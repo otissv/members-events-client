@@ -1,13 +1,18 @@
 /*
 * Application entry point
  */
-import { Router } from 'react-router';
+import { Router, browserHistory } from 'react-router';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
 import routes from './routes.js';
-import { browserHistory } from 'react-router';
+import reducers from './reducers';
 
-const mountNode = document.getElementById('mount-node');
+
+const createStoreWithMiddleware = applyMiddleware()(createStore);
 
 ReactDOM.render(
-  <Router history={browserHistory} routes={routes}/>,
-  mountNode
+  <Provider store={createStoreWithMiddleware(reducers)}>
+    <Router history={browserHistory} routes={routes}/>
+  </Provider>,
+  document.getElementById('mount-node')
 );

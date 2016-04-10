@@ -62,10 +62,15 @@
     "webpack-hot-middleware": "~2.10.0"
   },
   "dependencies": {
+    "axios": "^0.9.1",
+    "bluebird": "^3.3.4",
+    "cookiejs": "^1.0.7",
     "react": "~15.0.1",
     "react-dom": "~15.0.1",
     "react-redux": "~4.4.2",
     "react-router": "~2.0.1",
-    "redux": "~3.4.0"
+    "react-uikit-alert": "^0.2.3",
+    "redux": "~3.4.0",
+    "redux-form": "^5.0.1"
   }
 }
