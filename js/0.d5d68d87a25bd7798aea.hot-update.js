@@ -1,0 +1,10 @@
+webpackHotUpdate(0,{
+
+/***/ 785:
+/***/ function(module, exports, __webpack_require__) {
+
+	eval("'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };\n\nexports.default = UserReducer;\n\nvar _actions = __webpack_require__(122);\n\nvar INITAL_STATE = {\n  storage: null\n};\n\nfunction UserReducer() {\n  var state = arguments.length <= 0 || arguments[0] === undefined ? INITAL_STATE : arguments[0];\n  var action = arguments[1];\n\n  console.log(action);\n  switch (action.type) {\n    case _actions.GET_STORAGE:\n      console.log('otis');\n      return _extends({}, state, { storage: action.payload.data });\n    default:\n      return state;\n  }\n}\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZWR1Y2Vycy9zdG9yYWdlLXJlZHVjZXIuanM/MzlkMSJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7OztrQkFNd0I7O0FBTnhCOztBQUVBLElBQU0sZUFBZTtBQUNuQixXQUFTLElBQVQ7Q0FESTs7QUFJUyxTQUFTLFdBQVQsR0FBbUQ7TUFBOUIsOERBQVEsNEJBQXNCO01BQVIsc0JBQVE7O0FBQ2hFLFVBQVEsR0FBUixDQUFZLE1BQVosRUFEZ0U7QUFFaEUsVUFBUSxPQUFPLElBQVA7QUFDTjtBQUNBLGNBQVEsR0FBUixDQUFZLE1BQVosRUFEQTtBQUVFLDBCQUFXLFNBQU8sU0FBUyxPQUFPLE9BQVAsQ0FBZSxJQUFmLEdBQTNCLENBRkY7QUFERjtBQUtJLGFBQU8sS0FBUCxDQURGO0FBSkYsR0FGZ0UiLCJmaWxlIjoiNzg1LmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgR0VUX1NUT1JBR0UgfSBmcm9tICcuLi9hY3Rpb25zLyc7XG5cbmNvbnN0IElOSVRBTF9TVEFURSA9IHtcbiAgc3RvcmFnZTogbnVsbFxufTtcblxuZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gVXNlclJlZHVjZXIoc3RhdGUgPSBJTklUQUxfU1RBVEUsIGFjdGlvbikge1xuICBjb25zb2xlLmxvZyhhY3Rpb24pO1xuICBzd2l0Y2ggKGFjdGlvbi50eXBlKSB7XG4gICAgY2FzZSBHRVRfU1RPUkFHRTpcbiAgICBjb25zb2xlLmxvZygnb3RpcycpO1xuICAgICAgcmV0dXJuIHsuLi5zdGF0ZSwgc3RvcmFnZTogYWN0aW9uLnBheWxvYWQuZGF0YX07XG4gICAgZGVmYXVsdDpcbiAgICAgIHJldHVybiBzdGF0ZTtcbiAgfVxufVxuXG5cblxuLyoqIFdFQlBBQ0sgRk9PVEVSICoqXG4gKiogLi9yZWR1Y2Vycy9zdG9yYWdlLXJlZHVjZXIuanNcbiAqKi8iXSwic291cmNlUm9vdCI6IiJ9");
+
+/***/ }
+
+})

@@ -1,0 +1,10 @@
+webpackHotUpdate(0,{
+
+/***/ 785:
+/***/ function(module, exports, __webpack_require__) {
+
+	eval("'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };\n\nexports.default = UserReducer;\n\nvar _actions = __webpack_require__(122);\n\nvar INITAL_STATE = {\n  storage: null\n};\n\nfunction UserReducer() {\n  var state = arguments.length <= 0 || arguments[0] === undefined ? INITAL_STATE : arguments[0];\n  var action = arguments[1];\n\n  console.log(action);\n  switch (action.type) {\n    case _actions.GET_STORAGE:\n      return _extends({}, state, { storage: action.payload.data });\n    default:\n      return state;\n  }\n}\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZWR1Y2Vycy9zdG9yYWdlLXJlZHVjZXIuanM/MzlkMSJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7OztrQkFNd0I7O0FBTnhCOztBQUVBLElBQU0sZUFBZTtBQUNuQixXQUFTLElBQVQ7Q0FESTs7QUFJUyxTQUFTLFdBQVQsR0FBbUQ7TUFBOUIsOERBQVEsNEJBQXNCO01BQVIsc0JBQVE7O0FBQ2xFLFVBQVEsR0FBUixDQUFZLE1BQVosRUFEa0U7QUFFaEUsVUFBUSxPQUFPLElBQVA7QUFDTjtBQUNFLDBCQUFXLFNBQU8sU0FBUyxPQUFPLE9BQVAsQ0FBZSxJQUFmLEdBQTNCLENBREY7QUFERjtBQUlJLGFBQU8sS0FBUCxDQURGO0FBSEYsR0FGZ0UiLCJmaWxlIjoiNzg1LmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgR0VUX1NUT1JBR0UgfSBmcm9tICcuLi9hY3Rpb25zLyc7XG5cbmNvbnN0IElOSVRBTF9TVEFURSA9IHtcbiAgc3RvcmFnZTogbnVsbFxufTtcblxuZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gVXNlclJlZHVjZXIoc3RhdGUgPSBJTklUQUxfU1RBVEUsIGFjdGlvbikge1xuY29uc29sZS5sb2coYWN0aW9uKTtcbiAgc3dpdGNoIChhY3Rpb24udHlwZSkge1xuICAgIGNhc2UgR0VUX1NUT1JBR0U6XG4gICAgICByZXR1cm4gey4uLnN0YXRlLCBzdG9yYWdlOiBhY3Rpb24ucGF5bG9hZC5kYXRhfTtcbiAgICBkZWZhdWx0OlxuICAgICAgcmV0dXJuIHN0YXRlO1xuICB9XG59XG5cblxuXG4vKiogV0VCUEFDSyBGT09URVIgKipcbiAqKiAuL3JlZHVjZXJzL3N0b3JhZ2UtcmVkdWNlci5qc1xuICoqLyJdLCJzb3VyY2VSb290IjoiIn0=");
+
+/***/ }
+
+})

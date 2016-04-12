@@ -4,16 +4,24 @@
 'use strict';
 
 import { Router, IndexRoute, Route } from 'react-router';
+import {
+  MY_ACCOUNT,
+  SIGNIN,
+  SIGNUP
+} from './contants';
 
-import LayoutComponent from './components/application/layout-application.jsx';
-import SignupComponent from './components/auth/signup-auth.jsx';
-import Page2Component from './components/page-2-component.jsx';
 
+import Layout from './components/application/layout-application.jsx';
+import Singup from './components/auth/signup-auth.jsx';
+import Singin from './components/auth/signin-auth.jsx';
+import Home from './components/public/home-public.jsx';
+import MyAccount from './components/settings/my-account-setttings.jsx';
 
 export default (
-  <Router path='/' component={LayoutComponent}>
-    <IndexRoute component={Page2Component} />
-    <Route path='Signup' component={SignupComponent} />
-    <Route path='page2' component={Page2Component} />
+  <Router path='/' component={Layout}>
+    <IndexRoute component={Home} />
+    <Route path={SIGNUP} component={Singup} />
+    <Route path={SIGNIN} component={Singin} />
+    <Route path={MY_ACCOUNT} component={MyAccount} />
   </Router>
 );

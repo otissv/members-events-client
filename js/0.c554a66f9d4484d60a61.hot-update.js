@@ -1,0 +1,10 @@
+webpackHotUpdate(0,{
+
+/***/ 383:
+/***/ function(module, exports, __webpack_require__) {
+
+	eval("/* WEBPACK VAR INJECTION */(function(React) {/*\n* Application navigation\n */\n\n'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _reactRouter = __webpack_require__(94);\n\nvar Navigation = function Navigation(props) {\n  return React.createElement(\n    'ul',\n    { className: 'uk-list-line' },\n    React.createElement(\n      _reactRouter.Link,\n      { to: '/' },\n      'Home'\n    ),\n    React.createElement(\n      _reactRouter.Link,\n      { to: '/signup' },\n      'Signup'\n    ),\n    React.createElement(\n      _reactRouter.Link,\n      { to: '/signup' },\n      'Signup'\n    )\n  );\n};\n\nexports.default = Navigation;\n/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9jb21wb25lbnRzL2FwcGxpY2F0aW9uL25hdmlnYXRpb24tYXBwbGljYXRpb24uanN4P2FlZmYiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7OztBQUlBOzs7Ozs7QUFFQTs7QUFFQSxJQUFNLGFBQWEsU0FBYixVQUFhLENBQUMsS0FBRDtTQUNqQjs7TUFBSSxXQUFVLGNBQVYsRUFBSjtJQUNBOztRQUFNLElBQUcsR0FBSCxFQUFOOztLQURBO0lBRUU7O1FBQU0sSUFBRyxTQUFILEVBQU47O0tBRkY7SUFHRTs7UUFBTSxJQUFHLFNBQUgsRUFBTjs7S0FIRjs7Q0FEaUI7O2tCQVFKLFciLCJmaWxlIjoiMzgzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiLypcbiogQXBwbGljYXRpb24gbmF2aWdhdGlvblxuICovXG5cbid1c2Ugc3RyaWN0JztcblxuaW1wb3J0IHsgTGluayB9IGZyb20gJ3JlYWN0LXJvdXRlcic7XG5cbmNvbnN0IE5hdmlnYXRpb24gPSAocHJvcHMpID0+IChcbiAgPHVsIGNsYXNzTmFtZT0ndWstbGlzdC1saW5lJz5cbiAgPExpbmsgdG89Jy8nPkhvbWU8L0xpbms+XG4gICAgPExpbmsgdG89Jy9zaWdudXAnPlNpZ251cDwvTGluaz5cbiAgICA8TGluayB0bz0nL3NpZ251cCc+U2lnbnVwPC9MaW5rPlxuICA8L3VsPlxuKTtcblxuZXhwb3J0IGRlZmF1bHQgTmF2aWdhdGlvbjtcblxuXG5cbi8qKiBXRUJQQUNLIEZPT1RFUiAqKlxuICoqIC4vY29tcG9uZW50cy9hcHBsaWNhdGlvbi9uYXZpZ2F0aW9uLWFwcGxpY2F0aW9uLmpzeFxuICoqLyJdLCJzb3VyY2VSb290IjoiIn0=");
+
+/***/ }
+
+})

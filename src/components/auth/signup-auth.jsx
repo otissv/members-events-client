@@ -8,7 +8,7 @@ import { Link } from 'react-router';
 class Signup extends React.Component  {
 
   onSubmit (props) {
-    const { register, setStorage } = this.props;
+    const { register, setStorage, loggedIn } = this.props;
 
     register(props).payload
       .then(responce => responce)
@@ -18,6 +18,7 @@ class Signup extends React.Component  {
 
         const { _id, token } = responce.data.result;
         setStorage({ _id, token });
+        loggedIn(true);
       });
   }
 
@@ -25,7 +26,7 @@ class Signup extends React.Component  {
   render () {
     const { fields: { username, password }, handleSubmit } = this.props;
     return <form className="uk-form uk-form-stacked" onSubmit={handleSubmit(this.onSubmit.bind(this))}>
-      <h3>Sign up</h3>
+      <h3>Sign Up</h3>
       <div className="uk-form-row">
         <label className="uk-form-label" >Username</label>
         <div className="uk-form-controls">
@@ -54,7 +55,7 @@ class Signup extends React.Component  {
         </div>
       </div>
 
-      <button type='submit' className='btn btn-primary'>Submit</button>
+      <button type='submit' className='btn btn-primary'>Sign in</button>
 
       <Link to='/' className='btn btn-danger'>Cancel</Link>
     </form>;
@@ -66,9 +67,11 @@ Signup.contextTypes = {
   router: React.PropTypes.object
 };
 
+
 // Vaidate proptypes
 Signup.propTypes = {
   fields: React.PropTypes.object,
+  loggedIn: React.PropTypes.func,
   handleSubmit: React.PropTypes.func,
   register: React.PropTypes.func,
   setStorage: React.PropTypes.func
@@ -93,12 +96,13 @@ function validate (values) {
 // reduxForm: 1st is form config, 2nd argument is mapStateToProps, 3rd is mapDispatchToProps
 export default reduxForm(
   {
-    form: 'SignupForm',
+    form: 'SigninForm',
     fields: [ 'username', 'password' ],
     validate
   },
   null,
   {
+    loggedIn: actions.loggedIn,
     register : actions.register,
     setStorage: actions.setStorage
   }
