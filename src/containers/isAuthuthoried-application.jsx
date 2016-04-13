@@ -1,5 +1,5 @@
 /*
-* Authorisation component
+* Authorisation contaier
  */
 
 'use strict';

@@ -1,5 +1,5 @@
 /*
-* Application layout
+* Layout contaier
  */
 
 'use strict';
