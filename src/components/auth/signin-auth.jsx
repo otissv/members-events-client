@@ -7,18 +7,21 @@ import actions from '../../actions';
 
 class Signin extends React.Component  {
   onSubmit (props) {
-    const { register, setStorage, loggedIn } = this.props;
+    const { authenticate, setStorage, loggedIn } = this.props;
 
-    register(props).payload
+    authenticate(props).payload
       .then(responce => responce)
       .then(responce => {
+        if (!responce.data.success) {
+          browserHistory.push('/signup');
+        } else {
+          // redirect to home
+          browserHistory.push('/');
 
-        // redirect to home
-        browserHistory.push('/');
-
-        const { _id, token } = responce.data.result;
-        setStorage({ _id, token });
-        loggedIn(true);
+          const { _id, token } = responce.data.result;
+          setStorage({ _id, token });
+          loggedIn(true);
+        }
       });
   }
 
@@ -68,7 +71,7 @@ Signin.propTypes = {
   fields: React.PropTypes.object,
   loggedIn: React.PropTypes.bool,
   handleSubmit: React.PropTypes.func,
-  register: React.PropTypes.func,
+  authenticate: React.PropTypes.func,
   setStorage: React.PropTypes.func
 };
 
@@ -97,7 +100,7 @@ export default reduxForm(
   },
   null,
   {
-    register : actions.register,
+    authenticate : actions.authenticate,
     setStorage: actions.setStorage
   }
 )(Signin);

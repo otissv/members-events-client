@@ -8,6 +8,7 @@ import Promise from 'bluebird';
 import cookie from 'cookiejs';
 
 import {
+  AUTHENTICATE,
   SET_STORAGE,
   LOGGEDIN,
   API_URL,
@@ -21,7 +22,6 @@ Promise.promisifyAll(cookie);
 
 
 export function loggedIn (bool) {
-  
   return {
     type: LOGGEDIN,
     payload: bool
@@ -65,6 +65,15 @@ export function register (props) {
 
   return {
     type: REGISTER,
+    payload: request
+  };
+}
+
+export function authenticate (props) {
+  const request = axios.post(`${API_URL}authenticate`, props);
+
+  return {
+    type: AUTHENTICATE,
     payload: request
   };
 }

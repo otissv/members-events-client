@@ -19,11 +19,13 @@ export const SEVICES = '/sevices';
 export const USRES= '/users';
 
 
-// Stoarage actions types
+// Storage actions types
+export const AUTHENTICATE= 'AUTHENTICATE';
+export const DELETE_STORAGE= 'DELETE_STORAGE';
+export const GET_STORAGE = 'GET_STORAGE';
 export const LOGGEDIN = 'LOGGEDIN';
 export const SET_STORAGE = 'SET_STORAGE';
-export const GET_STORAGE = 'GET_STORAGE';
-export const DELETE_STORAGE= 'DELETE_STORAGE';
+
 
 // Authentication actions types
 export const REGISTER = 'REGISTER';
