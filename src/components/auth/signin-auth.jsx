@@ -24,7 +24,6 @@ class Signin extends React.Component  {
 
 
   render () {
-    console.log(this.props);
     const { handleSubmit } = this.props;
     return <AuthForm onSubmit={handleSubmit(this.onSubmit.bind(this))} {...this.props}/>;
   }
