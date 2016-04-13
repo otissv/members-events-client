@@ -5,7 +5,7 @@
 
 import { Router, IndexRoute, Route } from 'react-router';
 
-import isAuthuthoried from './components/application/isAuthuthoried-application.jsx';
+import isAuthuthoried from './containers/isAuthuthoried-application.jsx';
 import Layout from './components/application/layout-application.jsx';
 import Singup from './components/auth/signup-auth.jsx';
 import Singin from './components/auth/signin-auth.jsx';
