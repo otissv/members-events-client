@@ -7,7 +7,6 @@ import { createStore, applyMiddleware } from 'redux';
 import routes from './routes.js';
 import reducers from './reducers';
 
-
 const createStoreWithMiddleware = applyMiddleware()(createStore);
 
 ReactDOM.render(

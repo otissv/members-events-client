@@ -4,8 +4,7 @@
 
 'use strict';
 import { connect } from 'react-redux';
-import LoggedIn from './loggedIn-application.jsx';
-import NotLoggedIn from './NoLoggedIn-application.jsx';
+import Navigation from './navigation-application.jsx';
 import Alert from './alert-appplication.jsx';
 import Notify from './notify-appplication.jsx';
 import actions from '../../actions';
@@ -17,11 +16,10 @@ class Layout extends React.Component  {
   }
 
   render () {
-    // console.log(this.props.storage);
     return <div>
       <Alert/>
       <Notify/>
-      { this.props.isLoggedIn ? <LoggedIn/> : <NotLoggedIn/> }
+      <Navigation/>
       { this.props.children }
     </div>;
   }

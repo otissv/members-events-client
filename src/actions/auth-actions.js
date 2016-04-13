@@ -21,6 +21,7 @@ Promise.promisifyAll(cookie);
 
 
 export function loggedIn (bool) {
+  
   return {
     type: LOGGEDIN,
     payload: bool

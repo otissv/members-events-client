@@ -1,20 +1,20 @@
 'use strict';
 
 import { reduxForm } from 'redux-form';
+import { browserHistory, Link } from 'react-router';
 import actions from '../../actions';
-import { Link } from 'react-router';
 
 
 class Signin extends React.Component  {
-
   onSubmit (props) {
     const { register, setStorage, loggedIn } = this.props;
 
     register(props).payload
       .then(responce => responce)
       .then(responce => {
+
         // redirect to home
-        this.context.router.push('/');
+        browserHistory.push('/');
 
         const { _id, token } = responce.data.result;
         setStorage({ _id, token });
@@ -62,10 +62,6 @@ class Signin extends React.Component  {
   }
 }
 
-
-Signin.contextTypes = {
-  router: React.PropTypes.object
-};
 
 // Vaidate proptypes
 Signin.propTypes = {
