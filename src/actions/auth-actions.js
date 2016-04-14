@@ -34,9 +34,11 @@ export function authenticate (user) {
 
 
 export function deleteStorage () {
+	cookie.empty()
+
   return {
     type: DELETE_STORAGE,
-    payload: cookie.empty()
+    payload: null
   };
 }
 

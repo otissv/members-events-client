@@ -18,8 +18,8 @@ import actions from '../actions';
        unauthenticate
      }  = this.props;
 
-      const result = storage || getStorage(['_id', 'token']).payload;
-
+      const result = storage || getStorage().payload;
+      console.log(result)
       deleteStorage();
       unauthenticate(result._id);
       // redirect to home
