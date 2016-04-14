@@ -6,6 +6,8 @@
 import { browserHistory } from 'react-router';
 import auth from '../../containers/auth-container.jsx';
 import AuthForm from './form-auth.jsx';
+import { propTypes } from '../../helpers';
+
 
 class Signin extends React.Component  {
   onSubmit (props) {
@@ -33,13 +35,7 @@ class Signin extends React.Component  {
 }
 
 // Vaidate proptypes
-Signin.propTypes = {
-  fields: React.PropTypes.object,
-  loggedIn: React.PropTypes.func,
-  handleSubmit: React.PropTypes.func,
-  authenticate: React.PropTypes.func,
-  setStorage: React.PropTypes.func
-};
+Signin.propTypes = propTypes;
 
 
 export default auth(Signin, 'SigninForm');

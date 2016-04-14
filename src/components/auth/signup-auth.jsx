@@ -6,6 +6,8 @@
 
 import { browserHistory } from 'react-router';
 import auth from '../../containers/auth-container.jsx';
+import { propTypes } from '../../helpers';
+
 
 import AuthForm from './form-auth.jsx';
 
@@ -39,13 +41,7 @@ class Signup extends React.Component  {
 }
 
 // Vaidate proptypes
-Signup.propTypes = {
-  fields: React.PropTypes.object,
-  loggedIn: React.PropTypes.func,
-  handleSubmit: React.PropTypes.func,
-  register: React.PropTypes.func,
-  setStorage: React.PropTypes.func
-};
+Signup.propTypes = propTypes;
 
 
 export default auth(Signup, 'SignupForm');

@@ -5,6 +5,8 @@
 'use strict';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
+import { propTypes, mapStateToProps } from '../../helpers';
+
 import {
   ABOUT,
   CONTACT,
@@ -46,18 +48,11 @@ const NotLoggedInNav = (props) => (
 
 class Navigation extends React.Component{
   render () {
-    return this.props.loggedIn ? <LoggedInNav/> : <NotLoggedInNav/>;
+    return this.props.isLoggedIn ? <LoggedInNav/> : <NotLoggedInNav/>;
   }
 }
 
-function mapStateToProps (state) {
-  return {
-    loggedIn : state.auth.isLoggedIn
-  };
-}
 
-Navigation.propTypes = {
-  loggedIn: React.PropTypes.bool
-};
+Navigation.propTypes = propTypes;
 
 export default connect(mapStateToProps)(Navigation);

@@ -29,11 +29,6 @@ export default function Sign (ComposedClass, formName) {
       validate
     },
     null,
-    {
-      authenticate : actions.authenticate,
-      loggedIn: actions.loggedIn,
-      register : actions.register,
-      setStorage: actions.setStorage
-    }
+    actions
   )(ComposedClass);
 }

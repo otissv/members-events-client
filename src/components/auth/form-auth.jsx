@@ -4,6 +4,8 @@
 'use strcit';
 
 import { Link } from 'react-router';
+import { propTypes } from '../../helpers';
+
 
 const AuthForm = (props) => {
   const {
@@ -49,10 +51,6 @@ const AuthForm = (props) => {
 
 
 // Vaidate proptypes
-AuthForm.propTypes = {
-  fields: React.PropTypes.object,
-  loggedIn: React.PropTypes.func,
-  onSubmit: React.PropTypes.func
-};
+AuthForm.propTypes = propTypes;
 
 export default AuthForm;

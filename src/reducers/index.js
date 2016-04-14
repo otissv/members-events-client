@@ -5,12 +5,13 @@
 'use strict';
 
 import { combineReducers } from 'redux';
-import userReducer from './user-reducer';
-import authReducer from './auth-reducer';
 import { reducer as formReducer } from 'redux-form';
+import userReducer from './user-reducer';
+import applicationReducer from './application-reducer';
+
 
 const rootReducer = combineReducers({
-  auth  :authReducer,
+  application  :applicationReducer,
   users : userReducer,
   form  : formReducer
 });

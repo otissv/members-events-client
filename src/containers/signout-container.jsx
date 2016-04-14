@@ -4,55 +4,42 @@
 
 
  'use strict';
- import { connect } from 'react-redux';
- import { browserHistory } from 'react-router';
+import { connect } from 'react-redux';
+import { browserHistory } from 'react-router';
 import actions from '../actions';
+import { propTypes, mapStateToProps } from '../helpers';
 
 
- class Singout extends React.Component{
-   componentDidMount () {
-     const {
-       getStorage,
-       deleteStorage,
-       storage,
-       unauthenticate
-     }  = this.props;
+class Singout extends React.Component{
+ componentDidMount () {
+   const {
+     getStorage,
+     deleteStorage,
+     storage,
+     unauthenticate
+   } = this.props;
+   console.log(this.props)
+   //  deleteStorage();
+   //  loggedIn(false);
 
-      const result = storage || getStorage().payload;
-      console.log(result)
-      deleteStorage();
-      unauthenticate(result._id);
-      // redirect to home
-      browserHistory.push('/');
+   //  // chect to see if storage has data else get cookie
+   //  const result = storage || getStorage().payload;
+ 		// unauthenticate(result._id);
 
-   }
+   //  // redirect to home
+   //  browserHistory.push('/');
 
-   render () {
-     return <div>
-     Logging out...
-     </div>;
-   }
  }
 
-
-Singout.propTypes = {
-   getStorage    : React.PropTypes.func,
-   loggedIn      : React.PropTypes.bool,
-   deleteStorage : React.PropTypes.func,
-   storage       : React.PropTypes.func,
-   unauthenticate: React.PropTypes.func
- };
-
-function mapStateToProps(state){
-  return {
-    getStorage: state.auth.storage,
-    loggedIn: state.loggedIn
-
-  };
+ render () {
+   return <div>
+   Logging out...
+   </div>;
+ }
 }
 
-export default connect(mapStateToProps, {
-  getStorage : actions.getStorage,
-  deleteStorage: actions.deleteStorage,
-  unauthenticate: actions.unauthenticate
-})(Singout);
+
+Singout.propTypes = propTypes;
+
+
+export default connect(mapStateToProps, actions)(Singout);
