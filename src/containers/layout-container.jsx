@@ -13,9 +13,8 @@ import Notify from '../components/application/notify-appplication.jsx';
 class LayoutContainer extends React.Component  {
   componentWillMount () {
     const { getStorage } = this.props;
-    const storage = ['_id', 'token'];
 
-    getStorage(storage);
+    getStorage();
   }
     render () {
       return <div>
@@ -31,7 +30,8 @@ class LayoutContainer extends React.Component  {
 
 function mapStateToProps (state) {
   return {
-    isLoggedIn: state.auth.isLoggedIn
+    isLoggedIn: state.auth.isLoggedIn,
+    storage: state.auth.storage
   };
 }
 

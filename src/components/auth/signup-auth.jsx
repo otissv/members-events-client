@@ -18,12 +18,15 @@ class Signup extends React.Component  {
     register(props).payload
       .then(responce => responce)
       .then(responce => {
-        // redirect to home
-        browserHistory.push('/');
-
-        const { _id, token } = responce.data.result;
-        setStorage({ _id, token });
-        loggedIn(true);
+        if (!responce.data.success) {
+          browserHistory.push('/signup');
+        } else {
+          // redirect to home
+          browserHistory.push('/');
+          
+          setStorage(responce.data.result);
+          loggedIn(true);
+        }
       });
   }
 

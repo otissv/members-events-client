@@ -11,7 +11,7 @@ const INITAL_STATE = {
   storage : null
 };
 
-export default function UserReducer(state = INITAL_STATE, action) {
+export default function authReducer(state = INITAL_STATE, action) {
   switch (action.type) {
     case DELETE_STORAGE:
       return {...state, storage: action.payload};
@@ -23,6 +23,7 @@ export default function UserReducer(state = INITAL_STATE, action) {
       return {...state, isLoggedIn: action.payload};
 
     case SET_STORAGE:
+    	console.log(action.payload)
       return {...state, storage: action.payload};
 
     default:

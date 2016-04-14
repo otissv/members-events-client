@@ -5,7 +5,7 @@ const INITAL_STATE = {
   user: null
 };
 
-export default function UserReducer(state = INITAL_STATE, action) {
+export default function userReducer(state = INITAL_STATE, action) {
   switch (action.type) {
     case GET_USER:
       return {...state, user: action.payload.data};

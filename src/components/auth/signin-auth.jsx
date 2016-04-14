@@ -18,10 +18,8 @@ class Signin extends React.Component  {
         } else {
           // redirect to home
           browserHistory.push('/');
-
-          const { _id, token } = responce.data.result;
           
-          setStorage({ _id, token });
+          setStorage(responce.data.result);
           loggedIn(true);
         }
       });

@@ -41,10 +41,10 @@ export function deleteStorage () {
 }
 
 
-export function getStorage (idToken) {
+export function getStorage () {
   return {
     type: GET_STORAGE,
-    payload: cookie.get(idToken)
+    payload: cookie.all()
   };
 }
 
@@ -67,10 +67,12 @@ export function register (user) {
 }
 
 
-export function setStorage (idToken) {
+export function setStorage (storage) {
+	cookie.set(storage)
+
   return {
     type: SET_STORAGE,
-    payload: cookie.set(idToken)
+    payload: storage
   };
 }
 
