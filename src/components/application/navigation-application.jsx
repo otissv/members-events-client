@@ -20,7 +20,7 @@ import {
 } from '../../contants';
 
 
-const LoggedIn = (props) => (
+const LoggedInNav = (props) => (
   <ul className='uk-list'>
     <li><Link to='/'>Home</Link></li>
     <li><Link to={MY_ACCOUNT}>Account</Link></li>
@@ -31,7 +31,7 @@ const LoggedIn = (props) => (
   </ul>
 );
 
-const NotLoggedIn = (props) => (
+const NotLoggedInNav = (props) => (
   <ul className='uk-list'>
     <li><Link to={MY_ACCOUNT}>Account</Link></li>
     <li><Link to={ROOT}>Home</Link></li>
@@ -46,7 +46,7 @@ const NotLoggedIn = (props) => (
 
 class Navigation extends React.Component{
   render () {
-    return this.props.loggedIn ? <LoggedIn/> : <NotLoggedIn/>;
+    return this.props.loggedIn ? <LoggedInNav/> : <NotLoggedInNav/>;
   }
 }
 

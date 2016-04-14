@@ -68,7 +68,6 @@
   "dependencies": {
     "axios": "~0.9.1",
     "bluebird": "~3.3.4",
-    "cookiejs": "~1.0.7",
     "react": "~15.0.1",
     "react-dom": "~15.0.1",
     "react-redux": "~4.4.2",

@@ -1,3 +1,7 @@
+/*
+* Authorisation sign up
+ */
+
 'use strict';
 
 import { browserHistory } from 'react-router';

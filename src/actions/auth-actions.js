@@ -1,3 +1,4 @@
+
 /*
 * Authorisation actions
  */
@@ -5,20 +6,47 @@
 
 import axios from 'axios';
 import Promise from 'bluebird';
-import cookie from 'cookiejs';
+import cookie from 'cookie_js';
 
 import {
-  AUTHENTICATE,
-  SET_STORAGE,
-  LOGGEDIN,
   API_URL,
-  REGISTER,
+  AUTHENTICATE,
   GET_STORAGE,
-  DELETE_STORAGE
+  LOGGEDIN,
+  DELETE_STORAGE,
+  REGISTER,
+  SET_STORAGE,
+  UNAUTHENTICATE
 } from '../contants';
 
 
 Promise.promisifyAll(cookie);
+
+
+export function authenticate (user) {
+  const request = axios.post(`${API_URL}authenticate`, user);
+
+  return {
+    type: AUTHENTICATE,
+    payload: request
+  };
+}
+
+
+export function deleteStorage () {
+  return {
+    type: DELETE_STORAGE,
+    payload: cookie.empty()
+  };
+}
+
+
+export function getStorage (idToken) {
+  return {
+    type: GET_STORAGE,
+    payload: cookie.get(idToken)
+  };
+}
 
 
 export function loggedIn (bool) {
@@ -29,39 +57,8 @@ export function loggedIn (bool) {
 }
 
 
-export function setStorage (pairs) {
-  cookie.set(pairs);
-
-  return {
-    type: SET_STORAGE,
-    payload: pairs
-  };
-}
-
-
-export function getStorge (storagekeys) {
-
-  const reducer = (result, item) => {
-     result[item] = cookie.get(item);
-     return result;
-  };
-
-  return {
-    type: GET_STORAGE,
-    payload: storagekeys.reduce(reducer, {})
-  };
-}
-
-export function removeStorge (name) {
-
-  return {
-    type: DELETE_STORAGE,
-    payload: cookie.remove(name)
-  };
-}
-
-export function register (props) {
-  const request = axios.post(`${API_URL}register`, props);
+export function register (user) {
+  const request = axios.post(`${API_URL}register`, user);
 
   return {
     type: REGISTER,
@@ -69,11 +66,20 @@ export function register (props) {
   };
 }
 
-export function authenticate (props) {
-  const request = axios.post(`${API_URL}authenticate`, props);
+
+export function setStorage (idToken) {
+  return {
+    type: SET_STORAGE,
+    payload: cookie.set(idToken)
+  };
+}
+
+
+export function unauthenticate (user) {
+  const request = axios.post(`${API_URL}unauthenticate/${user}`);
 
   return {
-    type: AUTHENTICATE,
+    type: UNAUTHENTICATE,
     payload: request
   };
 }

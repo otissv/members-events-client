@@ -4,30 +4,45 @@
 
 'use strict';
 import { connect } from 'react-redux';
-import actions from '../../actions';
-import Layout from '../components/application/layout-application.jsx';
+import actions from '../actions';
 
+import Navigation from '../components/application/navigation-application.jsx';
+import Alert from '../components/application/alert-appplication.jsx';
+import Notify from '../components/application/notify-appplication.jsx';
 
-export default function(ComposedClass, redirect) {
-  class LayoutContainer extends React.Component  {
-    componentWillMount () {
-      // this.props.getStorge(['_id', 'token']);
-    }
+class LayoutContainer extends React.Component  {
+  componentWillMount () {
+    const { getStorage } = this.props;
+    const storage = ['_id', 'token'];
 
+    getStorage(storage);
+  }
     render () {
-      return <Layout />;
+      return <div>
+        <Alert {...this.props}/>
+        <Notify {...this.props}/>
+        <Navigation  {...this.props}/>
+
+        { this.props.children }
+
+      </div>;
     }
   }
 
-  function mapStateToProps (state) {
-    return {
-      storage : state.storage,
-      isLoggedIn: state.auth.isLoggedIn
-    };
-  }
-
-
-  return connect(mapStateToProps, {
-    getStorge : actions.getStorge
-  })(LayoutContainer);
+function mapStateToProps (state) {
+  return {
+    isLoggedIn: state.auth.isLoggedIn
+  };
 }
+
+
+LayoutContainer.propTypes = {
+  children  : React.PropTypes.any,
+  getStorage: React.PropTypes.func
+};
+
+
+export default connect(mapStateToProps, {
+  getStorage : actions.getStorage,
+  unauthenticate: actions.unauthenticate
+})(LayoutContainer);
