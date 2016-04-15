@@ -4,14 +4,11 @@
 
 'use strict';
 
-import auth from '../../containers/auth-container.jsx';
 import { propTypes } from '../../helpers';
-
-
 import AuthForm from './form-auth.jsx';
 
 
-class Signup extends React.Component  {
+export default class Signup extends React.Component  {
 
   onSubmit (props) {
     const { register, setStorage, loggedIn } = this.props;
@@ -41,6 +38,3 @@ class Signup extends React.Component  {
 
 // Vaidate proptypes
 Signup.propTypes = propTypes;
-
-
-export default auth(Signup, 'SignupForm');

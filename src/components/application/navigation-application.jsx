@@ -18,7 +18,7 @@ import {
   SIGNIN,
   SIGNOUT,
   SIGNUP,
-  USRES
+  USERS
 } from '../../contants';
 
 
@@ -26,7 +26,7 @@ const LoggedInNav = (props) => (
   <ul className='uk-list'>
     <li><Link to='/'>Home</Link></li>
     <li><Link to={MY_ACCOUNT}>Account</Link></li>
-    <li><Link to={USRES}>Users</Link></li>
+    <li><Link to={USERS}>Users</Link></li>
     <li><Link to={COURSES}>Courses</Link></li>
     <li><Link to={EVENTS}>Events</Link></li>
     <li><Link to={SIGNOUT}>Signout</Link></li>
@@ -35,7 +35,7 @@ const LoggedInNav = (props) => (
 
 const NotLoggedInNav = (props) => (
   <ul className='uk-list'>
-    <li><Link to={MY_ACCOUNT}>Account</Link></li>
+    <li><Link to={USERS}>Users</Link></li>
     <li><Link to={ROOT}>Home</Link></li>
     <li><Link to={SEVICES}>Service</Link></li>
     <li><Link to={ABOUT}>About</Link></li>

@@ -16,7 +16,7 @@ export const SIGNIN = '/signin';
 export const SIGNOUT = '/signout';
 export const SIGNUP = '/signup';
 export const SEVICES = '/sevices';
-export const USRES= '/users';
+export const USERS= '/users';
 
 // Application types
 export const DELETE_STORAGE = 'DELETE_STORAGE';
