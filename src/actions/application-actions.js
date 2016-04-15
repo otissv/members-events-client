@@ -22,14 +22,14 @@ export function redirectTo (path) {
   browserHistory.push(path);
 
   return {
-    type: REDIRECT,
+    type: LOCATION,
     payload: path
   };
 }
 
 
 export function deleteStorage () {
-  cookie.empty()
+  cookie.empty();
 
   return {
     type: DELETE_STORAGE,
@@ -55,11 +55,10 @@ export function loggedIn (bool) {
 
 
 export function setStorage (storage) {
-  cookie.set(storage)
+  cookie.set(storage);
 
   return {
     type: SET_STORAGE,
     payload: storage
   };
 }
-

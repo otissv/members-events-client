@@ -14,20 +14,21 @@ import Notify from '../components/application/notify-appplication.jsx';
 
 class LayoutContainer extends React.Component  {
   componentWillMount () {
-    const { getStorage } = this.props;
-    // getStorage();
+    this.props.getStorage();
   }
-    render () {
-      return <div>
-        <Alert {...this.props}/>
-        <Notify {...this.props}/>
-        <Navigation  {...this.props}/>
 
-        { this.props.children }
+  
+  render () {
+    return <div>
+      <Alert {...this.props}/>
+      <Notify {...this.props}/>
+      <Navigation  {...this.props}/>
 
-      </div>;
-    }
+      { this.props.children }
+
+    </div>;
   }
+}
 
 LayoutContainer.propTypes = propTypes;
 

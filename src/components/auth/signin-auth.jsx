@@ -3,7 +3,6 @@
  */
 'use strict';
 
-import { browserHistory } from 'react-router';
 import auth from '../../containers/auth-container.jsx';
 import AuthForm from './form-auth.jsx';
 import { propTypes } from '../../helpers';
@@ -16,11 +15,10 @@ class Signin extends React.Component  {
       .then(responce => responce)
       .then(responce => {
         if (!responce.data.success) {
-          browserHistory.push('/signup');
+          this.props.redirectTo('/signup');
         } else {
-          // redirect to home
-          browserHistory.push('/');
-          
+          this.props.redirectTo('/');
+
           setStorage(responce.data.result);
           loggedIn(true);
         }

@@ -4,7 +4,6 @@
 
 'use strict';
 import { connect } from 'react-redux';
-import { browserHistory } from 'react-router';
 import actions from '../actions';
 
 import { propTypes, mapStateToProps } from '../helpers';
@@ -13,10 +12,11 @@ export default function(ComposedClass, redirect) {
 
   class IsAuthuthoried extends React.Component{
     componentWillMount () {
-      if(!this.props.isLoggedIn) {
-        const path = redirect || '/';
+      const { isLoggedIn, redirectTo } = this.props;
 
-        browserHistory.push(path);
+      if(!isLoggedIn) {
+        const path = redirect || '/';
+        redirectTo(path);
       }
     }
 
@@ -27,5 +27,5 @@ export default function(ComposedClass, redirect) {
 
   IsAuthuthoried.propTypes = propTypes;
 
-  return connect(mapStateToProps)(IsAuthuthoried);
+  return connect(mapStateToProps, actions)(IsAuthuthoried);
 }
