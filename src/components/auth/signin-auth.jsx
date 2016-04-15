@@ -11,7 +11,6 @@ export default class Signin extends React.Component  {
   onSubmit (props) {
     const { authenticate, setStorage, loggedIn } = this.props;
     authenticate(props).payload
-      .then(reponse => reponse)
       .then(reponse => {
         if (!reponse.data.success) {
           this.props.redirectTo('/signup');
