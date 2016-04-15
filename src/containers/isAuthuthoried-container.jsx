@@ -11,6 +11,12 @@ import { propTypes, mapStateToProps } from '../helpers';
 export default function(ComposedClass, redirect) {
 
   class IsAuthuthoried extends React.Component {
+    constructor (props) {
+      super(props);
+
+      this.ComponentClass = props.isLoggedIn ? <ComposedClass {...this.props}/> : <div/>;
+    }
+
     componentWillMount () {
       const { isLoggedIn, redirectTo } = this.props;
 
@@ -21,7 +27,7 @@ export default function(ComposedClass, redirect) {
     }
 
     render () {
-      return <ComposedClass {...this.props}/>;
+      return this.ComponentClass;
     }
   }
 
