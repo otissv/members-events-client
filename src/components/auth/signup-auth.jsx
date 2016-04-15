@@ -14,14 +14,14 @@ export default class Signup extends React.Component  {
     const { register, setStorage, loggedIn } = this.props;
 
     register(props).payload
-      .then(reponse => {
-        if (!reponse.data.success) {
+      .then(response => {
+        if (!response.data.success) {
           this.props.redirectTo('/signup');
         } else {
           // redirect to home
           this.props.redirectTo('/');
 
-          setStorage(reponse.data.result);
+          setStorage(response.data.result);
           loggedIn(true);
         }
       });

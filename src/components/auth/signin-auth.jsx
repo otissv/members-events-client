@@ -11,13 +11,13 @@ export default class Signin extends React.Component  {
   onSubmit (props) {
     const { authenticate, setStorage, loggedIn } = this.props;
     authenticate(props).payload
-      .then(reponse => {
-        if (!reponse.data.success) {
+      .then(response => {
+        if (!response.data.success) {
           this.props.redirectTo('/signup');
         } else {
           this.props.redirectTo('/');
 
-          setStorage(reponse.data.result);
+          setStorage(response.data.result);
           loggedIn(true);
         }
       });
