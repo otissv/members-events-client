@@ -4,7 +4,7 @@
 'use strict';
 
 import AuthForm from './form-auth.jsx';
-import { propTypes } from '../../helpers';
+import { propTypes } from '../../props';
 
 
 export default class Signin extends React.Component  {

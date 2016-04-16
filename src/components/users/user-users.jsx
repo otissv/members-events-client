@@ -1,7 +1,7 @@
 'use strict';
 
 
-import { propTypes } from '../../helpers';
+import { propTypes } from '../../props';
 
 const User = (props) => {
   const { user } = props;

@@ -3,7 +3,7 @@
  */
 
 'use strict';
-import { propTypes } from '.././../helpers';
+import { propTypes } from '../../props';
 
 import Navigation from './navigation-application.jsx';
 import Alert from './alert-appplication.jsx';

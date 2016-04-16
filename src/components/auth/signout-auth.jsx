@@ -5,7 +5,7 @@
 
 'use strict';
 
-import { propTypes } from '../.././helpers';
+import { propTypes } from '../.././props';
 
 
 export default class Signout extends React.Component{

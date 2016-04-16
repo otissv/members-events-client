@@ -1,7 +1,8 @@
 'use strict';
 
 
-import { propTypes, objectToArray } from '../../helpers';
+import { objectToArray } from '../../helpers';
+import { propTypes } from '../../props';
 import { Link } from 'react-router';
 
 

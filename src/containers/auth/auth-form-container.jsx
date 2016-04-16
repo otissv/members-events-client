@@ -1,4 +1,4 @@
-'use strict';
+ 'use strict';
 
 import { reduxForm } from 'redux-form';
 import actions from '../../actions';

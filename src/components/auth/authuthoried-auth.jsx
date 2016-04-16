@@ -3,7 +3,7 @@
  */
 
 'use strict';
-import { propTypes } from '../../helpers';
+import { propTypes } from '../../props';
 
 
 export default class Authuthoried extends React.Component{

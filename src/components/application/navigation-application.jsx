@@ -5,7 +5,7 @@
 'use strict';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
-import { propTypes, mapStateToProps } from '../../helpers';
+import { propTypes, mapStateToProps } from '../../props';
 
 import {
   ABOUT,

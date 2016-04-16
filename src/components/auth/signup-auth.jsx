@@ -4,7 +4,7 @@
 
 'use strict';
 
-import { propTypes } from '../../helpers';
+import { propTypes } from '../../props';
 import AuthForm from './form-auth.jsx';
 
 

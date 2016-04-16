@@ -4,7 +4,7 @@
 'use strcit';
 
 import { Link } from 'react-router';
-import { propTypes } from '../../helpers';
+import { propTypes } from '../../props';
 
 
 const AuthForm = (props) => {
