@@ -1,8 +1,5 @@
 'use strict';
 
-import noMutate from 'no-mutate';
-
-
 import {
   SELECT_USER,
   SET_USERS,
@@ -16,11 +13,9 @@ const INITAL_STATE = {
 };
 
 export default function applicationReducer(state = INITAL_STATE, action) {
-  const { push } = noMutate;
-
   switch (action.type) {
     case SET_USERS:
-      return {...state, usersAll: ...action.payload};
+      return {...state, usersAll: action.payload};
 
     case SELECT_USER:
       return {...state, selectedUser: action.payload};

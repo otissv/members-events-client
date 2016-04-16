@@ -21,15 +21,15 @@ class UsersContainer extends React.Component{
 
     getUsers(_id, token).payload
       .then(response => {
-        console.log(response.data.result);
-        // setUsers(response.data.result);
+        setUsers(response.data.result);
       });
   }
 
   render () {
-    return <Users {...this.props}/>;
+    return <Users {...this.props} />;
   }
 }
+
 
 UsersContainer.propTypes = propTypes;
 

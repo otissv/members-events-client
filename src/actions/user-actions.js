@@ -5,6 +5,7 @@
 
 'use strict';
 import axios from 'axios';
+import { query, arrayToObject } from '../helpers';
 
 import {
   API_URL,
@@ -16,10 +17,6 @@ import {
   DELETE_USER
 } from '../contants';
 
-
-function query (_id, token) {
-  return `?_id=${_id}&token=${token}`;
-}
 
 export function getUsers (_id, token) {
   const request = axios.get(`${API_URL}users/${query(_id, token)}`);
@@ -33,7 +30,7 @@ export function getUsers (_id, token) {
 export function setUsers (users) {
   return {
     type: SET_USERS,
-    payload: users
+    payload: arrayToObject(users)
   };
 }
 
@@ -64,7 +61,7 @@ export function setUser (user) {
 }
 
 
-export function deleteUsers (_id, token) {
+export function deleteUsers (_id, token, user) {
   const request = axios.delete(`${API_URL}users/${user}/${query(_id, token)}`);
 
   return {

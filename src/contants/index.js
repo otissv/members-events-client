@@ -24,7 +24,7 @@ export const DELETE_STORAGE = 'DELETE_STORAGE';
 export const GET_STORAGE = 'GET_STORAGE';
 export const LOCATION = 'LOCATION';
 export const LOGGEDIN = 'LOGGEDIN';
-export const SELECT_USER = 'SELECTED_USER;'
+export const SELECT_USER = 'SELECTED_USER';
 export const SET_STORAGE = 'SET_STORAGE';
 
 

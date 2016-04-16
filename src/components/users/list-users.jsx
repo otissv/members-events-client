@@ -1,7 +1,7 @@
 'use strict';
 
 
-import { propTypes } from '../../helpers';
+import { propTypes, objectToArray } from '../../helpers';
 import { Link } from 'react-router';
 
 
@@ -21,7 +21,7 @@ class Users extends React.Component {
 
 
   render () {
-    const items = this.props.usersAll.map(item => {
+    const items = objectToArray(this.props.usersAll).map(item => {
       return <li key={item._id}>
         <Link
           data-userId={item._id}
@@ -32,6 +32,7 @@ class Users extends React.Component {
         </Link>
       </li>;
     });
+
 
     return <div>
       <h1>Users</h1>
