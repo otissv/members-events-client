@@ -35,8 +35,8 @@ export function register (user) {
 }
 
 
-export function unauthenticate (user) {
-  const request = axios.post(`${API_URL}unauthenticate/${user}`);
+export function unauthenticate (_id) {
+  const request = axios.post(`${API_URL}unauthenticate/${_id}`);
 
   return {
     type: UNAUTHENTICATE,

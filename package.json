@@ -69,6 +69,7 @@
     "axios": "~0.9.1",
     "bluebird": "~3.3.4",
     "cookie_js": "^1.1.1",
+    "deep-equal": "^1.0.1",
     "no-mutate": "^1.0.0",
     "react": "~15.0.1",
     "react-dom": "~15.0.1",

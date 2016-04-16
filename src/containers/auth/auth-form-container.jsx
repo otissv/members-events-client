@@ -1,9 +1,9 @@
 'use strict';
 
 import { reduxForm } from 'redux-form';
-import actions from '../actions';
+import actions from '../../actions';
 
-export default function Sign (ComposedClass, formName) {
+export default function AuthForm (ComposedClass, formName) {
 
 
   function validate (values) {

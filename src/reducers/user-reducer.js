@@ -1,16 +1,28 @@
-import { GET_USERS, GET_USER } from '../actions/';
+'use strict';
+
+import noMutate from 'no-mutate';
+
+
+import {
+  SET_USERS,
+  SET_USER
+} from '../contants/';
 
 const INITAL_STATE = {
-  userAll: [],
+  usersAll: [],
   user: null
 };
 
-export default function userReducer(state = INITAL_STATE, action) {
+export default function applicationReducer(state = INITAL_STATE, action) {
+  const { push } = noMutate;
+
   switch (action.type) {
-    case GET_USER:
-      return {...state, user: action.payload.data};
-    case GET_USERS:
-      return {...state, userAll: action.payload.data};
+    case SET_USERS:
+      return {...state, usersAll: push(state.usersAll)(action.payload)};
+
+    case SET_USER:
+      return {...state, user: action.payload};
+
     default:
       return state;
   }

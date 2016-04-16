@@ -13,6 +13,7 @@ const store = compose(
   window.devToolsExtension ? window.devToolsExtension() : DevTools.instrument()
 )(createStore)(reducers);
 
+
 ReactDOM.render(
   <Provider store={store}>
     <Router history={browserHistory} routes={routes}/>

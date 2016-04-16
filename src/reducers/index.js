@@ -11,9 +11,9 @@ import applicationReducer from './application-reducer';
 
 
 const rootReducer = combineReducers({
-  application  :applicationReducer,
-  users : userReducer,
-  form  : formReducer
+  application : applicationReducer,
+  users       : userReducer,
+  form        : formReducer
 });
 
 export default rootReducer;

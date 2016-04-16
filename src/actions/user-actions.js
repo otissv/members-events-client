@@ -7,18 +7,20 @@
 import axios from 'axios';
 
 import {
-  ROOT_URL,
+  API_URL,
   GET_USERS,
   GET_USER,
+  SET_USERS,
   DELETE_USER
 } from '../contants';
 
 
-const API_KEY = '?key=sdjkflsdjflsdjftert';
+function query (_id, token) {
+  return `?_id=${_id}&token=${token}`;
+}
 
-
-export function fetchUsers () {
-  const request = axios.get(`${ROOT_URL}posts${API_KEY}`);
+export function getUsers (_id, token) {
+  const request = axios.get(`${API_URL}users/${query(_id, token)}`);
 
   return {
     type: GET_USERS,
@@ -26,8 +28,15 @@ export function fetchUsers () {
   };
 }
 
-export function fetchUser (id) {
-  const request = axios.get(`${ROOT_URL}posts/${id}${API_KEY}`);
+export function setUsers (users) {
+  return {
+    type: SET_USERS,
+    payload: users
+  };
+}
+
+export function getUser (_id, token) {
+  const request = axios.get(`${API_URL}users/${query(_id, token)}`);
 
   return {
     type: GET_USER,
@@ -36,8 +45,8 @@ export function fetchUser (id) {
 }
 
 
-export function deletePost (id) {
-  const request = axios.delete(`${ROOT_URL}posts/${id}${API_KEY}`);
+export function deleteUsers (_id, token) {
+  const request = axios.delete(`${API_URL}users/${query(_id, token)}`);
 
   return {
     type: DELETE_USER,

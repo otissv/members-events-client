@@ -18,11 +18,12 @@ export const propTypes = {
   setStorage    : React.PropTypes.func,
   unauthenticate: React.PropTypes.func
 };
-   
+
 
 export function mapStateToProps (state) {
   return {
     isLoggedIn: state.application.isLoggedIn,
-    storage   : state.application.storage
+    storage   : state.application.storage,
+		usersAll  : state.users.usersAll
   };
 }
