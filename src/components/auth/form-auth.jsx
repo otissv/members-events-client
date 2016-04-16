@@ -10,11 +10,12 @@ import { propTypes } from '../../props';
 const AuthForm = (props) => {
   const {
     fields: { username, password },
+    heading,
     onSubmit
   } = props;
 
   return <form className="uk-form uk-form-stacked" onSubmit={onSubmit}>
-    <h3>Sign In</h3>
+    <h3>{heading}</h3>
     <div className="uk-form-row">
       <label className="uk-form-label" >Username</label>
       <div className="uk-form-controls">

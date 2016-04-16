@@ -31,7 +31,11 @@ export default class Signup extends React.Component  {
   render () {
     const { handleSubmit } = this.props;
 
-    return <AuthForm onSubmit={handleSubmit(this.onSubmit.bind(this))} {...this.props}/>;
+    return <AuthForm
+      onSubmit={handleSubmit(this.onSubmit.bind(this))}
+      {...this.props}
+      heading='Sing up'
+      />;
   }
 }
 

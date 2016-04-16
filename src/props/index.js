@@ -12,6 +12,7 @@ export const propTypes = {
 	getStorage    : React.PropTypes.func,
 	isLoggedIn    : React.PropTypes.bool,
   loggedIn      : React.PropTypes.func,
+	heading				: React.PropTypes.string,
   handleSubmit  : React.PropTypes.func,
   onSubmit      : React.PropTypes.func,
   register      : React.PropTypes.func,
