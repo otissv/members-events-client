@@ -10,7 +10,7 @@ import { propTypes, mapStateToProps } from '../../helpers';
 import Users from '../../components/users/list-users.jsx';
 
 
-class UserContainer extends React.Component{
+class UsersContainer extends React.Component{
   componentWillMount () {
     const {
       getUsers,
@@ -30,6 +30,6 @@ class UserContainer extends React.Component{
   }
 }
 
-UserContainer.propTypes = propTypes;
+UsersContainer.propTypes = propTypes;
 
-export default connect(mapStateToProps, actions)(UserContainer);
+export default connect(mapStateToProps, actions)(UsersContainer);

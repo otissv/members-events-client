@@ -2,22 +2,35 @@
 
 
 import { propTypes } from '../../helpers';
+import { Link } from 'react-router';
+
 
 class Users extends React.Component {
+  constructor (props) {
+    super(props);
 
-  // componentWillReceiveProps (nextProps, nextState) {
-  //   return deepEqual(nextProps.usersAll, this.props.usersAll);
-  // }
+    this.handleSetUser =  this.handleSetUser.bind(this);
+  }
+
+
+  handleSetUser (e) {
+    const userId = e.target.dataset.userid;
+
+    this.props.selectUser(userId);
+  }
+
 
   render () {
     const items = this.props.usersAll.map(item => {
-     return <li>
-      <ul>
-        <li>ID: {item._id}</li>
-        <li>Roles: {item.roles}</li>
-        <li>Username: {item.username}</li>
-      </ul>
-    </li>;
+      return <li key={item._id}>
+        <Link
+          data-userId={item._id}
+          onClick={this.handleSetUser}
+          to={`/users/:userId`}
+        >
+          {item.username}
+        </Link>
+      </li>;
     });
 
     return <div>

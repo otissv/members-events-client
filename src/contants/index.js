@@ -17,12 +17,14 @@ export const SIGNOUT = '/signout';
 export const SIGNUP = '/signup';
 export const SEVICES = '/sevices';
 export const USERS= '/users';
+export const USER = '/users/:userId';
 
 // Application types
 export const DELETE_STORAGE = 'DELETE_STORAGE';
 export const GET_STORAGE = 'GET_STORAGE';
 export const LOCATION = 'LOCATION';
 export const LOGGEDIN = 'LOGGEDIN';
+export const SELECT_USER = 'SELECTED_USER;'
 export const SET_STORAGE = 'SET_STORAGE';
 
 
