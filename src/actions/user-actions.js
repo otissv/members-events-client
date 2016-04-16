@@ -30,7 +30,7 @@ export function getUsers (_id, token) {
 export function setUsers (users) {
   return {
     type: SET_USERS,
-    payload: arrayToObject(users)
+    payload: arrayToObject(users, '_id')
   };
 }
 

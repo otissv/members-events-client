@@ -5,9 +5,9 @@
 'usen strict';
 
 
-export function arrayToObject (list) {
-  function reducer (obj, user) {
-    obj[`id_${user._id}`] = user;
+export function arrayToObject (list, _id) {
+  function reducer (obj, item) {
+    obj[`id_${item[_id]}`] = item;
     return obj;
   }
 
