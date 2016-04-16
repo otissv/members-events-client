@@ -11,7 +11,7 @@ import {
 
 const INITAL_STATE = {
   selectedUser: null,
-  usersAll: [],
+  usersAll: {},
   user: {}
 };
 
@@ -20,7 +20,7 @@ export default function applicationReducer(state = INITAL_STATE, action) {
 
   switch (action.type) {
     case SET_USERS:
-      return {...state, usersAll: push(state.usersAll)(action.payload)};
+      return {...state, usersAll: ...action.payload};
 
     case SELECT_USER:
       return {...state, selectedUser: action.payload};

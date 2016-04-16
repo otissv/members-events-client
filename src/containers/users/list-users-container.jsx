@@ -21,7 +21,8 @@ class UsersContainer extends React.Component{
 
     getUsers(_id, token).payload
       .then(response => {
-        setUsers(response.data.result);
+        console.log(response.data.result);
+        // setUsers(response.data.result);
       });
   }
 
