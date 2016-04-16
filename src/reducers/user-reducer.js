@@ -3,7 +3,8 @@
 import {
   SELECT_USER,
   SET_USERS,
-  SET_USER
+  SET_USER,
+  UPDATE_USER
 } from '../contants/';
 
 const INITAL_STATE = {
@@ -21,6 +22,9 @@ export default function applicationReducer(state = INITAL_STATE, action) {
       return {...state, selectedUser: action.payload};
 
     case SET_USER:
+      return {...state, user: action.payload};
+
+    case UPDATE_USER:
       return {...state, user: action.payload};
 
     default:

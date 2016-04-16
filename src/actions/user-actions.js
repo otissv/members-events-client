@@ -9,13 +9,24 @@ import { query, arrayToObject } from '../helpers';
 
 import {
   API_URL,
+  DELETE_USER,
   GET_USER,
   GET_USERS,
   SELECT_USER,
   SET_USER,
   SET_USERS,
-  DELETE_USER
+  UPDATE_USER
 } from '../contants';
+
+
+export function deleteUsers (_id, token, user) {
+  const request = axios.delete(`${API_URL}users/${user}/${query(_id, token)}`);
+
+  return {
+    type: DELETE_USER,
+    payload: request
+  };
+}
 
 
 export function getUsers (_id, token) {
@@ -61,11 +72,11 @@ export function setUser (user) {
 }
 
 
-export function deleteUsers (_id, token, user) {
-  const request = axios.delete(`${API_URL}users/${user}/${query(_id, token)}`);
+export function updateUser (_id, token, user, data) {
+  const request = axios.put(`${API_URL}users/${user}/${query(_id, token)}`, data);
 
   return {
-    type: DELETE_USER,
+    type: UPDATE_USER,
     payload: request
   };
 }

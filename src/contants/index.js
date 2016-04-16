@@ -18,6 +18,7 @@ export const SIGNUP = '/signup';
 export const SEVICES = '/sevices';
 export const USERS= '/users';
 export const USER = '/users/:userId';
+export const USER_EDIT = '/users/edit/:userId';
 
 // Application types
 export const DELETE_STORAGE = 'DELETE_STORAGE';
@@ -42,3 +43,4 @@ export const GET_USER = 'GET_USER';
 export const DELETE_USER = 'DELETE_USER';
 export const SET_USERS = 'SET_USERS';
 export const SET_USER = 'SET_USER';
+export const UPDATE_USER = 'UPDATE_USER';
