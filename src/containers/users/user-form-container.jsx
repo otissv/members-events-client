@@ -17,6 +17,10 @@ export default function UserForm (ComposedClass, formName) {
      errors.password = 'Enter a password';
    }
 
+   if (!values.roles) {
+     errors.roles = 'Enter a role';
+   }
+
    return errors;
  }
 
@@ -25,7 +29,7 @@ export default function UserForm (ComposedClass, formName) {
  return reduxForm(
    {
      form: formName,
-     fields: [ 'username', 'password' ],
+     fields: [ 'username', 'password', 'roles' ],
      validate
    },
    mapStateToProps,
