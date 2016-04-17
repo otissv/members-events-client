@@ -14,7 +14,7 @@ class User extends React.Component {
   handleDelete(e) {
     const {
       removeUserFromList,
-      deleteUsers,
+      deleteUser,
       selectUser,
       selectedUser,
       setUser,
@@ -24,7 +24,7 @@ class User extends React.Component {
 
     const { _id, token } = storage;
 
-    deleteUsers(_id, token, selectedUser).payload
+    deleteUser(_id, token, selectedUser).payload
       .then(response => {
         if(!response.data.success) {
           console.log(response.data.message);

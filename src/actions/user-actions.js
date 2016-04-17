@@ -24,7 +24,7 @@ import {
 } from '../contants';
 
 
-export function deleteUsers (_id, token, user) {
+export function deleteUser (_id, token, user) {
   const request = axios.delete(`${API_URL}users/${user}/${query(_id, token)}`);
 
   return {
@@ -63,9 +63,8 @@ export function getUser (_id, token, user) {
 }
 
 
-export function removeUserFromList (usersAll, key) {
-  const userList = arrayToObject(deleteKeyToArray(usersAll, key));
-
+export function removeUserFromList (list, keyName) {
+  const userList = arrayToObject(deleteKeyToArray(list, keyName));
 
   return {
     type: REMOVE_FROM_LIST_USER,
