@@ -14,6 +14,9 @@ import UserForm from './containers/users/user-form-container.jsx';
 
 
 import Home from './components/public/home-public.jsx';
+import About from './components/public/about-public.jsx';
+import Contacts from './components/public/contacts-public.jsx';
+import Services from './components/public/services-public.jsx';
 import Layout from './components/application/layout-application.jsx';
 import MyAccount from './components/settings/my-account-setttings.jsx';
 import Signup from './components/auth/signup-auth.jsx';
@@ -22,7 +25,10 @@ import Signout from './components/auth/signout-auth.jsx';
 import EditUser from './components/users/edit-user.jsx';
 
 import {
+  ABOUT,
+  CONTACTS,
   MY_ACCOUNT,
+  SEVICES,
   SIGNIN,
   SIGNOUT,
   SIGNUP,
@@ -43,10 +49,13 @@ const EditUserRoute = UserForm(EditUser, 'EditUserForm');
 export default (
   <Router path='/' component={Container(Layout)}>
     <IndexRoute component={Home} />
+    <Route path={ABOUT} component={About} />
+    <Route path={CONTACTS} component={Contacts} />
     <Route path={USERS} component={UsersListRoute} />
     <Route path={USER} component={UserRoute}/>
     <Route path={USER_EDIT} component={EditUserRoute}/>
     <Route path={MY_ACCOUNT} component={MyAccoutRoute} />
+    <Route path={SEVICES} component={Services} />
     <Route path={SIGNUP} component={SignupRoute} />
     <Route path={SIGNOUT} component={SignoutRoute} />
     <Route path={SIGNIN} component={SigninRoute} />

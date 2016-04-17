@@ -9,7 +9,7 @@ import { propTypes, mapStateToProps } from '../../props';
 
 import {
   ABOUT,
-  CONTACT,
+  CONTACTS,
   COURSES,
   EVENTS,
   MY_ACCOUNT,
@@ -39,7 +39,7 @@ const NotLoggedInNav = (props) => (
     <li><Link to={ROOT}>Home</Link></li>
     <li><Link to={SEVICES}>Service</Link></li>
     <li><Link to={ABOUT}>About</Link></li>
-    <li><Link to={CONTACT}>Contact</Link></li>
+    <li><Link to={CONTACTS}>Contacts</Link></li>
     <li><Link to={SIGNIN}>Signin</Link></li>
     <li><Link to={SIGNUP}>Signup</Link></li>
   </ul>

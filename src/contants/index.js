@@ -7,15 +7,15 @@ export const API_URL = 'http://localhost:3000/api/v01/';
 
 // routes
 export const ABOUT = '/about';
-export const CONTACT = '/contact';
+export const CONTACTS = '/contacts';
 export const COURSES = 'courses';
 export const EVENTS = '/events';
 export const MY_ACCOUNT = 'my-account';
 export const ROOT = '/';
+export const SEVICES = '/sevices';
 export const SIGNIN = '/signin';
 export const SIGNOUT = '/signout';
 export const SIGNUP = '/signup';
-export const SEVICES = '/sevices';
 export const USERS= '/users';
 export const USER = '/users/:userId';
 export const USER_EDIT = '/users/edit/:userId';
