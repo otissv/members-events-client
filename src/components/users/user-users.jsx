@@ -4,21 +4,54 @@
 import { propTypes } from '../../props';
 import { Link } from 'react-router';
 
-const User = (props) => {
-  const {
-    user,
-    selectedUser
-   } = props;
+class User extends React.Component {
+  constructor (props) {
+    super(props);
 
-  return <div>
-    <h1>User Profile</h1>
-    Name: {props.user.username}
-    Roles {props.user.roles}
-    <Link to='/users/edit/${selectedUser}' >Edit</Link>
+    this.handleDelete = this.handleDelete.bind(this);
+  }
 
-  </div>;
+  handleDelete(e) {
+    const {
+      removeUserFromList,
+      deleteUsers,
+      selectUser,
+      selectedUser,
+      setUser,
+      storage,
+      usersAll
+    } = this.props;
 
-};
+    const { _id, token } = storage;
+
+    deleteUsers(_id, token, selectedUser).payload
+      .then(response => {
+        if(!response.data.success) {
+          console.log(response.data.message);
+        }
+
+        removeUserFromList(usersAll, selectedUser);
+        setUser({});
+        selectUser(null);
+      });
+  }
+
+  render () {
+    const {
+      user,
+      selectedUser
+    } = this.props;
+
+    return <div>
+      <h1>User Profile</h1>
+      Name: {user.username}
+      Roles {user.roles}
+      <Link to={`/users/edit/${selectedUser}`} >Edit</Link>
+      <a href='#' onClick={this.handleDelete}>Detele</a>
+    </div>;
+  }
+
+}
 
 export default User;
 

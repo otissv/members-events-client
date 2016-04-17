@@ -1,6 +1,7 @@
 'use strict';
 
 import {
+  REMOVE_FROM_LIST_USER,
   SELECT_USER,
   SET_USERS,
   SET_USER,
@@ -15,6 +16,9 @@ const INITAL_STATE = {
 
 export default function applicationReducer(state = INITAL_STATE, action) {
   switch (action.type) {
+    case REMOVE_FROM_LIST_USER:
+      return {...state, usersAll: action.payload};
+
     case SET_USERS:
       return {...state, usersAll: action.payload};
 

@@ -5,11 +5,16 @@
 
 'use strict';
 import axios from 'axios';
-import { query, arrayToObject } from '../helpers';
+import {
+  arrayToObject,
+  deleteKeyToArray,
+  query
+} from '../helpers';
 
 import {
   API_URL,
   DELETE_USER,
+  REMOVE_FROM_LIST_USER,
   GET_USER,
   GET_USERS,
   SELECT_USER,
@@ -39,9 +44,11 @@ export function getUsers (_id, token) {
 }
 
 export function setUsers (users) {
+  const usersList = arrayToObject(users);
+
   return {
     type: SET_USERS,
-    payload: arrayToObject(users, '_id')
+    payload: usersList('_id', 'user_')
   };
 }
 
@@ -52,6 +59,17 @@ export function getUser (_id, token, user) {
   return {
     type: GET_USER,
     payload: request
+  };
+}
+
+
+export function removeUserFromList (usersAll, key) {
+  const userList = arrayToObject(deleteKeyToArray(usersAll, key));
+
+
+  return {
+    type: REMOVE_FROM_LIST_USER,
+    payload: userList('_id', 'user_')
   };
 }
 

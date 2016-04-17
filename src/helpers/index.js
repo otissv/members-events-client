@@ -5,15 +5,21 @@
 'usen strict';
 
 
-export function arrayToObject (list, _id) {
-  function reducer (obj, item) {
-    obj[`id_${item[_id]}`] = item;
-    return obj;
-  }
+export function arrayToObject (list) {
+  return function (key, prefix) {
+    function reducer (obj, item) {
+      if (item == null) {
+        return obj;
 
-  return list.reduce(reducer, {});
+      } else {
+        obj[`${prefix}${item[key]}`] = item;
+        return obj;
+      }
+    }
+
+    return list.reduce(reducer, {});
+  };
 }
-
 
 export function query (_id, token) {
   return `?_id=${_id}&token=${token}`;
@@ -22,4 +28,12 @@ export function query (_id, token) {
 
 export function objectToArray (obj) {
   return Object.keys(obj).map(key => obj[key]);
+}
+
+export function deleteKeyToArray (obj, keyToDelete) {
+  return Object.keys(obj).map(key => {
+     if (obj[key]._id !== keyToDelete) {
+       return obj[key];
+     }
+  });
 }
