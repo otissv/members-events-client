@@ -9,16 +9,25 @@ export default function UserForm (ComposedClass, formName) {
  function validate (values) {
    const errors = {};
 
-   if (!values.username) {
-     errors.username = 'Enter a username';
+
+   if (!values.email) {
+     errors.email = 'Enter a email address';
    }
 
-   if (!values.password) {
-     errors.password = 'Enter a password';
+   if (!values.firstName) {
+     errors.firstName = 'Enter a first name';
+   }
+
+   if (!values.lastName) {
+     errors.lastName = 'Enter last name';
    }
 
    if (!values.roles) {
      errors.roles = 'Enter a role';
+   }
+
+   if (!values.username) {
+     errors.username = 'Enter a username';
    }
 
    return errors;
@@ -29,7 +38,19 @@ export default function UserForm (ComposedClass, formName) {
  return reduxForm(
    {
      form: formName,
-     fields: [ 'username', 'password', 'roles' ],
+     fields: [
+       'address.address1',
+       'address.address2',
+       'address.city',
+       'address.state',
+       'address.postcode',
+       'email',
+       'password',
+       'firstName',
+       'lastName',
+       'roles',
+       'username'
+     ],
      validate
    },
    mapStateToProps,

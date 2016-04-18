@@ -37,15 +37,23 @@ class User extends React.Component {
   }
 
   render () {
-    const {
-      user,
-      selectedUser
-    } = this.props;
+    const { user, selectedUser } = this.props;
 
     return <div>
       <h1>User Profile</h1>
-      Name: {user.username}
-      Roles {user.roles}
+      Name: {user.username}<br />
+      First Name: {user.firstName}<br />
+      Last Name: {user.LastName}<br />
+      Email: {user.email}<br />
+      Roles: {user.roles}<br />
+
+      Adddres1: {user.address ? user.address.address1 : ''} <br />
+      Adddres2: {user.address ? user.address.address2: ''}<br />
+      City: {user.address ? user.address.city : ''}<br />
+      State: {user.address ? user.address.state : ''}<br />
+      Postcode: {user.address ? user.address.postcode : ''}<br />
+
+
       <Link to={`/users/edit/${selectedUser}`} >Edit</Link>
       <a href='#' onClick={this.handleDelete}>Detele</a>
     </div>;

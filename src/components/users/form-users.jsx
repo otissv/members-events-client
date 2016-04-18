@@ -5,6 +5,7 @@
 
 import { Link } from 'react-router';
 import { propTypes } from '../../props';
+import Address from '../shared/address-shared.jsx';
 
 
 class UserForm extends React.Component {
@@ -16,16 +17,25 @@ class UserForm extends React.Component {
 
   render () {
     const {
-      fields: { username, password, roles },
+      fields: {
+        ...address,
+        email,
+        password,
+        firstName,
+        lastName,
+        roles,
+        username
+      },
       heading,
       selectedUser,
       onChange,
       onSubmit
     } = this.props;
 
-    // console.log(roles);
+
     return <form className="uk-form uk-form-stacked" onSubmit={onSubmit}>
       <h3>{heading}</h3>
+
       <div className="uk-form-row">
         <label className="uk-form-label" >Username</label>
         <div className="uk-form-controls">
@@ -35,25 +45,55 @@ class UserForm extends React.Component {
           />
         </div>
 
-        <div className='text-help'>
+        <div className='uk-text-danger'>
         {username.touched ? username.error : ''}
         </div>
       </div>
 
+
       <div className="uk-form-row">
-        <label className="uk-form-label" >password</label>
+        <label className="uk-form-label" >Email</label>
         <div className="uk-form-controls">
-          <input type='password'
-            className={`form-group ${password.touched && password.invalid ? 'uk-form-danger' : ''}`}
-            {...password}
+          <input type='email'
+            className={`form-group ${email.touched && email.invalid ? 'uk-form-danger' : ''}`}
+            {...email}
           />
         </div>
 
-        <div className='text-help'>
-        {password.touched ? password.error : ''}
+        <div className='uk-text-danger'>
+        {email.touched ? email.error : ''}
         </div>
       </div>
 
+      <div className="uk-form-row">
+        <label className="uk-form-label" >First Name</label>
+        <div className="uk-form-controls">
+          <input type='text'
+            className={`form-group ${firstName.touched && firstName.invalid ? 'uk-form-danger' : ''}`}
+            {...firstName}
+          />
+        </div>
+
+        <div className='uk-text-danger'>
+        {firstName.touched ? firstName.error : ''}
+        </div>
+      </div>
+
+      <div className="uk-form-row">
+        <label className="uk-form-label" >Last Name</label>
+        <div className="uk-form-controls">
+          <input type='text'
+            className={`form-group ${lastName.touched && lastName.invalid ? 'uk-form-danger' : ''}`}
+            {...lastName}
+          />
+        </div>
+
+        <div className='uk-text-danger'>
+        {lastName.touched ? lastName.error : ''}
+        </div>
+      </div>
+
+      <Address {...address} />
 
       <div className="uk-form-row">
         Roles
@@ -76,12 +116,12 @@ class UserForm extends React.Component {
           </label>
         </div>
 
-        <div className='text-help'>
+        <div className='uk-text-danger'>
         {roles.touched ? roles.error : ''}
         </div>
       </div>
 
-      <button type='submit' className='btn btn-primary'>Sign in</button>
+      <button type='submit' className='btn btn-primary'>Send</button>
 
       <Link to={`/users/${selectedUser}`} className='btn btn-danger'>Cancel</Link>
     </form>;
