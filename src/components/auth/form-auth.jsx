@@ -25,7 +25,7 @@ const AuthForm = (props) => {
         />
       </div>
 
-      <div className='text-help'>
+      <div className='uk-text-danger'>
       {username.touched ? username.error : ''}
       </div>
     </div>
@@ -39,7 +39,7 @@ const AuthForm = (props) => {
         />
       </div>
 
-      <div className='text-help'>
+      <div className='uk-text-danger'>
       {password.touched ? password.error : ''}
       </div>
     </div>
