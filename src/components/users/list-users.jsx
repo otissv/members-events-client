@@ -15,9 +15,9 @@ class Users extends React.Component {
 
 
   handleSetUser (e) {
-    const userId = e.target.dataset.userid;
+    const memId = e.target.dataset.memid;
 
-    this.props.selectUser(userId);
+    this.props.selectUser(memId);
   }
 
 
@@ -25,9 +25,9 @@ class Users extends React.Component {
     const items = objectToArray(this.props.usersAll).map(item => {
       return <li key={item._id}>
         <Link
-          data-userId={item._id}
+          data-memId={item._id}
           onClick={this.handleSetUser}
-          to={`/users/:userId`}
+          to={`/users/${item._id}`}
         >
           {item.username}
         </Link>

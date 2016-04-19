@@ -22,7 +22,7 @@ import MyAccount from './components/settings/my-account-setttings.jsx';
 import Signup from './components/auth/signup-auth.jsx';
 import Signin from './components/auth/signin-auth.jsx';
 import Signout from './components/auth/signout-auth.jsx';
-import EditUser from './components/users/edit-user.jsx';
+import UserEdit from './components/users/edit-user.jsx';
 
 import {
   ABOUT,
@@ -37,13 +37,14 @@ import {
   USER_EDIT
 } from './contants';
 
+
+const MyAccoutRoute = IsAuthuthoried(MyAccount, '/signin');
 const SignupRoute = AuthForm(Signup, 'SignupForm');
 const SignoutRoute = Container(Signout);
 const SigninRoute = AuthForm(Signin, 'SigninForm');
-const MyAccoutRoute = IsAuthuthoried(MyAccount, '/signin');
 const UsersListRoute = IsAuthuthoried(UsersListContainer);
 const UserRoute = IsAuthuthoried(UserContainer);
-const EditUserRoute = UserForm(EditUser, 'EditUserForm');
+const UserEditRoute = UserForm(UserEdit, 'UserEdiotForm');
 
 
 export default (
@@ -51,13 +52,13 @@ export default (
     <IndexRoute component={Home} />
     <Route path={ABOUT} component={About} />
     <Route path={CONTACTS} component={Contacts} />
-    <Route path={USERS} component={UsersListRoute} />
-    <Route path={USER} component={UserRoute}/>
-    <Route path={USER_EDIT} component={EditUserRoute}/>
     <Route path={MY_ACCOUNT} component={MyAccoutRoute} />
     <Route path={SEVICES} component={Services} />
     <Route path={SIGNUP} component={SignupRoute} />
     <Route path={SIGNOUT} component={SignoutRoute} />
     <Route path={SIGNIN} component={SigninRoute} />
+    <Route path={USERS} component={UsersListRoute} />
+    <Route path={USER} component={UserRoute}/>
+    <Route path={USER_EDIT} component={UserEditRoute}/>
   </Router>
 );

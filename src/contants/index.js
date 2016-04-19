@@ -9,7 +9,11 @@ export const API_URL = 'http://localhost:3000/api/v01/';
 export const ABOUT = '/about';
 export const CONTACTS = '/contacts';
 export const COURSES = 'courses';
+export const COURSE = '/courses/:courseId';
+export const COURSE_EDIT = '/courses/edit/:courseId';
 export const EVENTS = '/events';
+export const EVENT = '/events/:eventId';
+export const EVENT_EDIT = '/events/edit/:eventId';
 export const MY_ACCOUNT = 'my-account';
 export const ROOT = '/';
 export const SEVICES = '/sevices';
@@ -38,7 +42,25 @@ export const UNAUTHENTICATE = 'UNAUTHENTICATE';
 // Authentication actions types
 export const REGISTER = 'REGISTER';
 
-// User Action types
+// Event action types
+export const GET_EVENTS = 'GET_EVENTS';
+export const GET_EVENT = 'GET_EVENT';
+export const DELETE_EVENT = 'DELETE_EVENT';
+export const SET_EVENTS = 'SET_EVENTS';
+export const SET_EVENT = 'SET_EVENT';
+export const UPDATE_EVENT = 'UPDATE_EVENT';
+
+
+// Event action types
+export const GET_COURSES = 'GET_COURSES';
+export const GET_COURSE = 'GET_COURSE';
+export const DELETE_COURSE = 'DELETE_COURSE';
+export const SET_COURSES = 'SET_COURSES';
+export const SET_COURSE = 'SET_COURSE';
+export const UPDATE_COURSE = 'UPDATE_COURSE';
+
+
+// User action types
 export const GET_USERS = 'GET_USERS';
 export const GET_USER = 'GET_USER';
 export const DELETE_USER = 'DELETE_USER';

@@ -53,7 +53,7 @@ class User extends React.Component {
       State: {user.address ? user.address.state : ''}<br />
       Postcode: {user.address ? user.address.postcode : ''}<br />
 
-
+      <Link to={`/users`} >Back</Link>
       <Link to={`/users/edit/${selectedUser}`} >Edit</Link>
       <a href='#' onClick={this.handleDelete}>Detele</a>
     </div>;
