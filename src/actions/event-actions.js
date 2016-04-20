@@ -13,8 +13,8 @@ import {
 
 import {
   API_URL,
-  DELETE_EVENT,
-  REMOVE_FROM_LIST_EVENT,
+  REMOVE_EVENT,
+  REMOVE_EVENT_FROM_LIST,
   GET_EVENT,
   GET_EVENTS,
   SELECT_EVENT,
@@ -24,11 +24,11 @@ import {
 } from '../contants';
 
 
-export function deleteEvent (_id, token, event) {
+export function removeEvent (_id, token, event) {
   const request = axios.delete(`${API_URL}events/${event}/${query(_id, token)}`);
 
   return {
-    type: DELETE_EVENT,
+    type: REMOVE_EVENT,
     payload: request
   };
 }
@@ -67,7 +67,7 @@ export function removeEventFromList (list, keyName) {
   const eventList = arrayToObject(deleteKeyToArray(list, keyName));
 
   return {
-    type: REMOVE_FROM_LIST_EVENT,
+    type: REMOVE_EVENT_FROM_LIST,
     payload: eventList('_id', 'event_')
   };
 }

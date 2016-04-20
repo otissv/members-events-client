@@ -1,7 +1,7 @@
 'use strict';
 
 import {
-  REMOVE_FROM_LIST_EVENT,
+  REMOVE_EVENT_FROM_LIST,
   SELECT_EVENT,
   SET_EVENTS,
   SET_EVENT,
@@ -16,7 +16,7 @@ const INITAL_STATE = {
 
 export default function applicationReducer(state = INITAL_STATE, action) {
   switch (action.type) {
-    case REMOVE_FROM_LIST_EVENT:
+    case REMOVE_EVENT_FROM_LIST:
       return {...state, eventsAll: action.payload};
 
     case SET_EVENTS:

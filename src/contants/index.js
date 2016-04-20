@@ -30,7 +30,6 @@ export const DELETE_STORAGE = 'DELETE_STORAGE';
 export const GET_STORAGE = 'GET_STORAGE';
 export const LOCATION = 'LOCATION';
 export const LOGGEDIN = 'LOGGEDIN';
-export const REMOVE_FROM_LIST_USER = 'REMOVE_FROM_LIST_USER';
 export const SET_STORAGE = 'SET_STORAGE';
 
 
@@ -42,19 +41,23 @@ export const UNAUTHENTICATE = 'UNAUTHENTICATE';
 // Authentication actions types
 export const REGISTER = 'REGISTER';
 
+
 // Event action types
 export const GET_EVENTS = 'GET_EVENTS';
 export const GET_EVENT = 'GET_EVENT';
-export const DELETE_EVENT = 'DELETE_EVENT';
+export const REMOVE_EVENT = 'REMOVE_EVENT';
+export const REMOVE_EVENT_FROM_LIST = 'REMOVE_EVENT_FROM_LIST';
 export const SET_EVENTS = 'SET_EVENTS';
 export const SET_EVENT = 'SET_EVENT';
 export const UPDATE_EVENT = 'UPDATE_EVENT';
 export const SELECT_EVENT = 'SELECT_EVENT';
 
+
 // Event action types
 export const GET_COURSES = 'GET_COURSES';
 export const GET_COURSE = 'GET_COURSE';
 export const DELETE_COURSE = 'DELETE_COURSE';
+export const REMOVE_COURSE_FROM_LIST = 'REMOVE_COURSE_FROM_LIST';
 export const SET_COURSES = 'SET_COURSES';
 export const SET_COURSE = 'SET_COURSE';
 export const UPDATE_COURSE = 'UPDATE_COURSE';
@@ -63,7 +66,8 @@ export const UPDATE_COURSE = 'UPDATE_COURSE';
 // User action types
 export const GET_USERS = 'GET_USERS';
 export const GET_USER = 'GET_USER';
-export const DELETE_USER = 'DELETE_USER';
+export const REMOVE_USER = 'REMOVE_USER';
+export const REMOVE_USER_FROM_LIST = 'REMOVE_USER_FROM_LIST';
 export const SET_USERS = 'SET_USERS';
 export const SET_USER = 'SET_USER';
 export const UPDATE_USER = 'UPDATE_USER';

@@ -13,8 +13,8 @@ import {
 
 import {
   API_URL,
-  DELETE_USER,
-  REMOVE_FROM_LIST_USER,
+  REMOVE_USER,
+  REMOVE_USER_FROM_LIST,
   GET_USER,
   GET_USERS,
   SELECT_USER,
@@ -24,11 +24,11 @@ import {
 } from '../contants';
 
 
-export function deleteUser (_id, token, user) {
+export function removeUser (_id, token, user) {
   const request = axios.delete(`${API_URL}users/${user}/${query(_id, token)}`);
 
   return {
-    type: DELETE_USER,
+    type: REMOVE_USER,
     payload: request
   };
 }
@@ -67,7 +67,7 @@ export function removeUserFromList (list, keyName) {
   const userList = arrayToObject(deleteKeyToArray(list, keyName));
 
   return {
-    type: REMOVE_FROM_LIST_USER,
+    type: REMOVE_USER_FROM_LIST,
     payload: userList('_id', 'user_')
   };
 }

@@ -8,6 +8,7 @@ import {
 
 import { propTypes } from '../../props';
 import { Link } from 'react-router';
+import deleteEvent from './delete-events';
 
 class Event extends React.Component {
   constructor (props) {
@@ -17,30 +18,8 @@ class Event extends React.Component {
   }
 
   handleDelete(e) {
-    const {
-      removeEventFromList,
-      deleteEvent,
-      selectEvent,
-      eventSelected,
-      setEvent,
-      storage,
-      redirectTo,
-      eventsAll
-    } = this.props;
-
-    const { _id, token } = storage;
-
-    deleteEvent(_id, token, eventSelected).payload
-      .then(response => {
-        // if(!response.data.success) {
-        //   console.log(response.data.message);
-        // }
-        // console.log(response.data.success);
-        // removeEventFromList(eventsAll, eventSelected);
-        // setEvent({});
-        // selectEvent(null);
-        // redirectTo(EVENTS_ROUTE);
-      });
+    e.preventDefault();
+    deleteEvent(this.props);
   }
 
   render () {

@@ -19,14 +19,14 @@ import UserForm from './containers/users/user-form-container.jsx';
 import Home from './components/public/home-public.jsx';
 import About from './components/public/about-public.jsx';
 import Contacts from './components/public/contacts-public.jsx';
-import EventEdit from './components/events/edit-event.jsx';
+import EventEdit from './components/events/edit-events.jsx';
 import Services from './components/public/services-public.jsx';
 import Layout from './components/application/layout-application.jsx';
 import MyAccount from './components/settings/my-account-setttings.jsx';
 import Signup from './components/auth/signup-auth.jsx';
 import Signin from './components/auth/signin-auth.jsx';
 import Signout from './components/auth/signout-auth.jsx';
-import UserEdit from './components/users/edit-user.jsx';
+import UserEdit from './components/users/edit-users.jsx';
 
 import {
   ABOUT_ROUTE,

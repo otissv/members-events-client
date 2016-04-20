@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 import actions from '../../actions';
 
 import { propTypes, mapStateToProps } from '../../props';
-import Users from '../../components/users/user-users.jsx';
+import Users from '../../components/users/view-users.jsx';
 
 
 class UserContainer extends React.Component{

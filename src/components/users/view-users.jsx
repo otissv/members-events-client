@@ -8,6 +8,8 @@ import {
 
 import { propTypes } from '../../props';
 import { Link } from 'react-router';
+import deleteUser from './delete-users';
+
 
 class User extends React.Component {
   constructor (props) {
@@ -17,28 +19,7 @@ class User extends React.Component {
   }
 
   handleDelete(e) {
-    const {
-      removeUserFromList,
-      deleteUser,
-      selectUser,
-      selectedUser,
-      setUser,
-      storage,
-      usersAll
-    } = this.props;
-
-    const { _id, token } = storage;
-
-    deleteUser(_id, token, selectedUser).payload
-      .then(response => {
-        if(!response.data.success) {
-          console.log(response.data.message);
-        }
-
-        removeUserFromList(usersAll, selectedUser);
-        setUser({});
-        selectUser(null);
-      });
+    deleteUser(this.props);
   }
 
   render () {
