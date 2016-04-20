@@ -8,40 +8,39 @@ import { Link } from 'react-router';
 import { propTypes, mapStateToProps } from '../../props';
 
 import {
-  ABOUT,
-  CONTACTS,
-  COURSES,
-  EVENTS,
-  MY_ACCOUNT,
-  ROOT,
-  SEVICES,
-  SIGNIN,
-  SIGNOUT,
-  SIGNUP,
-  USERS
+  ABOUT_ROUTE,
+  CONTACTS_ROUTE,
+  COURSES_ROUTE,
+  EVENTS_ROUTE,
+  MY_ACCOUNT_ROUTE,
+  ROOT_ROUTE,
+  SEVICES_ROUTE,
+  SIGNIN_ROUTE,
+  SIGNOUT_ROUTE,
+  SIGNUP_ROUTE,
+  USERS_ROUTE
 } from '../../contants';
 
 
 const LoggedInNav = (props) => (
   <ul className='uk-list'>
-    <li><Link to='/'>Home</Link></li>
-    <li><Link to={MY_ACCOUNT}>Account</Link></li>
-    <li><Link to={USERS}>Users</Link></li>
-    <li><Link to={COURSES}>Courses</Link></li>
-    <li><Link to={EVENTS}>Events</Link></li>
-    <li><Link to={SIGNOUT}>Signout</Link></li>
+    <li><Link to={ROOT_ROUTE}>Home</Link></li>
+    <li><Link to={MY_ACCOUNT_ROUTE}>Account</Link></li>
+    <li><Link to={USERS_ROUTE}>Users</Link></li>
+    <li><Link to={COURSES_ROUTE}>Courses</Link></li>
+    <li><Link to={EVENTS_ROUTE}>Events</Link></li>
+    <li><Link to={SIGNOUT_ROUTE}>Signout</Link></li>
   </ul>
 );
 
 const NotLoggedInNav = (props) => (
   <ul className='uk-list'>
-    <li><Link to={USERS}>Users</Link></li>
-    <li><Link to={ROOT}>Home</Link></li>
-    <li><Link to={SEVICES}>Service</Link></li>
-    <li><Link to={ABOUT}>About</Link></li>
-    <li><Link to={CONTACTS}>Contacts</Link></li>
-    <li><Link to={SIGNIN}>Signin</Link></li>
-    <li><Link to={SIGNUP}>Signup</Link></li>
+    <li><Link to={ROOT_ROUTE}>Home</Link></li>
+    <li><Link to={SEVICES_ROUTE}>Service</Link></li>
+    <li><Link to={ABOUT_ROUTE}>About</Link></li>
+    <li><Link to={CONTACTS_ROUTE}>Contacts</Link></li>
+    <li><Link to={SIGNIN_ROUTE}>Signin</Link></li>
+    <li><Link to={SIGNUP_ROUTE}>Signup</Link></li>
   </ul>
 );
 

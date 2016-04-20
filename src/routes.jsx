@@ -25,16 +25,15 @@ import Signout from './components/auth/signout-auth.jsx';
 import UserEdit from './components/users/edit-user.jsx';
 
 import {
-  ABOUT,
-  CONTACTS,
-  MY_ACCOUNT,
-  SEVICES,
-  SIGNIN,
-  SIGNOUT,
-  SIGNUP,
-  USER,
-  USERS,
-  USER_EDIT
+  ABOUT_ROUTE,
+  CONTACTS_ROUTE,
+  MY_ACCOUNT_ROUTE,
+  SEVICES_ROUTE,
+  SIGNIN_ROUTE,
+  SIGNOUT_ROUTE,
+  SIGNUP_ROUTE,
+  USERS_ROUTE,
+  USER_EDIT_ROUTE
 } from './contants';
 
 
@@ -50,15 +49,15 @@ const UserEditRoute = UserForm(UserEdit, 'UserEdiotForm');
 export default (
   <Router path='/' component={Container(Layout)}>
     <IndexRoute component={Home} />
-    <Route path={ABOUT} component={About} />
-    <Route path={CONTACTS} component={Contacts} />
-    <Route path={MY_ACCOUNT} component={MyAccoutRoute} />
-    <Route path={SEVICES} component={Services} />
-    <Route path={SIGNUP} component={SignupRoute} />
-    <Route path={SIGNOUT} component={SignoutRoute} />
-    <Route path={SIGNIN} component={SigninRoute} />
-    <Route path={USERS} component={UsersListRoute} />
-    <Route path={USER} component={UserRoute}/>
-    <Route path={USER_EDIT} component={UserEditRoute}/>
+    <Route path={ABOUT_ROUTE} component={About} />
+    <Route path={CONTACTS_ROUTE} component={Contacts} />
+    <Route path={MY_ACCOUNT_ROUTE} component={MyAccoutRoute} />
+    <Route path={SEVICES_ROUTE} component={Services} />
+    <Route path={SIGNUP_ROUTE} component={SignupRoute} />
+    <Route path={SIGNOUT_ROUTE} component={SignoutRoute} />
+    <Route path={SIGNIN_ROUTE} component={SigninRoute} />
+    <Route path={USERS_ROUTE} component={UsersListRoute} />
+    <Route path={`${USERS_ROUTE}/:userId`} component={UserRoute}/>
+    <Route path={`${USER_EDIT_ROUTE}/:userId`} component={UserEditRoute}/>
   </Router>
 );

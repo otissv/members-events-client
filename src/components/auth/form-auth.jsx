@@ -6,6 +6,8 @@
 import { Link } from 'react-router';
 import { propTypes } from '../../props';
 
+import { ROOT_ROUTE } from '../../contants';
+
 
 const AuthForm = (props) => {
   const {
@@ -46,7 +48,7 @@ const AuthForm = (props) => {
 
     <button type='submit' className='btn btn-primary'>Sign in</button>
 
-    <Link to='/' className='btn btn-danger'>Cancel</Link>
+    <Link to={ROOT_ROUTE} className='btn btn-danger'>Cancel</Link>
   </form>;
 };
 

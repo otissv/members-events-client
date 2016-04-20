@@ -6,6 +6,9 @@ import { propTypes } from '../../props';
 import { Link } from 'react-router';
 
 
+import { USERS_ROUTE } from '../../contants';
+
+
 class Users extends React.Component {
   constructor (props) {
     super(props);
@@ -27,7 +30,7 @@ class Users extends React.Component {
         <Link
           data-memId={item._id}
           onClick={this.handleSetUser}
-          to={`/users/${item._id}`}
+          to={`${USERS_ROUTE}/${item._id}`}
         >
           {item.username}
         </Link>

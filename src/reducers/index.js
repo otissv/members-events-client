@@ -8,12 +8,13 @@ import { combineReducers } from 'redux';
 import { reducer as formReducer } from 'redux-form';
 import userReducer from './user-reducer';
 import applicationReducer from './application-reducer';
-
+import eventReducer from './event-reducer.js';
 
 const rootReducer = combineReducers({
   application : applicationReducer,
-  users       : userReducer,
-  form        : formReducer
+  form        : formReducer,
+  event       : eventReducer,
+  users       : userReducer  
 });
 
 export default rootReducer;

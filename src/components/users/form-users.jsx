@@ -7,6 +7,7 @@ import { Link } from 'react-router';
 import { propTypes } from '../../props';
 import Address from '../shared/address-shared.jsx';
 
+import { USERS_ROUTE } from '../../contants';
 
 class UserForm extends React.Component {
   componentWillMount() {
@@ -123,7 +124,7 @@ class UserForm extends React.Component {
 
       <button type='submit' className='btn btn-primary'>Send</button>
 
-      <Link to={`/users/${selectedUser}`} className='btn btn-danger'>Cancel</Link>
+      <Link to={`${USERS_ROUTE}/${selectedUser}`} className='btn btn-danger'>Cancel</Link>
     </form>;
   }
 }

@@ -1,6 +1,11 @@
 'use strict';
 
 
+import {
+  USERS_ROUTE,
+  USER_EDIT_ROUTE
+} from '../../contants';
+
 import { propTypes } from '../../props';
 import { Link } from 'react-router';
 
@@ -53,8 +58,8 @@ class User extends React.Component {
       State: {user.address ? user.address.state : ''}<br />
       Postcode: {user.address ? user.address.postcode : ''}<br />
 
-      <Link to={`/users`} >Back</Link>
-      <Link to={`/users/edit/${selectedUser}`} >Edit</Link>
+      <Link to={USERS_ROUTE} >Back</Link>
+      <Link to={`${USER_EDIT_ROUTE}/${selectedUser}`} >Edit</Link>
       <a href='#' onClick={this.handleDelete}>Detele</a>
     </div>;
   }

@@ -27,7 +27,6 @@ export function redirectTo (path) {
   };
 }
 
-
 export function deleteStorage () {
   cookie.empty();
 

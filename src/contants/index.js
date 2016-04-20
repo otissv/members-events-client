@@ -5,26 +5,27 @@
 // API
 export const API_URL = 'http://localhost:3000/api/v01/';
 
-// routes
-export const ABOUT = '/about';
-export const CONTACTS = '/contacts';
-export const COURSES = 'courses';
-export const COURSE = '/courses/:courseId';
-export const COURSE_EDIT = '/courses/edit/:courseId';
-export const EVENTS = '/events';
-export const EVENT = '/events/:eventId';
-export const EVENT_EDIT = '/events/edit/:eventId';
-export const MY_ACCOUNT = 'my-account';
-export const ROOT = '/';
-export const SEVICES = '/sevices';
-export const SIGNIN = '/signin';
-export const SIGNOUT = '/signout';
-export const SIGNUP = '/signup';
-export const USERS= '/users';
-export const USER = '/users/:userId';
-export const USER_EDIT = '/users/edit/:userId';
 
-// Application types
+// Routes
+export const ABOUT_ROUTE = '/about';
+export const CONTACTS_ROUTE = '/contacts';
+export const COURSES_ROUTE = 'courses';
+export const COURSE_ROUTE = '/courses/:courseId';
+export const COURSE_EDIT_ROUTE = '/courses/edit/:courseId';
+export const EVENTS_ROUTE = '/events';
+export const EVENT_ROUTE = '/events/:eventId';
+export const EVENT_EDIT_ROUTE = '/events/edit/:eventId';
+export const MY_ACCOUNT_ROUTE = 'my-account';
+export const ROOT_ROUTE = '/';
+export const SEVICES_ROUTE = '/sevices';
+export const SIGNIN_ROUTE = '/signin';
+export const SIGNOUT_ROUTE = '/signout';
+export const SIGNUP_ROUTE = '/signup';
+export const USERS_ROUTE= '/users';
+export const USER_EDIT_ROUTE = '/users/edit';
+
+
+// Application action types
 export const DELETE_STORAGE = 'DELETE_STORAGE';
 export const GET_STORAGE = 'GET_STORAGE';
 export const LOCATION = 'LOCATION';
