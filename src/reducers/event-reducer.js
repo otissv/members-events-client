@@ -9,9 +9,9 @@ import {
 } from '../contants/';
 
 const INITAL_STATE = {
-  selectedUser: null,
-  eventsAll: {},
-  event: {}
+  eventSelected: null,
+  eventsAll    : {},
+  event        : {}
 };
 
 export default function applicationReducer(state = INITAL_STATE, action) {
@@ -23,7 +23,7 @@ export default function applicationReducer(state = INITAL_STATE, action) {
       return {...state, eventsAll: action.payload};
 
     case SELECT_EVENT:
-      return {...state, selectedUser: action.payload};
+      return {...state, eventSelected: action.payload};
 
     case SET_EVENT:
       return {...state, event: action.payload};

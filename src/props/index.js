@@ -23,10 +23,15 @@ export const propTypes = {
 
 export function mapStateToProps (state) {
   return {
-    isLoggedIn  : state.application.isLoggedIn,
-		selectedUser: state.users.selectedUser,
-    storage     : state.application.storage,
-		user        : state.users.user,
-		usersAll    : state.users.usersAll
+		isLoggedIn   : state.application.isLoggedIn,
+    storage      : state.application.storage,
+
+		event        : state.events.event,
+		eventsAll    : state.events.eventsAll,
+		eventSelected: state.events.eventSelected,
+
+		user         : state.users.user,
+		usersAll     : state.users.usersAll,
+		selectedUser : state.users.selectedUser
   };
 }

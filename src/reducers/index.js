@@ -13,8 +13,8 @@ import eventReducer from './event-reducer.js';
 const rootReducer = combineReducers({
   application : applicationReducer,
   form        : formReducer,
-  event       : eventReducer,
-  users       : userReducer  
+  events       : eventReducer,
+  users       : userReducer
 });
 
 export default rootReducer;

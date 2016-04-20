@@ -13,8 +13,8 @@ export const COURSES_ROUTE = 'courses';
 export const COURSE_ROUTE = '/courses/:courseId';
 export const COURSE_EDIT_ROUTE = '/courses/edit/:courseId';
 export const EVENTS_ROUTE = '/events';
-export const EVENT_ROUTE = '/events/:eventId';
-export const EVENT_EDIT_ROUTE = '/events/edit/:eventId';
+export const EVENT_ROUTE = '/events';
+export const EVENT_EDIT_ROUTE = '/events/edit';
 export const MY_ACCOUNT_ROUTE = 'my-account';
 export const ROOT_ROUTE = '/';
 export const SEVICES_ROUTE = '/sevices';
@@ -31,7 +31,6 @@ export const GET_STORAGE = 'GET_STORAGE';
 export const LOCATION = 'LOCATION';
 export const LOGGEDIN = 'LOGGEDIN';
 export const REMOVE_FROM_LIST_USER = 'REMOVE_FROM_LIST_USER';
-export const SELECT_USER = 'SELECTED_USER';
 export const SET_STORAGE = 'SET_STORAGE';
 
 
@@ -50,7 +49,7 @@ export const DELETE_EVENT = 'DELETE_EVENT';
 export const SET_EVENTS = 'SET_EVENTS';
 export const SET_EVENT = 'SET_EVENT';
 export const UPDATE_EVENT = 'UPDATE_EVENT';
-
+export const SELECT_EVENT = 'SELECT_EVENT';
 
 // Event action types
 export const GET_COURSES = 'GET_COURSES';
@@ -68,3 +67,4 @@ export const DELETE_USER = 'DELETE_USER';
 export const SET_USERS = 'SET_USERS';
 export const SET_USER = 'SET_USER';
 export const UPDATE_USER = 'UPDATE_USER';
+export const SELECT_USER = 'SELECTED_USER';
