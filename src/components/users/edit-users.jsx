@@ -1,7 +1,7 @@
 /*
-* Authorisation sign in
+* Edit users component
  */
-'use strict';
+
 
 import AuthForm from './form-users.jsx';
 import { propTypes } from '../../props';

@@ -1,4 +1,6 @@
-'use strict';
+/*
+* Event reducer
+*/
 
 import {
   REMOVE_EVENT_FROM_LIST,

@@ -1,9 +1,9 @@
 /*
-* Authorisation sign out
+* Authorisation sign out component
  */
 
 
-'use strict';
+
 
 import { propTypes } from '../.././props';
 

@@ -1,8 +1,8 @@
 /*
-* Authorisation contaier
+* Authorisation container
  */
 
-'use strict';
+
 import { connect } from 'react-redux';
 import actions from '../../actions';
 

@@ -1,4 +1,6 @@
-'use strict';
+/*
+* List Users component
+*/
 
 
 import { objectToArray } from '../../helpers';

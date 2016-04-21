@@ -1,7 +1,6 @@
 /*
-* Application notifications
+* Application alert component
  */
-'use strict';
 
 import UiKitAlert from 'react-uikit-alert';
 

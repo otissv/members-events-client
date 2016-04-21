@@ -1,4 +1,6 @@
-'use strict';
+/*
+* Contacts Page component
+*/
 
 import { propTypes } from '../../props';
 

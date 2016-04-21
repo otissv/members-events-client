@@ -1,5 +1,6 @@
-'use strict';
-
+/*
+* Account Settings component
+*/
 import { propTypes } from '../../props';
 
 

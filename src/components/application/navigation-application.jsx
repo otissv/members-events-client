@@ -1,8 +1,8 @@
 /*
-* Not Logged in to application
+* Navigation component
  */
 
-'use strict';
+
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
 import { propTypes, mapStateToProps } from '../../props';

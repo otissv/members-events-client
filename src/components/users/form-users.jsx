@@ -1,5 +1,5 @@
 /*
-* Authorisation form
+* User form component
  */
 'use strcit';
 

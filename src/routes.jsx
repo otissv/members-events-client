@@ -1,7 +1,7 @@
 /*
  * Aplication routes
  */
-'use strict';
+
 
 import { Router, IndexRoute, Route } from 'react-router';
 

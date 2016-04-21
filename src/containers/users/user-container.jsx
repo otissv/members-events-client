@@ -1,5 +1,5 @@
 /*
-* Authorisation contaier
+* User container
  */
 
 'use strict';

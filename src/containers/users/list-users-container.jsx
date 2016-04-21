@@ -1,8 +1,8 @@
 /*
-* Authorisation contaier
+* LIst Usuers contaier
  */
 
-'use strict';
+
 import { connect } from 'react-redux';
 import actions from '../../actions';
 

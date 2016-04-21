@@ -1,5 +1,6 @@
-'use strict';
-
+/*
+* View users component
+*/
 
 import {
   USERS_ROUTE,

@@ -2,7 +2,6 @@
 * Layout component
  */
 
-'use strict';
 import { propTypes } from '../../props';
 
 import Navigation from './navigation-application.jsx';

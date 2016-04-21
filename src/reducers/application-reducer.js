@@ -1,3 +1,7 @@
+/*
+* Application reduer
+*/
+
 import {
   LOGGEDIN,
   DELETE_STORAGE,

@@ -1,7 +1,6 @@
 /*
-* Rdux dev tools
+* Rdux dev tools component
  */
-'use strict';
 
 import { createDevTools } from 'redux-devtools';
 import LogMonitor from 'redux-devtools-log-monitor';

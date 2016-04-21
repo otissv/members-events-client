@@ -1,7 +1,7 @@
 /*
-* Authorisation form
+* Event form component
  */
-'use strcit';
+
 
 import { Link } from 'react-router';
 import { propTypes } from '../../props';

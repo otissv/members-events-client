@@ -1,3 +1,7 @@
+/*
+* Delete Users component
+*/
+
 import { USERS_ROUTE } from '../../contants';
 
 

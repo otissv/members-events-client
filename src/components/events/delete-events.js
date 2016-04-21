@@ -1,3 +1,6 @@
+/*
+* Delete event component
+*/
 
 import { EVENTS_ROUTE } from '../../contants';
 

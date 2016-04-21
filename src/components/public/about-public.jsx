@@ -1,4 +1,7 @@
-'use strict';
+/*
+* About page component
+*/
+
 
 import { propTypes } from '../../props';
 

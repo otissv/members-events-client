@@ -1,5 +1,5 @@
 /*
-* Aplication reducer
+* Combined reducers
 */
 
 'use strict';

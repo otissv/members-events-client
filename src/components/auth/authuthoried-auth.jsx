@@ -2,7 +2,7 @@
 * Authorisation component
  */
 
-'use strict';
+
 import { propTypes } from '../../props';
 
 

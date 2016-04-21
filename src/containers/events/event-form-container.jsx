@@ -1,4 +1,6 @@
-'use strict';
+/*
+* Event form container
+ */
 
 import { reduxForm } from 'redux-form';
 import actions from '../../actions';

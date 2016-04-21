@@ -1,4 +1,6 @@
-'use strict';
+/*
+* Address Component
+*/
 
 import { propTypes } from '../../props';
 

@@ -2,7 +2,6 @@
 * Component props
 */
 
-'usen strict';
 
 export const propTypes = {
 	authenticate  : React.PropTypes.func,

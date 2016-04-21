@@ -1,5 +1,6 @@
-'use strict';
-
+/*
+* View event component
+*/
 
 import {
   EVENTS_ROUTE,

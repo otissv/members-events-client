@@ -2,8 +2,6 @@
 * Helper methods
 */
 
-'usen strict';
-
 
 export function arrayToObject (list) {
   return function (key, prefix) {

@@ -1,4 +1,6 @@
-'use strict';
+/*
+* List events component
+*/
 
 
 import { objectToArray } from '../../helpers';

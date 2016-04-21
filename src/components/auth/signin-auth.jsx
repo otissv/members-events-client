@@ -1,7 +1,7 @@
 /*
-* Authorisation sign in
+* Authorisation sign in component
  */
-'use strict';
+
 
 import AuthForm from './form-auth.jsx';
 import { propTypes } from '../../props';

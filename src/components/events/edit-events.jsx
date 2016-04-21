@@ -1,7 +1,7 @@
 /*
-* Authorisation sign in
+* Edit Event component
  */
-'use strict';
+
 
 import AuthForm from './form-events.jsx';
 import { propTypes } from '../../props';

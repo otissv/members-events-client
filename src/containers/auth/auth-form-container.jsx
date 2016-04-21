@@ -1,4 +1,6 @@
- 'use strict';
+/*
+* Authorise form container
+*/
 
 import { reduxForm } from 'redux-form';
 import actions from '../../actions';

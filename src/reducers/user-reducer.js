@@ -1,4 +1,6 @@
-'use strict';
+/*
+* User reducer
+*/
 
 import {
   REMOVE_USER_FROM_LIST,

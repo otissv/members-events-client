@@ -1,6 +1,8 @@
 /*
 * Application entry point
  */
+
+ 
 import { Router, browserHistory } from 'react-router';
 import { Provider } from 'react-redux';
 import { compose, createStore, applyMiddleware } from 'redux';
