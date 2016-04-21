@@ -6,7 +6,7 @@
 import { Link } from 'react-router';
 import { propTypes } from '../../props';
 import Address from '../shared/address-shared.jsx';
-
+import FormInput from '../form-input-component.jsx';
 import { USERS_ROUTE } from '../../contants';
 
 class UserForm extends React.Component {
@@ -37,62 +37,30 @@ class UserForm extends React.Component {
     return <form className="uk-form uk-form-stacked" onSubmit={onSubmit}>
       <h3>{heading}</h3>
 
-      <div className="uk-form-row">
-        <label className="uk-form-label" >Username</label>
-        <div className="uk-form-controls">
-          <input type='text'
-            className={`form-group ${username.touched && username.invalid ? 'uk-form-danger' : ''}`}
-            {...username}
-          />
-        </div>
+      <FormInput
+        field={username}
+        label='Username'
+        type='text'
+      />
 
-        <div className='uk-text-danger'>
-        {username.touched ? username.error : ''}
-        </div>
-      </div>
+      <FormInput
+        field={email}
+        label='Email'
+        type='email'
+      />
 
+      <FormInput
+        field={firstName}
+        label='First Name'
+        type='text'
+      />
 
-      <div className="uk-form-row">
-        <label className="uk-form-label" >Email</label>
-        <div className="uk-form-controls">
-          <input type='email'
-            className={`form-group ${email.touched && email.invalid ? 'uk-form-danger' : ''}`}
-            {...email}
-          />
-        </div>
+      <FormInput
+        field={lastName}
+        label='Last Name'
+        type='text'
+      />
 
-        <div className='uk-text-danger'>
-        {email.touched ? email.error : ''}
-        </div>
-      </div>
-
-      <div className="uk-form-row">
-        <label className="uk-form-label" >First Name</label>
-        <div className="uk-form-controls">
-          <input type='text'
-            className={`form-group ${firstName.touched && firstName.invalid ? 'uk-form-danger' : ''}`}
-            {...firstName}
-          />
-        </div>
-
-        <div className='uk-text-danger'>
-        {firstName.touched ? firstName.error : ''}
-        </div>
-      </div>
-
-      <div className="uk-form-row">
-        <label className="uk-form-label" >Last Name</label>
-        <div className="uk-form-controls">
-          <input type='text'
-            className={`form-group ${lastName.touched && lastName.invalid ? 'uk-form-danger' : ''}`}
-            {...lastName}
-          />
-        </div>
-
-        <div className='uk-text-danger'>
-        {lastName.touched ? lastName.error : ''}
-        </div>
-      </div>
 
       <Address {...address} />
 

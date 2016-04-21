@@ -7,6 +7,7 @@ import { Link } from 'react-router';
 import { propTypes } from '../../props';
 
 import { ROOT_ROUTE } from '../../contants';
+import FormInput from '../form-input-component.jsx';
 
 
 const AuthForm = (props) => {
@@ -18,33 +19,19 @@ const AuthForm = (props) => {
 
   return <form className="uk-form uk-form-stacked" onSubmit={onSubmit}>
     <h3>{heading}</h3>
-    <div className="uk-form-row">
-      <label className="uk-form-label" >Username</label>
-      <div className="uk-form-controls">
-        <input type='text'
-          className={`form-group ${username.touched && username.invalid ? 'uk-form-danger' : ''}`}
-          {...username}
-        />
-      </div>
 
-      <div className='uk-text-danger'>
-      {username.touched ? username.error : ''}
-      </div>
-    </div>
 
-    <div className="uk-form-row">
-      <label className="uk-form-label" >password</label>
-      <div className="uk-form-controls">
-        <input type='password'
-          className={`form-group ${password.touched && password.invalid ? 'uk-form-danger' : ''}`}
-          {...password}
-        />
-      </div>
+    <FormInput
+      field={username}
+      label='Username'
+      type='text'
+    />
 
-      <div className='uk-text-danger'>
-      {password.touched ? password.error : ''}
-      </div>
-    </div>
+    <FormInput
+      field={password}
+      label='Password'
+      type='password'
+    />
 
     <button type='submit' className='btn btn-primary'>Sign in</button>
 

@@ -7,6 +7,8 @@ import { Link } from 'react-router';
 import { propTypes } from '../../props';
 import Address from '../shared/address-shared.jsx';
 import { EVENTS_ROUTE } from '../../contants';
+import FormInput from '../form-input-component.jsx';
+
 
 class EventForm extends React.Component {
   componentWillMount() {
@@ -19,6 +21,11 @@ class EventForm extends React.Component {
     const {
       fields: {
         ...address,
+        attended,
+        duration,
+        enrolled,
+        start,
+        satuts,
         title
       },
       heading,
@@ -31,19 +38,39 @@ class EventForm extends React.Component {
     return <form className="uk-form uk-form-stacked" onSubmit={onSubmit}>
       <h3>{heading}</h3>
 
-      <div className="uk-form-row">
-        <label className="uk-form-label" >Eventname</label>
-        <div className="uk-form-controls">
-          <input type='text'
-            className={`form-group ${title.touched && title.invalid ? 'uk-form-danger' : ''}`}
-            {...title}
-          />
-        </div>
+      <FormInput
+        field={title}
+        label='Event title'
+        type='text'
+      />
 
-        <div className='uk-text-danger'>
-        {title.touched ? title.error : ''}
-        </div>
-      </div>
+      <FormInput
+        field={start}
+        label='start'
+        type='text'
+      />
+
+      <FormInput
+        field={duration}
+        label='Duration'
+        type='text'
+      />
+
+      <FormInput
+        field={enrolled}
+        label='Enrolled'
+        type='text'
+      />
+
+
+      <FormInput
+        field={status}
+        label='Status'
+        type='text'
+      />
+
+
+      <Address {...address} />
 
 
 
