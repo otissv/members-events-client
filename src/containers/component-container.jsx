@@ -5,7 +5,7 @@
 
 import { connect } from 'react-redux';
 import actions from '../actions';
-import { mapStateToProps } from '../props';
+import { mapStateToProps } from '../reducers';
 
 export default function(ComposedClass, redirect) {
 

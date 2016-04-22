@@ -2,7 +2,6 @@
 * Address Component
 */
 
-import { propTypes } from '../../props';
 import FormInput from '../form-input-component.jsx';
 
 const Address = (props) => {

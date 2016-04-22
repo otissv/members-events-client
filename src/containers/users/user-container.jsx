@@ -5,8 +5,7 @@
 'use strict';
 import { connect } from 'react-redux';
 import actions from '../../actions';
-
-import { propTypes, mapStateToProps } from '../../props';
+import { mapStateToProps } from '../../reducers';
 import Users from '../../components/users/view-users.jsx';
 
 

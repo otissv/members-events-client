@@ -4,7 +4,7 @@
 
 import { reduxForm } from 'redux-form';
 import actions from '../../actions';
-import { mapStateToProps } from '../../props';
+import { mapStateToProps } from '../../reducers';
 
 
 export default function UserForm (ComposedClass, formName) {

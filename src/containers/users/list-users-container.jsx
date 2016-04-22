@@ -5,8 +5,7 @@
 
 import { connect } from 'react-redux';
 import actions from '../../actions';
-
-import { mapStateToProps } from '../../props';
+import { mapStateToProps } from '../../reducers';
 import Users from '../../components/users/list-users.jsx';
 
 

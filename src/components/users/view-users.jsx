@@ -6,8 +6,6 @@ import {
   USERS_ROUTE,
   USER_EDIT_ROUTE
 } from '../../contants';
-
-import { propTypes } from '../../props';
 import { Link } from 'react-router';
 import deleteUser from './delete-users';
 
