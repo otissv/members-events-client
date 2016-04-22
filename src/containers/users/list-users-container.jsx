@@ -33,7 +33,7 @@ class UsersContainer extends React.Component{
 UsersContainer.propTypes = {
   getUsers: React.PropTypes.func.isRequired,
   setUsers: React.PropTypes.func.isRequired,
-  storage : React.PropTypes.func.isRequired
+  storage : React.PropTypes.object.isRequired
 };
 
 export default connect(mapStateToProps, actions)(UsersContainer);

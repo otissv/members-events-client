@@ -8,8 +8,8 @@ import { combineReducers } from 'redux';
 import { reducer as formReducer } from 'redux-form';
 import userReducer from './user-reducer';
 import applicationReducer from './application-reducer';
-import eventReducer from './event-reducer.js';
-
+import eventReducer from './event-reducer';
+import courseReducer from './course-reducer';
 
 export function mapStateToProps (state) {
   return {
@@ -21,6 +21,11 @@ export function mapStateToProps (state) {
 		eventEditor  : state.events.eventEditor,
 		eventSelected: state.events.eventSelected,
 
+    course        : state.courses.course,
+		coursesAll    : state.courses.coursesAll,
+		courseEditor  : state.courses.courseEditor,
+		courseSelected: state.courses.courseSelected,
+
 		user         : state.users.user,
 		usersAll     : state.users.usersAll,
 		selectedUser : state.users.selectedUser
@@ -30,7 +35,8 @@ export function mapStateToProps (state) {
 const rootReducer = combineReducers({
   application : applicationReducer,
   form        : formReducer,
-  events       : eventReducer,
+  events      : eventReducer,
+  courses     : courseReducer,
   users       : userReducer
 });
 

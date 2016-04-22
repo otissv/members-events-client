@@ -33,7 +33,7 @@ class EventsContainer extends React.Component{
 EventsContainer.propTypes = {
   getEvents: React.PropTypes.func.isRequired,
   setEvents: React.PropTypes.func.isRequired,
-  storage  : React.PropTypes.func.isRequired
+  storage  : React.PropTypes.object.isRequired
 };
 
 export default connect(mapStateToProps, actions)(EventsContainer);

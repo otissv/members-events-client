@@ -33,7 +33,7 @@ export default function(ComposedClass, redirect) {
 
   IsAuthuthoried.propTypes = {
     isLoggedIn: React.PropTypes.bool,
-    redirectTo: React.PropTypes.fuc.isRequired
+    redirectTo: React.PropTypes.func.isRequired
   };
 
   return connect(mapStateToProps, actions)(IsAuthuthoried);
