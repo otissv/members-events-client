@@ -4,14 +4,12 @@
 
 
 import { objectToArray } from '../../helpers';
-import { propTypes } from '../../props';
 import { Link } from 'react-router';
-
 
 import { EVENTS_ROUTE } from '../../contants';
 
 
-class Events extends React.Component {
+export default class Events extends React.Component {
   constructor (props) {
     super(props);
 
@@ -47,7 +45,8 @@ class Events extends React.Component {
   }
 }
 
-export default Events;
 
-
-Events.propTypes = propTypes;
+Events.propTypes = {
+  eventsAll: React.PropTypes.object,
+  selectEvent: React.PropTypes.func.isRequired
+};

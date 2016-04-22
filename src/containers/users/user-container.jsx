@@ -31,6 +31,11 @@ class UserContainer extends React.Component{
   }
 }
 
-UserContainer.propTypes = propTypes;
+UserContainer.propTypes = {
+  getUser     : React.PropTypes.func.isRequired,
+  selectedUser: React.PropTypes.string.isRequired,
+  setUser     : React.PropTypes.func.isRequired,
+  storage     : React.PropTypes.object.isRequired
+};
 
 export default connect(mapStateToProps, actions)(UserContainer);

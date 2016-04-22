@@ -5,7 +5,7 @@
 
 import { connect } from 'react-redux';
 import actions from '../actions';
-import { propTypes, mapStateToProps } from '../props';
+import { mapStateToProps } from '../props';
 
 export default function(ComposedClass, redirect) {
 
@@ -14,8 +14,6 @@ export default function(ComposedClass, redirect) {
       return <ComposedClass {...this.props}/>;
     }
   }
-
-  Container.propTypes = propTypes;
 
   return connect(mapStateToProps, actions)(Container);
 }

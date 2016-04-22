@@ -15,6 +15,7 @@ export const propTypes = {
   handleSubmit  : React.PropTypes.func,
   onSubmit      : React.PropTypes.func,
   register      : React.PropTypes.func,
+	redirectTo    : React.PropTypes.func,
   setStorage    : React.PropTypes.func,
   unauthenticate: React.PropTypes.func
 };

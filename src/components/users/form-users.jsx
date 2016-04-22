@@ -4,7 +4,6 @@
 'use strcit';
 
 import { Link } from 'react-router';
-import { propTypes } from '../../props';
 import Address from '../shared/address-shared.jsx';
 import FormInput from '../form-input-component.jsx';
 import { USERS_ROUTE } from '../../contants';
@@ -99,6 +98,14 @@ class UserForm extends React.Component {
 
 
 // Vaidate proptypes
-UserForm.propTypes = propTypes;
+UserForm.propTypes = {
+  user         : React.PropTypes.object.isRequired,
+  fields        : React.PropTypes.object.isRequired,
+  heading       : React.PropTypes.string,
+  initializeForm: React.PropTypes.func.isRequired,
+  selectedUser : React.PropTypes.string,
+  onChange      : React.PropTypes.func.isRequired,
+  onSubmit      : React.PropTypes.func.isRequired
+};
 
 export default UserForm;

@@ -4,7 +4,6 @@
 
 
 import { Link } from 'react-router';
-import { propTypes } from '../../props';
 import Address from '../shared/address-shared.jsx';
 import { EVENTS_ROUTE } from '../../contants';
 import FormInput from '../form-input-component.jsx';
@@ -25,7 +24,7 @@ class EventForm extends React.Component {
         duration,
         enrolled,
         start,
-        satuts,
+        status,
         title
       },
       heading,
@@ -62,6 +61,12 @@ class EventForm extends React.Component {
         type='text'
       />
 
+      <FormInput
+        field={attended}
+        label='Attended'
+        type='text'
+      />
+
 
       <FormInput
         field={status}
@@ -82,8 +87,14 @@ class EventForm extends React.Component {
   }
 }
 
-
-// Vaidate proptypes
-EventForm.propTypes = propTypes;
+EventForm.propTypes = {
+  event         : React.PropTypes.object.isRequired,
+  fields        : React.PropTypes.object.isRequired,
+  heading       : React.PropTypes.string,
+  initializeForm: React.PropTypes.func.isRequired,
+  selectedEvent : React.PropTypes.string,
+  onChange      : React.PropTypes.func.isRequired,
+  onSubmit      : React.PropTypes.func.isRequired
+};
 
 export default EventForm;

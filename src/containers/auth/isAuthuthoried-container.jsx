@@ -6,7 +6,7 @@
 import { connect } from 'react-redux';
 import actions from '../../actions';
 
-import { propTypes, mapStateToProps } from '../../props';
+import { mapStateToProps } from '../../props';
 
 export default function(ComposedClass, redirect) {
 
@@ -31,7 +31,10 @@ export default function(ComposedClass, redirect) {
     }
   }
 
-  IsAuthuthoried.propTypes = propTypes;
+  IsAuthuthoried.propTypes = {
+    isLoggedIn: React.PropTypes.bool,
+    redirectTo: React.PropTypes.fuc.isRequired
+  };
 
   return connect(mapStateToProps, actions)(IsAuthuthoried);
 }

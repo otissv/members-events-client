@@ -6,7 +6,7 @@
 import { connect } from 'react-redux';
 import actions from '../../actions';
 
-import { propTypes, mapStateToProps } from '../../props';
+import { mapStateToProps } from '../../props';
 import Events from '../../components/events/list-events.jsx';
 
 
@@ -31,6 +31,10 @@ class EventsContainer extends React.Component{
 }
 
 
-EventsContainer.propTypes = propTypes;
+EventsContainer.propTypes = {
+  getEvents: React.PropTypes.func.isRequired,
+  setEvents: React.PropTypes.func.isRequired,
+  storage  : React.PropTypes.func.isRequired
+};
 
 export default connect(mapStateToProps, actions)(EventsContainer);

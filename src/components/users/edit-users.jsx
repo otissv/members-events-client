@@ -4,7 +4,6 @@
 
 
 import AuthForm from './form-users.jsx';
-import { propTypes } from '../../props';
 
 
 export default class EditUser extends React.Component  {
@@ -17,9 +16,9 @@ export default class EditUser extends React.Component  {
 
   handleSubmit (data) {
     const {
+      redirectTo,
       selectedUser,
       storage,
-      redirectTo,
       updateUser
     } = this.props;
 
@@ -48,4 +47,10 @@ export default class EditUser extends React.Component  {
 }
 
 // Vaidate proptypes
-EditUser.propTypes = propTypes;
+EditUser.propTypes = {
+  handleSubmit  : React.PropTypes.func.isRequired,
+  redirectTo  : React.PropTypes.func.isRequired,
+  selectedUser: React.PropTypes.string.isRequired,
+  storage     : React.PropTypes.object.isRequired,
+  updateUser  : React.PropTypes.func.isRequired
+};

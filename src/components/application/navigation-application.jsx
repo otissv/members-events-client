@@ -5,7 +5,7 @@
 
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
-import { propTypes, mapStateToProps } from '../../props';
+import { mapStateToProps } from '../../props';
 
 import {
   ABOUT_ROUTE,
@@ -52,6 +52,8 @@ class Navigation extends React.Component{
 }
 
 
-Navigation.propTypes = propTypes;
+Navigation.propTypes = {
+  isLoggedIn: React.PropTypes.bool
+};
 
 export default connect(mapStateToProps)(Navigation);

@@ -2,12 +2,6 @@
 * Authorisation sign out component
  */
 
-
-
-
-import { propTypes } from '../.././props';
-
-
 export default class Signout extends React.Component{
  componentDidMount () {
    const {
@@ -31,10 +25,17 @@ export default class Signout extends React.Component{
 
  render () {
    return <div>
-   Logging out...
+     Logging out...
    </div>;
  }
 }
 
 
-Signout.propTypes = propTypes;
+Signout.propTypes = {
+  deleteStorage : React.PropTypes.func.isRequired,
+  getStorage    : React.PropTypes.func.isRequired,
+  loggedIn      : React.PropTypes.func.isRequired,
+  storage       : React.PropTypes.object.isRequired,
+  redirectTo    : React.PropTypes.func.isRequired,
+  unauthenticate: React.PropTypes.func.isRequired
+};

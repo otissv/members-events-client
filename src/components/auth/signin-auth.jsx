@@ -4,7 +4,6 @@
 
 
 import AuthForm from './form-auth.jsx';
-import { propTypes } from '../../props';
 
 
 export default class Signin extends React.Component  {
@@ -34,5 +33,11 @@ export default class Signin extends React.Component  {
   }
 }
 
-// Vaidate proptypes
-Signin.propTypes = propTypes;
+
+Signin.propTypes ={
+  authenticate  : React.PropTypes.func.isRequired,
+  setStorage    : React.PropTypes.func.isRequired,
+  loggedIn      : React.PropTypes.func.isRequired,
+  redirectTo    : React.PropTypes.func.isRequired,
+  handleSubmit  : React.PropTypes.func.isRequired
+};

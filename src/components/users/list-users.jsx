@@ -50,4 +50,7 @@ class Users extends React.Component {
 export default Users;
 
 
-Users.propTypes = propTypes;
+Users.propTypes = {
+  usersAll  : React.PropTypes.object.isRequired,
+  selectUser: React.PropTypes.func.isRequired
+};

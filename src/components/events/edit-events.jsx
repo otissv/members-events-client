@@ -4,7 +4,7 @@
 
 
 import AuthForm from './form-events.jsx';
-import { propTypes } from '../../props';
+
 
 import { EVENTS_ROUTE } from '../../contants';
 
@@ -49,5 +49,11 @@ export default class EditUser extends React.Component  {
   }
 }
 
-// Vaidate proptypes
-EditUser.propTypes = propTypes;
+
+EditUser.propTypes = {
+  eventSelected: React.PropTypes.string.isRequired,
+  redirectTo   : React.PropTypes.func.isRequired,
+  storage      : React.PropTypes.object.isRequired,
+  updateEvent  : React.PropTypes.func.isRequired,
+  handleSubmit : React.PropTypes.func.isRequired
+};

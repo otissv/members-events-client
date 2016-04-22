@@ -43,7 +43,9 @@ const Address = (props) => {
 };
 
 
-Address.propTypes = propTypes;
+Address.propTypes = {
+  address: React.PropTypes.object.isRequired
+};
 
 
 export default Address;

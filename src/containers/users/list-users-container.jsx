@@ -6,7 +6,7 @@
 import { connect } from 'react-redux';
 import actions from '../../actions';
 
-import { propTypes, mapStateToProps } from '../../props';
+import { mapStateToProps } from '../../props';
 import Users from '../../components/users/list-users.jsx';
 
 
@@ -31,6 +31,10 @@ class UsersContainer extends React.Component{
 }
 
 
-UsersContainer.propTypes = propTypes;
+UsersContainer.propTypes = {
+  getUsers: React.PropTypes.func.isRequired,
+  setUsers: React.PropTypes.func.isRequired,
+  storage : React.PropTypes.func.isRequired
+};
 
 export default connect(mapStateToProps, actions)(UsersContainer);

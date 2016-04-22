@@ -2,10 +2,6 @@
 * Authorisation component
  */
 
-
-import { propTypes } from '../../props';
-
-
 export default class Authuthoried extends React.Component{
   componentWillMount () {
     const { isLoggedIn, redirectTo, path } = this.props;
@@ -24,4 +20,9 @@ export default class Authuthoried extends React.Component{
   }
 }
 
-Authuthoried.propTypes = propTypes;
+Authuthoried.propTypes = {
+  isLoggedIn: React.PropTypes.bool.isRequired,
+  redirectTo: React.PropTypes.func.isRequired,
+  component : React.PropTypes.element.isRequired,
+  path      : React.PropTypes.string
+};

@@ -3,7 +3,6 @@
  */
 
 
-import { propTypes } from '../../props';
 import AuthForm from './form-auth.jsx';
 
 
@@ -38,5 +37,11 @@ export default class Signup extends React.Component  {
   }
 }
 
-// Vaidate proptypes
-Signup.propTypes = propTypes;
+
+Signup.propTypes = {
+  loggedIn      : React.PropTypes.func.isRequired,
+  handleSubmit  : React.PropTypes.func.isRequired,
+  register      : React.PropTypes.func.isRequired,
+  redirectTo    : React.PropTypes.func.isRequired,
+  setStorage    : React.PropTypes.func.isRequired
+};

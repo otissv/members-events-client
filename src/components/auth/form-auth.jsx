@@ -4,7 +4,6 @@
 
 
 import { Link } from 'react-router';
-import { propTypes } from '../../props';
 
 import { ROOT_ROUTE } from '../../contants';
 import FormInput from '../form-input-component.jsx';
@@ -40,7 +39,11 @@ const AuthForm = (props) => {
 };
 
 
-// Vaidate proptypes
-AuthForm.propTypes = propTypes;
+AuthForm.propTypes = {
+  fields        : React.PropTypes.object.isRequired,
+  heading				: React.PropTypes.string,
+  handleSubmit  : React.PropTypes.func.isRequired,
+  onSubmit      : React.PropTypes.func.isRequired
+};
 
 export default AuthForm;

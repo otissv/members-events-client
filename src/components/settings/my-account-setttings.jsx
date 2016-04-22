@@ -1,7 +1,6 @@
 /*
 * Account Settings component
 */
-import { propTypes } from '../../props';
 
 
 const MyAccount = (props) => (
@@ -13,8 +12,6 @@ const MyAccount = (props) => (
 
 );
 
-
-MyAccount.propTypes = propTypes;
 
 
 export default MyAccount;

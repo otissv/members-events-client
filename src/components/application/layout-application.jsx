@@ -2,8 +2,6 @@
 * Layout component
  */
 
-import { propTypes } from '../../props';
-
 import Navigation from './navigation-application.jsx';
 import Alert from './alert-appplication.jsx';
 import Notify from './notify-appplication.jsx';
@@ -27,4 +25,7 @@ export default class Layout extends React.Component  {
   }
 }
 
-Layout.propTypes = propTypes;
+Layout.propTypes = {
+  children: React.PropTypes.any,
+  getStorage: React.PropTypes.func
+};

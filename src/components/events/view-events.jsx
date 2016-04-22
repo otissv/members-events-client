@@ -7,7 +7,6 @@ import {
   EVENT_EDIT_ROUTE
 } from '../../contants';
 
-import { propTypes } from '../../props';
 import { Link } from 'react-router';
 import deleteEvent from './delete-events';
 
@@ -54,4 +53,7 @@ class Event extends React.Component {
 export default Event;
 
 
-Event.propTypes = propTypes;
+Event.propTypes = {
+  event        : React.PropTypes.object.isRequired,
+  eventSelected: React.PropTypes.string.isRequired
+};

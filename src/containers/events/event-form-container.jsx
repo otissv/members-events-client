@@ -31,6 +31,7 @@ export default function UserForm (ComposedClass, formName) {
        'address.city',
        'address.state',
        'address.postcode',
+       'attended',
        'duration',
        'enrolled',
        'room',
