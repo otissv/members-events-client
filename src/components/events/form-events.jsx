@@ -8,7 +8,7 @@ import { propTypes } from '../../props';
 import Address from '../shared/address-shared.jsx';
 import { EVENTS_ROUTE } from '../../contants';
 import FormInput from '../form-input-component.jsx';
-
+import TextEditor from '../shared/text-editor-component.jsx';
 
 class EventForm extends React.Component {
   componentWillMount() {
@@ -72,7 +72,8 @@ class EventForm extends React.Component {
 
       <Address {...address} />
 
-
+      <label className="uk-form-label">About</label>
+      <TextEditor {...this.props}/>
 
       <button type='submit' className='btn btn-primary'>Send</button>
 

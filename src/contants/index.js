@@ -61,7 +61,8 @@ export const REMOVE_COURSE_FROM_LIST = 'REMOVE_COURSE_FROM_LIST';
 export const SET_COURSES = 'SET_COURSES';
 export const SET_COURSE = 'SET_COURSE';
 export const UPDATE_COURSE = 'UPDATE_COURSE';
-
+export const GET_EVENT_EDITOR = 'GET_EVENT_EDITOR';
+export const SET_EVENT_EDITOR = 'SET_EVENT_EDITOR';
 
 // User action types
 export const GET_USERS = 'GET_USERS';

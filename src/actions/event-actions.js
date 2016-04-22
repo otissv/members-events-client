@@ -5,6 +5,7 @@
 
 'use strict';
 import axios from 'axios';
+
 import {
   arrayToObject,
   deleteKeyToArray,
@@ -16,9 +17,11 @@ import {
   REMOVE_EVENT,
   REMOVE_EVENT_FROM_LIST,
   GET_EVENT,
+  GET_EVENT_EDITOR,
   GET_EVENTS,
   SELECT_EVENT,
   SET_EVENT,
+  SET_EVENT_EDITOR,
   SET_EVENTS,
   UPDATE_EVENT
 } from '../contants';
@@ -95,5 +98,21 @@ export function updateEvent (_id, token, event, data) {
   return {
     type: UPDATE_EVENT,
     payload: request
+  };
+}
+
+
+export function getEventEditor () {
+  return {
+    type: GET_EVENT_EDITOR,
+    payload: ''
+  };
+}
+
+
+export function setEventEditor (state) {
+  return {
+    type: SET_EVENT_EDITOR,
+    payload: state
   };
 }

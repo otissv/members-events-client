@@ -43,7 +43,7 @@ export default class EditUser extends React.Component  {
     return <AuthForm
       onSubmit={handleSubmit(this.handleSubmit)}
       {...this.props}
-      heading='Edit User'
+      heading='Edit Event'
       onChange={this.handleChange}
       />;
   }

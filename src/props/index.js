@@ -27,6 +27,7 @@ export function mapStateToProps (state) {
 
 		event        : state.events.event,
 		eventsAll    : state.events.eventsAll,
+		eventEditor  : state.events.eventEditor,
 		eventSelected: state.events.eventSelected,
 
 		user         : state.users.user,
