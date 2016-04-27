@@ -7,6 +7,7 @@ import { objectToArray } from '../../helpers';
 import { Link } from 'react-router';
 
 import { EVENTS_ROUTE } from '../../contants';
+import EventCalendar from './calendar-events.jsx';
 
 
 export default class Events extends React.Component {
@@ -41,6 +42,8 @@ export default class Events extends React.Component {
     return <div>
       <h1>Events</h1>
       <ul>{items}</ul>
+
+      <EventCalendar />
     </div>;
   }
 }
