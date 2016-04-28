@@ -3,53 +3,49 @@
 */
 
 
+import BigCalendar from 'react-big-calendar';
+import moment from 'moment';
+// import events from './events.js';
 import { objectToArray } from '../../helpers';
-import { Link } from 'react-router';
 
-import { EVENTS_ROUTE } from '../../contants';
-import EventCalendar from './calendar-events.jsx';
-
+ // Setup the localizer by providing the moment (or globalize) Object
+ // to the correct localizer.
+BigCalendar.setLocalizer(
+  BigCalendar.momentLocalizer(moment)
+);
 
 export default class Events extends React.Component {
   constructor (props) {
     super(props);
-
-    this.handleSetEvent =  this.handleSetEvent.bind(this);
   }
-
-
-  handleSetEvent (e) {
-    const memId = e.target.dataset.memid;
-
-    this.props.selectEvent(memId);
-  }
-
 
   render () {
-    const items = objectToArray(this.props.eventsAll).map(item => {
-      return <li key={item._id}>
-        <Link
-          data-memId={item._id}
-          onClick={this.handleSetEvent}
-          to={`${EVENTS_ROUTE}/${item._id}`}
-        >
-          {item.title}
-        </Link>
-      </li>;
-    });
+    const { eventsAll, eventsCalendarDate } = this.props;
 
+    const events = objectToArray(eventsAll).map(item => item);
 
-    return <div>
-      <h1>Events</h1>
-      <ul>{items}</ul>
-
-      <EventCalendar />
-    </div>;
+    return <BigCalendar
+      events={events}
+      selectable
+      startAccessor='start'
+      endAccessor='end'
+      defaultDate={eventsCalendarDate}
+      onSelectEvent={event => alert(
+        `Tilte: ${event.title}\n` +
+        `Start: ${event.start}\n` +
+        `End: ${event.end}\n` +
+        `Description: ${event.description}`
+      )}
+      onSelectSlot={(slotInfo) => alert(
+         `selected slot: \n\nstart ${slotInfo.start.toLocaleString()} ` +
+         `\nend: ${slotInfo.end.toLocaleString()}`
+       )}
+    />;
   }
 }
 
 
 Events.propTypes = {
-  eventsAll: React.PropTypes.object,
-  selectEvent: React.PropTypes.func.isRequired
-};
+  // events: React.PropTypes.object.isRequired,
+  // eventsCalendarDate: React.PropTypes.string.isRequired
+}

@@ -42,6 +42,7 @@ export const REGISTER = 'REGISTER';
 
 
 // Event action types
+export const EVENTS_CALENDAR_DATE = 'EVENTS_CALENDAR_DATE';
 export const GET_EVENTS = 'GET_EVENTS';
 export const GET_EVENT = 'GET_EVENT';
 export const REMOVE_EVENT = 'REMOVE_EVENT';

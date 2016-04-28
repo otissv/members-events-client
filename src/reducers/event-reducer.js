@@ -5,6 +5,7 @@
 import { EditorState } from 'draft-js';
 
 import {
+  EVENTS_CALENDAR_DATE,
   REMOVE_EVENT_FROM_LIST,
   SELECT_EVENT,
   SET_EVENTS,
@@ -13,15 +14,23 @@ import {
   UPDATE_EVENT
 } from '../contants/';
 
+
 const INITAL_STATE = {
-  eventSelected: null,
+  event        : {},
+  eventsCalendarDate: new Date(),
   eventsAll    : {},
   eventEditor  : EditorState.createEmpty(),
-  event        : {}
+  eventSelected: null
 };
 
+
+// new Date(2015, 3, 1)
 export default function applicationReducer(state = INITAL_STATE, action) {
   switch (action.type) {
+
+    case EVENTS_CALENDAR_DATE:
+      return {...state, eventsCalendarDate: action.payload};
+
     case REMOVE_EVENT_FROM_LIST:
       return {...state, eventsAll: action.payload};
 

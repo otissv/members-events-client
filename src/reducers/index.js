@@ -13,22 +13,23 @@ import courseReducer from './course-reducer';
 
 export function mapStateToProps (state) {
   return {
-		isLoggedIn   : state.application.isLoggedIn,
-    storage      : state.application.storage,
+		isLoggedIn        : state.application.isLoggedIn,
+    storage           : state.application.storage,
 
-		event        : state.events.event,
-		eventsAll    : state.events.eventsAll,
-		eventEditor  : state.events.eventEditor,
-		eventSelected: state.events.eventSelected,
+		event             : state.events.event,
+		eventsAll         : state.events.eventsAll,
+    eventsCalendarDate: state.events.eventsCalendarDate,
+		eventEditor       : state.events.eventEditor,
+		eventSelected     : state.events.eventSelected,
 
-    course        : state.courses.course,
-		coursesAll    : state.courses.coursesAll,
-		courseEditor  : state.courses.courseEditor,
-		courseSelected: state.courses.courseSelected,
+    course            : state.courses.course,
+		coursesAll        : state.courses.coursesAll,
+		courseEditor      : state.courses.courseEditor,
+		courseSelected    : state.courses.courseSelected,
 
-		user         : state.users.user,
-		usersAll     : state.users.usersAll,
-		selectedUser : state.users.selectedUser
+		user              : state.users.user,
+		usersAll          : state.users.usersAll,
+		selectedUser      : state.users.selectedUser
   };
 }
 

@@ -92,6 +92,14 @@ export function setEvent (event) {
 }
 
 
+export function setEventsCalendarDate (calendarDate) {
+  return {
+    type: EVENTS_CALENDAR_DATE,
+    payload: calendarDate
+  };
+}
+
+
 export function updateEvent (_id, token, event, data) {
   const request = axios.put(`${API_URL}events/${event}/${query(_id, token)}`, data);
 
