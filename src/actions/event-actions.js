@@ -47,7 +47,15 @@ export function getEvents (_id, token) {
 }
 
 export function setEvents (events) {
-  const eventsList = arrayToObject(events);
+
+  const eventsList = arrayToObject(events.map(item => {
+    // convert dates to Date type
+    return {
+      ...item,
+      end: new Date(item.end),
+      start: new Date(item.start)
+    };
+  }));
 
   return {
     type: SET_EVENTS,
@@ -88,14 +96,6 @@ export function setEvent (event) {
   return {
     type: SET_EVENT,
     payload: event
-  };
-}
-
-
-export function setEventsCalendarDate (calendarDate) {
-  return {
-    type: EVENTS_CALENDAR_DATE,
-    payload: calendarDate
   };
 }
 

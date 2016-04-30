@@ -9,6 +9,18 @@ import {
 
 import { Link } from 'react-router';
 import deleteEvent from './delete-events';
+import moment from 'moment';
+
+
+// const eventStatus(end) {
+//   if (moment(event.end).format() < moment().format()) {
+//     status = 'Ended';
+//   } else if (moment(event.start).format() < moment().format()) {
+//     status = 'In progres';
+//   } else {
+//     status = 'Not started';
+//   }
+// };
 
 class Event extends React.Component {
   constructor (props) {
@@ -23,16 +35,17 @@ class Event extends React.Component {
   }
 
   render () {
-    const { event, eventSelected } = this.props;
+    const { event, eventSelected, status, when } = this.props;
 
     return <div>
       <h1>Event Profile</h1>
       Name    : {event.title}<br />
+      When    : {when}<br />
+      Status  : {status}<br />
+
+      Going   : {event.enrolled}<br />
+      Invited :
       Attended: {event.attended}<br />
-      Duration: {event.duration}<br />
-      Enrolled: {event.enrolled}<br />
-      Start   : {event.start}<br />
-      Satuts  : {event.satuts}<br />
 
 
       Adddres1: {event.address ? event.address.address1 : ''} <br />
@@ -55,5 +68,7 @@ export default Event;
 
 Event.propTypes = {
   event        : React.PropTypes.object.isRequired,
-  eventSelected: React.PropTypes.string.isRequired
+  eventSelected: React.PropTypes.string.isRequired,
+  status       : React.PropTypes.string.isRequired,
+  when         : React.PropTypes.string.isRequired
 };

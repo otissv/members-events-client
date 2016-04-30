@@ -36,8 +36,7 @@ export default function UserForm (ComposedClass, formName) {
        'enrolled',
        'room',
        'title',
-       'start',
-       'status'
+       'start'
      ],
      validate
    },

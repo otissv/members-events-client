@@ -24,7 +24,6 @@ class EventForm extends React.Component {
         duration,
         enrolled,
         start,
-        status,
         title
       },
       heading,
@@ -66,15 +65,7 @@ class EventForm extends React.Component {
         label='Attended'
         type='text'
       />
-
-
-      <FormInput
-        field={status}
-        label='Status'
-        type='text'
-      />
-
-
+      
       <Address {...address} />
 
       <label className="uk-form-label">About</label>
