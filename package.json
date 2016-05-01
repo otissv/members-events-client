@@ -76,11 +76,13 @@
     "no-mutate": "~1.0.0",
     "react": "~15.0.1",
     "react-big-calendar": "^0.9.11",
+    "react-datetime": "^2.1.0",
     "react-dom": "~15.0.1",
-    "react-redux": "~4.4.2",
+    "react-redux": "^4.4.5",
     "react-router": "~2.0.1",
     "react-uikit-alert": "~0.2.3",
     "redux": "~3.4.0",
-    "redux-form": "~5.0.1"
+    "redux-form": "~5.0.1",
+    "redux-thunk": "^2.0.1"
   }
 }

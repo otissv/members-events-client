@@ -20,6 +20,8 @@ import EventsListContainer from './containers/events/list-events-container.jsx';
 import EventContainer from './containers/events/event-container.jsx';
 import EventForm from './containers/events/event-form-container.jsx';
 import EventEdit from './components/events/edit-events.jsx';
+import EventNew from './components/events/new-events.jsx';
+
 
 import UsersListContainer from './containers/users/list-users-container.jsx';
 import UserContainer from './containers/users/user-container.jsx';
@@ -36,7 +38,6 @@ import Layout from './components/application/layout-application.jsx';
 import MyAccount from './components/settings/my-account-setttings.jsx';
 
 
-
 import {
   ABOUT_ROUTE,
   CONTACTS_ROUTE,
@@ -44,6 +45,7 @@ import {
   COURSE_EDIT_ROUTE,
   EVENTS_ROUTE,
   EVENT_EDIT_ROUTE,
+  EVENT_NEW_ROUTE,
   MY_ACCOUNT_ROUTE,
   SEVICES_ROUTE,
   SIGNIN_ROUTE,
@@ -57,8 +59,10 @@ import {
 const MyAccoutRoute = IsAuthuthoried(MyAccount, '/signin');
 
 const EventEditRoute = EventForm(EventEdit, 'EventEditForm');
+const EventNewRoute = EventForm(EventNew, 'EventNewForm');
 const EventsListRoute = IsAuthuthoried(EventsListContainer);
 const EventRoute = IsAuthuthoried(EventContainer);
+
 
 const CourseEditRoute = CourseForm(CourseEdit, 'CourseEditForm');
 const CoursesListRoute = IsAuthuthoried(CoursesListContainer);
@@ -86,6 +90,8 @@ export default (
     <Route path={EVENTS_ROUTE} component={EventsListRoute} />
     <Route path={`${EVENTS_ROUTE}/:userId`} component={EventRoute}/>
     <Route path={`${EVENT_EDIT_ROUTE}/:userId`} component={EventEditRoute}/>
+    <Route path={`${EVENT_NEW_ROUTE}`} component={EventNewRoute}/>
+
 
     <Route path={SIGNUP_ROUTE} component={SignupRoute} />
     <Route path={SIGNOUT_ROUTE} component={SignoutRoute} />

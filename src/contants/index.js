@@ -8,12 +8,16 @@ export const API_URL = 'http://localhost:3000/api/v01/';
 
 // Routes
 export const ABOUT_ROUTE = '/about';
+
 export const CONTACTS_ROUTE = '/contacts';
 export const COURSES_ROUTE = 'courses';
-export const COURSE_EDIT_ROUTE = '/courses/edit';
+export const COURSE_EDIT_ROUTE = '/course/edit';
+
 export const EVENTS_ROUTE = '/events';
-export const EVENT_ROUTE = '/events';
-export const EVENT_EDIT_ROUTE = '/events/edit';
+export const EVENT_ROUTE = '/event';
+export const EVENT_EDIT_ROUTE = '/event/edit';
+export const EVENT_NEW_ROUTE = '/event/new';
+
 export const MY_ACCOUNT_ROUTE = 'my-account';
 export const ROOT_ROUTE = '/';
 export const SEVICES_ROUTE = '/sevices';
@@ -21,7 +25,7 @@ export const SIGNIN_ROUTE = '/signin';
 export const SIGNOUT_ROUTE = '/signout';
 export const SIGNUP_ROUTE = '/signup';
 export const USERS_ROUTE= '/users';
-export const USER_EDIT_ROUTE = '/users/edit';
+export const USER_EDIT_ROUTE = '/user/edit';
 
 
 // Application action types
@@ -42,6 +46,7 @@ export const REGISTER = 'REGISTER';
 
 
 // Event action types
+export const CREATE_EVENT = 'CREATE_EVENT';
 export const EVENTS_CALENDAR_DATE = 'EVENTS_CALENDAR_DATE';
 export const GET_EVENTS = 'GET_EVENTS';
 export const GET_EVENT = 'GET_EVENT';

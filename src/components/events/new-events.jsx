@@ -1,13 +1,12 @@
 /*
-* Edit Event component
+* New Event component
  */
 
 
-import AuthForm from './form-events.jsx';
+import AuthForm from './form-events';
 import { EVENTS_ROUTE } from '../../contants';
 
-
-export default class EditUser extends React.Component  {
+export default class NewUser extends React.Component  {
   constructor (props) {
     super(props);
 
@@ -17,17 +16,16 @@ export default class EditUser extends React.Component  {
 
   handleSubmit (data) {
     const {
-      eventSelected,
       storage,
       redirectTo,
-      updateEvent
+      createEvent
     } = this.props;
 
     const { _id, token } =  storage;
 
-    updateEvent(_id, token, eventSelected, data).payload
+    createEvent(_id, token, data).payload
       .then(response => {
-        redirectTo(`${EVENTS_ROUTE}/${eventSelected}`);
+        redirectTo(EVENTS_ROUTE);
       });
   }
 
@@ -40,18 +38,17 @@ export default class EditUser extends React.Component  {
     const { handleSubmit } = this.props;
     return <AuthForm
       onSubmit={handleSubmit(this.handleSubmit)}
-      {...this.props}
-      heading='Edit Event'
+      {...this.props} event={{}}
+      heading='New Event'
       onChange={this.handleChange}
       />;
   }
 }
 
 
-EditUser.propTypes = {
-  eventSelected: React.PropTypes.string.isRequired,
+NewUser.propTypes = {
   redirectTo   : React.PropTypes.func.isRequired,
   storage      : React.PropTypes.object.isRequired,
-  updateEvent  : React.PropTypes.func.isRequired,
+  // updateEvent  : React.PropTypes.func.isRequired,
   handleSubmit : React.PropTypes.func.isRequired
 };

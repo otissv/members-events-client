@@ -5,6 +5,8 @@
 
 'use strict';
 import axios from 'axios';
+import moment from 'moment';
+
 
 import {
   arrayToObject,
@@ -14,17 +16,28 @@ import {
 
 import {
   API_URL,
-  REMOVE_EVENT,
-  REMOVE_EVENT_FROM_LIST,
+  CREATE_EVENT,
   GET_EVENT,
   GET_EVENT_EDITOR,
   GET_EVENTS,
+  REMOVE_EVENT,
+  REMOVE_EVENT_FROM_LIST,
   SELECT_EVENT,
   SET_EVENT,
   SET_EVENT_EDITOR,
   SET_EVENTS,
   UPDATE_EVENT
 } from '../contants';
+
+
+export function createEvent (_id, token, data) {
+  const request = axios.post(`${API_URL}events/${query(_id, token)}`, data);
+
+  return {
+    type: UPDATE_EVENT,
+    payload: request
+  };
+}
 
 
 export function removeEvent (_id, token, event) {
@@ -52,8 +65,8 @@ export function setEvents (events) {
     // convert dates to Date type
     return {
       ...item,
-      end: new Date(item.end),
-      start: new Date(item.start)
+      end: moment(item.end),
+      start: moment(item.start)
     };
   }));
 

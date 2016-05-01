@@ -2,16 +2,17 @@
 * Application entry point
  */
 
- 
+
 import { Router, browserHistory } from 'react-router';
 import { Provider } from 'react-redux';
 import { compose, createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk'
 import DevTools from './components/devTools/dev-tools.js';
 import routes from './routes.jsx';
 import reducers from './reducers';
 
 const store = compose(
-  applyMiddleware(),
+  applyMiddleware(thunk),
   window.devToolsExtension ? window.devToolsExtension() : DevTools.instrument()
 )(createStore)(reducers);
 

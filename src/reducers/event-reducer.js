@@ -5,6 +5,7 @@
 import { EditorState } from 'draft-js';
 
 import {
+  CREATE_EVENT,
   EVENTS_CALENDAR_DATE,
   REMOVE_EVENT_FROM_LIST,
   SELECT_EVENT,

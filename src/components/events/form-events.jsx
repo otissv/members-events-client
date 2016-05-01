@@ -5,14 +5,20 @@
 
 import { Link } from 'react-router';
 import Address from '../shared/address-shared.jsx';
+import Datetime from 'react-datetime';
 import { EVENTS_ROUTE } from '../../contants';
 import FormInput from '../form-input-component.jsx';
 import TextEditor from '../shared/text-editor-component.jsx';
+import moment from 'moment';
 
 class EventForm extends React.Component {
   componentWillMount() {
     const { initializeForm, event } = this.props;
-    initializeForm(event);
+    initializeForm({
+      ...event,
+      start: moment(event.start),
+      end  : moment(event.end)
+    });
   }
 
 
@@ -21,14 +27,14 @@ class EventForm extends React.Component {
       fields: {
         ...address,
         attended,
-        duration,
+        category,
+        end,
         enrolled,
         start,
         title
       },
       heading,
       selectedEvent,
-      onChange,
       onSubmit
     } = this.props;
 
@@ -42,17 +48,11 @@ class EventForm extends React.Component {
         type='text'
       />
 
-      <FormInput
-        field={start}
-        label='start'
-        type='text'
-      />
+      <label className="uk-form-label">Starting</label>
+      <Datetime {...start} />
 
-      <FormInput
-        field={duration}
-        label='Duration'
-        type='text'
-      />
+      <label className="uk-form-label">Ending</label>
+      <Datetime {...end} />
 
       <FormInput
         field={enrolled}
@@ -65,8 +65,13 @@ class EventForm extends React.Component {
         label='Attended'
         type='text'
       />
-      
-      <Address {...address} />
+
+      <FormInput
+        field={category}
+        label='Category'
+        type='text'
+      />
+
 
       <label className="uk-form-label">About</label>
       <TextEditor {...this.props}/>

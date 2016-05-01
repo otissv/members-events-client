@@ -6,8 +6,8 @@
 import BigCalendar from 'react-big-calendar';
 import moment from 'moment';
 import { objectToArray } from '../../helpers';
-
-import { EVENTS_ROUTE } from '../../contants';
+import { Link } from 'react-router';
+import { EVENTS_ROUTE, EVENT_NEW_ROUTE } from '../../contants';
 
  // Setup the localizer by providing the moment (or globalize) Object
  // to the correct localizer.
@@ -37,23 +37,33 @@ export default class Events extends React.Component {
 
     const events = objectToArray(eventsAll).map(item => item);
 
-    return <BigCalendar
-      events={events}
-      selectable
-      startAccessor='start'
-      endAccessor='end'
-      defaultDate={eventsCalendarDate}
-      onSelectEvent={this.handleSelectEvent}
-      onSelectSlot={(slotInfo) => alert(
-         `selected slot: \n\nstart ${slotInfo.start.toLocaleString()} ` +
-         `\nend: ${slotInfo.end.toLocaleString()}`
-       )}
-    />;
+    return <div>
+
+    <Link to={EVENT_NEW_ROUTE}>New event</Link>
+    
+      <BigCalendar
+        events={events}
+        selectable
+        startAccessor='start'
+        endAccessor='end'
+        defaultDate={eventsCalendarDate}
+        onSelectEvent={this.handleSelectEvent}
+        onSelectSlot={(slotInfo) => alert(
+           `selected slot: \n\nstart ${slotInfo.start.toLocaleString()} ` +
+           `\nend: ${slotInfo.end.toLocaleString()}`
+         )}
+      />
+    </div>;
   }
 }
 
 
 Events.propTypes = {
-  // events: React.PropTypes.object.isRequired,
-  // eventsCalendarDate: React.PropTypes.string.isRequired
+  // shouldUpdate
+  eventsAll: React.PropTypes.object.isRequired,
+  eventsCalendarDate: React.PropTypes.object.isRequired,
+
+  // actions
+  redirectTo: React.PropTypes.func.isRequired,
+  selectEvent: React.PropTypes.func.isRequired
 };

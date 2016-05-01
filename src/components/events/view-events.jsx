@@ -9,7 +9,6 @@ import {
 
 import { Link } from 'react-router';
 import deleteEvent from './delete-events';
-import moment from 'moment';
 
 
 // const eventStatus(end) {
