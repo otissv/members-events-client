@@ -26,18 +26,10 @@ export default function CourseForm (ComposedClass, formName) {
    {
      form: formName,
      fields: [
-       'address.address1',
-       'address.address2',
-       'address.city',
-       'address.state',
-       'address.postcode',
-       'attended',
-       'duration',
-       'enrolled',
-       'room',
-       'title',
-       'start',
-       'status'
+       'color',
+       'status',
+       'students',
+       'title'
      ],
      validate
    },

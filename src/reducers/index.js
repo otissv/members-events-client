@@ -9,7 +9,7 @@ import { reducer as formReducer } from 'redux-form';
 import userReducer from './user-reducer';
 import applicationReducer from './application-reducer';
 import eventReducer from './event-reducer';
-import courseReducer from './course-reducer';
+import categoryReducer from './category-reducer';
 
 export function mapStateToProps (state) {
   return {
@@ -22,10 +22,12 @@ export function mapStateToProps (state) {
 		eventEditor       : state.events.eventEditor,
 		eventSelected     : state.events.eventSelected,
 
-    course            : state.courses.course,
-		coursesAll        : state.courses.coursesAll,
-		courseEditor      : state.courses.courseEditor,
-		courseSelected    : state.courses.courseSelected,
+    category          : state.categories.category,
+		categoriesAll     : state.categories.categoriesAll,
+    categoryColor     : state.categories.categoryColor,
+    categoryColorsAll : state.categories.categoryColorsAll,
+		categoryEditor    : state.categories.categoryEditor,
+		categorySelected  : state.categories.categorySelected,
 
 		user              : state.users.user,
 		usersAll          : state.users.usersAll,
@@ -37,7 +39,7 @@ const rootReducer = combineReducers({
   application : applicationReducer,
   form        : formReducer,
   events      : eventReducer,
-  courses     : courseReducer,
+  categories  : categoryReducer,
   users       : userReducer
 });
 

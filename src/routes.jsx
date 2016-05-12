@@ -11,10 +11,11 @@ import Signup from './components/auth/signup-auth.jsx';
 import Signin from './components/auth/signin-auth.jsx';
 import Signout from './components/auth/signout-auth.jsx';
 
-import CoursesListContainer from './containers/courses/list-course-container.jsx';
-import CourseContainer from './containers/courses/course-container.jsx';
-import CourseForm from './containers/courses/course-form-container.jsx';
-import CourseEdit from './components/courses/edit-courses.jsx';
+import CategoriesListContainer from './containers/categories/list-category-container.jsx';
+import CategoryContainer from './containers/categories/category-container.jsx';
+import CategoryForm from './containers/categories/category-form-container.jsx';
+import CategoryEdit from './components/categories/edit-categories.jsx';
+import CategoryNew from './components/categories/new-category.jsx';
 
 import EventsListContainer from './containers/events/list-events-container.jsx';
 import EventContainer from './containers/events/event-container.jsx';
@@ -41,8 +42,9 @@ import MyAccount from './components/settings/my-account-setttings.jsx';
 import {
   ABOUT_ROUTE,
   CONTACTS_ROUTE,
-  COURSES_ROUTE,
-  COURSE_EDIT_ROUTE,
+  CATEGORIES_ROUTE,
+  CATEGORY_EDIT_ROUTE,
+  CATEGORY_NEW_ROUTE,
   EVENTS_ROUTE,
   EVENT_EDIT_ROUTE,
   EVENT_NEW_ROUTE,
@@ -64,9 +66,10 @@ const EventsListRoute = IsAuthuthoried(EventsListContainer);
 const EventRoute = IsAuthuthoried(EventContainer);
 
 
-const CourseEditRoute = CourseForm(CourseEdit, 'CourseEditForm');
-const CoursesListRoute = IsAuthuthoried(CoursesListContainer);
-const CourseRoute = IsAuthuthoried(CourseContainer);
+const CategoryEditRoute = CategoryForm(CategoryEdit, 'CategoryEditForm');
+const CategoryNewRoute = CategoryForm(CategoryNew, 'CategoryNewForm');
+const CategoriesListRoute = IsAuthuthoried(CategoriesListContainer);
+const CategoryRoute = IsAuthuthoried(CategoryContainer);
 
 const SignupRoute = AuthForm(Signup, 'SignupForm');
 const SignoutRoute = Container(Signout);
@@ -83,9 +86,10 @@ export default (
     <Route path={CONTACTS_ROUTE} component={Contacts} />
     <Route path={SEVICES_ROUTE} component={Services} />
 
-    <Route path={COURSES_ROUTE} component={CoursesListRoute} />
-    <Route path={`${COURSES_ROUTE}/:userId`} component={CourseRoute}/>
-    <Route path={`${COURSE_EDIT_ROUTE}/:userId`} component={CourseEditRoute}/>
+    <Route path={CATEGORIES_ROUTE} component={CategoriesListRoute} />
+    <Route path={`${CATEGORIES_ROUTE}/:userId`} component={CategoryRoute}/>
+    <Route path={`${CATEGORY_EDIT_ROUTE}/:userId`} component={CategoryEditRoute}/>
+    <Route path={`${CATEGORY_NEW_ROUTE}`} component={CategoryNewRoute}/>
 
     <Route path={EVENTS_ROUTE} component={EventsListRoute} />
     <Route path={`${EVENTS_ROUTE}/:userId`} component={EventRoute}/>

@@ -10,7 +10,7 @@ import { mapStateToProps } from '../../reducers';
 import {
   ABOUT_ROUTE,
   CONTACTS_ROUTE,
-  COURSES_ROUTE,
+  CATEGORIES_ROUTE,
   EVENTS_ROUTE,
   MY_ACCOUNT_ROUTE,
   ROOT_ROUTE,
@@ -27,7 +27,7 @@ const LoggedInNav = (props) => (
     <li><Link to={ROOT_ROUTE}>Home</Link></li>
     <li><Link to={MY_ACCOUNT_ROUTE}>Account</Link></li>
     <li><Link to={USERS_ROUTE}>Users</Link></li>
-    <li><Link to={COURSES_ROUTE}>Courses</Link></li>
+    <li><Link to={CATEGORIES_ROUTE}>Categories</Link></li>
     <li><Link to={EVENTS_ROUTE}>Events</Link></li>
     <li><Link to={SIGNOUT_ROUTE}>Signout</Link></li>
   </ul>

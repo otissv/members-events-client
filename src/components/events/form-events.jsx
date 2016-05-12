@@ -8,10 +8,21 @@ import Address from '../shared/address-shared.jsx';
 import Datetime from 'react-datetime';
 import { EVENTS_ROUTE } from '../../contants';
 import FormInput from '../form-input-component.jsx';
+import Modal from 'react-uikit-modal';
 import TextEditor from '../shared/text-editor-component.jsx';
 import moment from 'moment';
+import velocity from 'velocity-animate';
+
 
 class EventForm extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.animateIn = this.animateIn.bind(this);
+    this.animateOut = this.animateOut.bind(this);
+  }
+
+
   componentWillMount() {
     const { initializeForm, event } = this.props;
     initializeForm({
@@ -19,6 +30,18 @@ class EventForm extends React.Component {
       start: moment(event.start),
       end  : moment(event.end)
     });
+  }
+
+
+  animateIn (modal, dialog) {
+    velocity(modal, {opacity: 1}, {display: 'block'}, 300);
+    velocity(dialog, {translateY: 1, opacity: 1}, {display: 'block'}, 200);
+  }
+
+
+  animateOut (modal, dialog) {
+    velocity(modal, {opacity:0}, { display: 'none' }, 300);
+    velocity(dialog, {translateY: -100, opacity: 0}, { display: 'none' }, 200);
   }
 
 
@@ -66,11 +89,27 @@ class EventForm extends React.Component {
         type='text'
       />
 
-      <FormInput
-        field={category}
-        label='Category'
-        type='text'
-      />
+      <Modal
+        close
+        trigger={{
+          body: 'Category',
+          animate: {
+            'in': (modal, dialog) => this.animateIn(modal, dialog),
+            out: (modal, dialog) => this.animateOut(modal, dialog)
+          }
+        }}
+      >
+        <FormInput
+          field={category}
+          label='Category'
+          type='text'
+        />
+
+        <h2>Headline</h2>
+        <p>
+          hello
+        </p>
+      </Modal>
 
 
       <label className="uk-form-label">About</label>

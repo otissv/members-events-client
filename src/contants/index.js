@@ -6,12 +6,14 @@
 export const API_URL = 'http://localhost:3000/api/v01/';
 
 
-// Routes
+// Public routes
 export const ABOUT_ROUTE = '/about';
-
 export const CONTACTS_ROUTE = '/contacts';
-export const COURSES_ROUTE = 'courses';
-export const COURSE_EDIT_ROUTE = '/course/edit';
+
+export const CATEGORIES_ROUTE = '/categories';
+export const CATEGORY_ROUTE = '/category';
+export const CATEGORY_EDIT_ROUTE = '/category/edit';
+export const CATEGORY_NEW_ROUTE = '/category/new';
 
 export const EVENTS_ROUTE = '/events';
 export const EVENT_ROUTE = '/event';
@@ -59,14 +61,17 @@ export const UPDATE_EVENT = 'UPDATE_EVENT';
 
 
 // Event action types
-export const GET_COURSE = 'GET_COURSE';
-export const GET_COURSES = 'GET_COURSES';
-export const REMOVE_COURSE = 'REMOVE_COURSE';
-export const REMOVE_COURSE_FROM_LIST = 'REMOVE_COURSE_FROM_LIST';
-export const SELECT_COURSE = 'SELECT_COURSE';
-export const SET_COURSE = 'SET_COURSE';
-export const SET_COURSES = 'SET_COURSES';
-export const UPDATE_COURSE = 'UPDATE_COURSE';
+export const GET_CATEGORY = 'GET_COURSE';
+export const GET_CATEGORIES = 'GET_COURSES';
+export const GET_COLORS = 'GET_COLORS';
+export const REMOVE_CATEGORY = 'REMOVE_COURSE';
+export const REMOVE_CATEGORY_FROM_LIST = 'REMOVE_COURSE_FROM_LIST';
+export const SELECT_CATEGORY = 'SELECT_COURSE';
+export const SET_CATEGORY = 'SET_COURSE';
+export const SET_CATEGORIES = 'SET_COURSES';
+export const SET_COLOR = 'SET_COLOR';
+export const SET_COLORS = 'GET_COLORS';
+export const UPDATE_CATEGORY = 'UPDATE_COURSE';
 
 
 // User action types

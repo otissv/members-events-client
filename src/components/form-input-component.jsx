@@ -2,8 +2,12 @@
 const FormInpunt = (props) => {
 	const {
 		field,
+		id,
 		label,
+		name,
 		type,
+		onEvents,
+		input,
 	} = props;
 
 	return <div className="uk-form-row">
@@ -11,7 +15,7 @@ const FormInpunt = (props) => {
       <div className="uk-form-controls">
         <input type={type || 'text'}
           className={`form-group ${field.touched && field.invalid ? 'uk-form-danger' : ''}`}
-          {...field}
+          {...field} {...input}
         />
       </div>
 

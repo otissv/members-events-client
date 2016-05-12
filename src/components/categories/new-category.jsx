@@ -1,15 +1,12 @@
 /*
-* Edit Course component
+* New Category component
  */
 
 
-import AuthForm from './form-courses.jsx';
+import AuthForm from './form-categories';
+import { CATEGORIES_ROUTE } from '../../contants';
 
-
-import { COURSES_ROUTE } from '../../contants';
-
-
-export default class EditUser extends React.Component  {
+export default class NewUser extends React.Component  {
   constructor (props) {
     super(props);
 
@@ -19,17 +16,16 @@ export default class EditUser extends React.Component  {
 
   handleSubmit (data) {
     const {
-      courseSelected,
       storage,
       redirectTo,
-      updateCourse
+      createCategory
     } = this.props;
 
     const { _id, token } =  storage;
 
-    updateCourse(_id, token, courseSelected, data).payload
+    createCategory(_id, token, data).payload
       .then(response => {
-        redirectTo(`${COURSES_ROUTE}/${courseSelected}`);
+        redirectTo(CATEGORIES_ROUTE);
       });
   }
 
@@ -42,18 +38,17 @@ export default class EditUser extends React.Component  {
     const { handleSubmit } = this.props;
     return <AuthForm
       onSubmit={handleSubmit(this.handleSubmit)}
-      {...this.props}
-      heading='Edit Course'
+      {...this.props} category={{}}
+      heading='New Category'
       onChange={this.handleChange}
       />;
   }
 }
 
 
-EditUser.propTypes = {
-  courseSelected: React.PropTypes.string.isRequired,
+NewUser.propTypes = {
   redirectTo   : React.PropTypes.func.isRequired,
   storage      : React.PropTypes.object.isRequired,
-  updateCourse  : React.PropTypes.func.isRequired,
+  createCategory  : React.PropTypes.func.isRequired,
   handleSubmit : React.PropTypes.func.isRequired
 };
