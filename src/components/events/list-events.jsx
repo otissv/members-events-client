@@ -39,8 +39,8 @@ export default class Events extends React.Component {
 
     return <div>
 
-    <Link to={EVENT_NEW_ROUTE}>New event</Link>
-    
+      <Link to={EVENT_NEW_ROUTE}>New event</Link>
+
       <BigCalendar
         events={events}
         selectable
