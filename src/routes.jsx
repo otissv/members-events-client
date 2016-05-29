@@ -81,7 +81,7 @@ const UserRoute = IsAuthuthoried(UserContainer);
 
 export default (
   <Router path='/' component={Container(Layout)}>
-    <IndexRoute component={Home} />
+    <IndexRoute component={SigninRoute} />
     <Route path={ABOUT_ROUTE} component={About} />
     <Route path={CONTACTS_ROUTE} component={Contacts} />
     <Route path={SEVICES_ROUTE} component={Services} />

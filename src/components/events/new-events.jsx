@@ -6,7 +6,7 @@
 import AuthForm from './form-events';
 import { EVENTS_ROUTE } from '../../contants';
 
-export default class NewUser extends React.Component  {
+export default class NewEvent extends React.Component  {
   constructor (props) {
     super(props);
 
@@ -41,14 +41,14 @@ export default class NewUser extends React.Component  {
       {...this.props} event={{}}
       heading='New Event'
       onChange={this.handleChange}
-      />;
+    />;
   }
 }
 
 
-NewUser.propTypes = {
+NewEvent.propTypes = {
   redirectTo   : React.PropTypes.func.isRequired,
   storage      : React.PropTypes.object.isRequired,
-  // updateEvent  : React.PropTypes.func.isRequired,
+  createEvent  : React.PropTypes.func.isRequired,
   handleSubmit : React.PropTypes.func.isRequired
 };

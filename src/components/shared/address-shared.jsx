@@ -2,7 +2,8 @@
 * Address Component
 */
 
-import FormInput from '../form-input-component.jsx';
+
+import FormInput from 'react-uikit-form/lib/form-input';
 
 const Address = (props) => {
   const { address1, address2, city, state, postcode } = props.address;
@@ -10,30 +11,30 @@ const Address = (props) => {
   return <div>
 
     <FormInput
-      field={address1}
+      {...address1}
       label='Address 1'
       type='text'
     />
     <FormInput
-      field={address2}
+      {...address2}
       label='Address 2'
       type='text'
     />
 
     <FormInput
-      field={city}
+      {...city}
       label='City'
       type='text'
     />
 
     <FormInput
-      field={state}
+      {...state}
       label='State'
       type='text'
     />
 
     <FormInput
-      field={postcode}
+      {...postcode}
       label='Postcode'
       type='text'
     />

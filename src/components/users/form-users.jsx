@@ -3,9 +3,11 @@
  */
 'use strcit';
 
+
 import { Link } from 'react-router';
 import Address from '../shared/address-shared.jsx';
-import FormInput from '../form-input-component.jsx';
+import Form from 'react-uikit-form';
+import FormInput from 'react-uikit-form/lib/form-input';
 import { USERS_ROUTE } from '../../contants';
 
 class UserForm extends React.Component {
@@ -33,29 +35,29 @@ class UserForm extends React.Component {
     } = this.props;
 
 
-    return <form className="uk-form uk-form-stacked" onSubmit={onSubmit}>
+    return <Form layout='stacked' onSubmit={onSubmit}>
       <h3>{heading}</h3>
 
       <FormInput
-        field={username}
+        {...username}
         label='Username'
         type='text'
       />
 
       <FormInput
-        field={email}
+        {...email}
         label='Email'
         type='email'
       />
 
       <FormInput
-        field={firstName}
+        {...firstName}
         label='First Name'
         type='text'
       />
 
       <FormInput
-        field={lastName}
+        {...lastName}
         label='Last Name'
         type='text'
       />
@@ -92,7 +94,7 @@ class UserForm extends React.Component {
       <button type='submit' className='btn btn-primary'>Send</button>
 
       <Link to={`${USERS_ROUTE}/${selectedUser}`} className='btn btn-danger'>Cancel</Link>
-    </form>;
+    </Form>;
   }
 }
 

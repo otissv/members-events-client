@@ -7,7 +7,8 @@ import { Link } from 'react-router';
 import Address from '../shared/address-shared.jsx';
 import Datetime from 'react-datetime';
 import { EVENTS_ROUTE } from '../../contants';
-import FormInput from '../form-input-component.jsx';
+import Form from 'react-uikit-form';
+import FormInput from 'react-uikit-form/lib/form-input';
 import Modal from 'react-uikit-modal';
 import TextEditor from '../shared/text-editor-component.jsx';
 import moment from 'moment';
@@ -62,11 +63,11 @@ class EventForm extends React.Component {
     } = this.props;
 
 
-    return <form className="uk-form uk-form-stacked" onSubmit={onSubmit}>
+    return <Form layout='stacked' onSubmit={onSubmit}>
       <h3>{heading}</h3>
 
       <FormInput
-        field={title}
+        {...title}
         label='Event title'
         type='text'
       />
@@ -78,7 +79,7 @@ class EventForm extends React.Component {
       <Datetime {...end} />
 
       <FormInput
-        field={enrolled}
+        {...enrolled}
         label='Enrolled'
         type='text'
       />
@@ -100,7 +101,7 @@ class EventForm extends React.Component {
         }}
       >
         <FormInput
-          field={category}
+          {...category}
           label='Category'
           type='text'
         />
@@ -118,7 +119,7 @@ class EventForm extends React.Component {
       <button type='submit' className='btn btn-primary'>Send</button>
 
       <Link to={`${EVENTS_ROUTE}/${selectedEvent}`} className='btn btn-danger'>Cancel</Link>
-    </form>;
+    </Form>;
   }
 }
 

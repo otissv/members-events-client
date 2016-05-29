@@ -5,7 +5,8 @@
 
 import { Link } from 'react-router';
 import { CATEGORIES_ROUTE } from '../../contants';
-import FormInput from '../form-input-component.jsx';
+import Form from 'react-uikit-form';
+import FormInput from 'react-uikit-form/lib/form-input';
 import Modal from '../../../../react-uikit-components/components/react-uikit-modal';
 import List from 'react-uikit-list';
 import Listitem from 'react-uikit-list';
@@ -80,23 +81,23 @@ class CategoryForm extends React.Component {
 
     const modalId = 'swatches';
 
-    return <form className="uk-form uk-form-stacked" onSubmit={onSubmit}>
+    return <Form className="uk-form uk-form-stacked" onSubmit={onSubmit}>
       <h3>{heading}</h3>
 
       <FormInput
-        field={title}
+        {...title}
         label='Category title'
         type='text'
       />
 
       <FormInput
-        field={students}
+        {...students}
         label='Students'
         type='text'
       />
 
       <FormInput
-        field={status}
+        {...status}
         label='Status'
         type='text'
       />
@@ -110,7 +111,7 @@ class CategoryForm extends React.Component {
           type: 'div',
           display: 'inlineBlock',
           body: <FormInput
-            field={color}
+            {...color}
             label='Color'
             input={{
               id : 'color',
@@ -141,7 +142,7 @@ class CategoryForm extends React.Component {
       <button type='submit' className='btn btn-primary'>Save</button>
 
       <Link to={`${CATEGORIES_ROUTE}/${categorySelected}`} className='btn btn-danger'>Cancel</Link>
-    </form>;
+    </Form>;
   }
 }
 

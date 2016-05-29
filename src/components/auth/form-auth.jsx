@@ -2,13 +2,15 @@
 * Authorisation form component
  */
 
-
+import Form from '../../../../react-uikit-components/components/react-uikit-form';
+import FormInput from '../../../../react-uikit-components/components/react-uikit-form/lib/form-input';
+import Button from '../../../../react-uikit-components/components/react-uikit-button';
 import { Link } from 'react-router';
-
 import { ROOT_ROUTE } from '../../contants';
-import FormInput from '../form-input-component.jsx';
 
-
+function help (type, text, context) {
+  return { type, text, context };
+}
 const AuthForm = (props) => {
   const {
     fields: { username, password },
@@ -16,26 +18,32 @@ const AuthForm = (props) => {
     onSubmit
   } = props;
 
-  return <form className="uk-form uk-form-stacked" onSubmit={onSubmit}>
-    <h3>{heading}</h3>
+  return <Form
+    title={heading}
+    layout='stacked'
+    onSubmit={onSubmit}
+    items={[
+      {
+        ...username,
+        kitid: 'username',
+        label: 'Username',
+        context: username.invalid && username.touched ? 'danger' :  null,
+        help:  username.invalid && username.touched ? help('block', username.error, 'danger') :  null
+      },
+      {
 
-
-    <FormInput
-      field={username}
-      label='Username'
-      type='text'
-    />
-
-    <FormInput
-      field={password}
-      label='Password'
-      type='password'
-    />
-
-    <button type='submit' className='btn btn-primary'>Sign in</button>
-
-    <Link to={ROOT_ROUTE} className='btn btn-danger'>Cancel</Link>
-  </form>;
+        ...password,
+        kitid: 'label',
+        label: 'password',
+        context: password.invalid && username.touched ? 'danger' :  null,
+        help:  password.invalid && password.touched ? help('block', password.error, 'danger') :  null
+      }
+    ]}
+  >
+    <Button type='submit' context='primary' margin='right top'>
+      Sign in
+    </Button>
+  </Form>;
 };
 
 

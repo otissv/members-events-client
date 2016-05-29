@@ -3,7 +3,7 @@
  */
 
 // API
-export const API_URL = 'http://localhost:3000/api/v01/';
+export const API_URL = 'http://localhost:5000/api/v01/';
 
 
 // Public routes
