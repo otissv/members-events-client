@@ -47,6 +47,7 @@ export default function UserForm (ComposedClass, formName) {
        'address.city',
        'address.state',
        'address.postcode',
+       'dateOfBirth',
        'email',
        'password',
        'firstName',

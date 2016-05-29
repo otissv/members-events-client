@@ -21,6 +21,7 @@ class UserForm extends React.Component {
     const {
       fields: {
         ...address,
+        dateOfBirth,
         email,
         password,
         firstName,
@@ -60,6 +61,13 @@ class UserForm extends React.Component {
         {...lastName}
         label='Last Name'
         type='text'
+      />
+
+      <FormInput
+        {...dateOfBirth}
+        label='Date of Birth'
+        icon='calendar'
+        type='date'
       />
 
 
