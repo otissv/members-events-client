@@ -8,6 +8,9 @@ export const API_URL = 'http://localhost:5000/api/v01/';
 
 // Public routes
 export const ABOUT_ROUTE = '/about';
+export const MY_ACCOUNT_ROUTE = 'my-account';
+export const ROOT_ROUTE = '/';
+export const SEVICES_ROUTE = '/sevices';
 export const CONTACTS_ROUTE = '/contacts';
 
 export const CATEGORIES_ROUTE = '/categories';
@@ -20,14 +23,13 @@ export const EVENT_ROUTE = '/event';
 export const EVENT_EDIT_ROUTE = '/event/edit';
 export const EVENT_NEW_ROUTE = '/event/new';
 
-export const MY_ACCOUNT_ROUTE = 'my-account';
-export const ROOT_ROUTE = '/';
-export const SEVICES_ROUTE = '/sevices';
 export const SIGNIN_ROUTE = '/signin';
 export const SIGNOUT_ROUTE = '/signout';
 export const SIGNUP_ROUTE = '/signup';
-export const USERS_ROUTE= '/users';
+
+export const USERS_ROUTE = '/users';
 export const USER_EDIT_ROUTE = '/user/edit';
+export const USER_NEW_ROUTE = './user/new';
 
 
 // Application action types
@@ -75,6 +77,7 @@ export const UPDATE_CATEGORY = 'UPDATE_COURSE';
 
 
 // User action types
+export const CREATE_USER = 'CREATE_USER';
 export const GET_USERS = 'GET_USERS';
 export const GET_USER = 'GET_USER';
 export const REMOVE_USER = 'REMOVE_USER';

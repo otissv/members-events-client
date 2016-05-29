@@ -28,6 +28,8 @@ import UsersListContainer from './containers/users/list-users-container.jsx';
 import UserContainer from './containers/users/user-container.jsx';
 import UserForm from './containers/users/user-form-container.jsx';
 import UserEdit from './components/users/edit-users.jsx';
+import UserNew from './components/users/new-users.jsx';
+
 
 import Container from './containers/component-container.jsx';
 
@@ -54,7 +56,8 @@ import {
   SIGNOUT_ROUTE,
   SIGNUP_ROUTE,
   USERS_ROUTE,
-  USER_EDIT_ROUTE
+  USER_EDIT_ROUTE,
+  USER_NEW_ROUTE
 } from './contants';
 
 
@@ -76,8 +79,10 @@ const SignoutRoute = Container(Signout);
 const SigninRoute = AuthForm(Signin, 'SigninForm');
 
 const UserEditRoute = UserForm(UserEdit, 'UserEditForm');
+const UserNewRoute = UserForm(UserNew, 'UserNewForm');
 const UsersListRoute = IsAuthuthoried(UsersListContainer);
 const UserRoute = IsAuthuthoried(UserContainer);
+
 
 export default (
   <Router path='/' component={Container(Layout)}>
@@ -104,6 +109,7 @@ export default (
     <Route path={USERS_ROUTE} component={UsersListRoute} />
     <Route path={`${USERS_ROUTE}/:userId`} component={UserRoute}/>
     <Route path={`${USER_EDIT_ROUTE}/:userId`} component={UserEditRoute}/>
+    <Route path={`${USER_NEW_ROUTE}`} component={UserNewRoute}/>
 
     <Route path={MY_ACCOUNT_ROUTE} component={MyAccoutRoute} />
   </Router>

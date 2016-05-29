@@ -7,7 +7,7 @@ import { objectToArray } from '../../helpers';
 import { Link } from 'react-router';
 
 
-import { USERS_ROUTE } from '../../contants';
+import { USERS_ROUTE, USER_NEW_ROUTE } from '../../contants';
 
 
 class Users extends React.Component {
@@ -40,6 +40,8 @@ class Users extends React.Component {
 
 
     return <div>
+      <Link to={USER_NEW_ROUTE}>New user</Link>
+
       <h1>Users</h1>
       <ul>{items}</ul>
     </div>;

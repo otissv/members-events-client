@@ -24,6 +24,15 @@ import {
 } from '../contants';
 
 
+export function createUser (_id, token, data) {
+  const request = axios.post(`${API_URL}users/${query(_id, token)}`, data);
+
+  return {
+    type: UPDATE_USER,
+    payload: request
+  };
+}
+
 export function removeUser (_id, token, user) {
   const request = axios.delete(`${API_URL}users/${user}/${query(_id, token)}`);
 
