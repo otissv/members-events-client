@@ -16,7 +16,6 @@ import {
 
 import {
   API_URL,
-  CREATE_EVENT,
   GET_EVENT,
   GET_EVENT_EDITOR,
   GET_EVENTS,
