@@ -26,9 +26,9 @@ class User extends React.Component {
 
     return <div>
       <h1>User Profile</h1>
-      Name: {user.username}<br />
       First Name: {user.firstName}<br />
       Last Name: {user.LastName}<br />
+      Username: {user.username}<br />
       Email: {user.email}<br />
       Roles: {user.roles}<br />
 
