@@ -2,9 +2,9 @@
 * Authorisation form component
  */
 
-import Form from '../../../../react-uikit-components/components/react-uikit-form';
-import FormInput from '../../../../react-uikit-components/components/react-uikit-form/lib/form-input';
-import Button from '../../../../react-uikit-components/components/react-uikit-button';
+import Form from 'react-uikit-form';
+import FormInput from 'react-uikit-form/lib/form-input';
+import Button from 'react-uikit-button';
 import { Link } from 'react-router';
 import { ROOT_ROUTE } from '../../contants';
 
