@@ -12,7 +12,7 @@ import {
   AUTHENTICATE,
   REGISTER,
   UNAUTHENTICATE
-} from '../contants';
+} from 'contants';
 
 
 export function authenticate (user) {

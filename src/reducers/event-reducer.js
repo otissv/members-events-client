@@ -13,7 +13,7 @@ import {
   SET_EVENT,
   SET_EVENT_EDITOR,
   UPDATE_EVENT
-} from '../contants/';
+} from 'contants';
 
 
 const INITAL_STATE = {

@@ -10,7 +10,7 @@ import {
   arrayToObject,
   deleteKeyToArray,
   query
-} from '../helpers';
+} from 'helpers';
 
 import {
   API_URL,

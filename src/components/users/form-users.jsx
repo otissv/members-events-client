@@ -8,7 +8,7 @@ import { Link } from 'react-router';
 import Address from '../shared/address-shared.jsx';
 import Form from 'react-uikit-form';
 import FormInput from 'react-uikit-form/lib/form-input';
-import { USERS_ROUTE } from '../../contants';
+import { USERS_ROUTE } from 'contants';
 
 class UserForm extends React.Component {
   componentWillMount() {

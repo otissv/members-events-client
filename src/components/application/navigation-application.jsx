@@ -5,7 +5,7 @@
 
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
-import { mapStateToProps } from '../../reducers';
+import { mapStateToProps } from 'reducers';
 
 import {
   ABOUT_ROUTE,

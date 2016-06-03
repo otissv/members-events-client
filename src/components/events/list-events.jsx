@@ -5,9 +5,12 @@
 
 import BigCalendar from 'react-big-calendar';
 import moment from 'moment';
-import { objectToArray } from '../../helpers';
+import { objectToArray } from 'helpers';
 import { Link } from 'react-router';
-import { EVENTS_ROUTE, EVENT_NEW_ROUTE } from '../../contants';
+import {
+  EVENTS_ROUTE,
+  EVENT_NEW_ROUTE
+} from 'contants';
 
  // Setup the localizer by providing the moment (or globalize) Object
  // to the correct localizer.

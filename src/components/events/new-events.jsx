@@ -4,7 +4,7 @@
 
 
 import AuthForm from './form-events';
-import { EVENTS_ROUTE } from '../../contants';
+import { EVENTS_ROUTE } from 'contants';
 
 export default class NewEvent extends React.Component  {
   constructor (props) {

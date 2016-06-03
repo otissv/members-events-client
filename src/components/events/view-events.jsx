@@ -5,7 +5,7 @@
 import {
   EVENTS_ROUTE,
   EVENT_EDIT_ROUTE
-} from '../../contants';
+} from 'contants';
 
 import { Link } from 'react-router';
 import deleteEvent from './delete-events';

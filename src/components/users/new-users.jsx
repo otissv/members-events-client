@@ -4,7 +4,7 @@
 
 
 import AuthForm from './form-users';
-import { USERS_ROUTE } from '../../contants';
+import { USERS_ROUTE } from 'contants';
 
 export default class NewUser extends React.Component  {
   constructor (props) {

@@ -4,7 +4,7 @@
 
 
 import AuthForm from './form-events.jsx';
-import { EVENTS_ROUTE } from '../../contants';
+import { EVENTS_ROUTE } from 'contants';
 
 
 export default class EditUser extends React.Component  {

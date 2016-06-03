@@ -2,7 +2,7 @@
 * Delete Users component
 */
 
-import { USERS_ROUTE } from '../../contants';
+import { USERS_ROUTE } from 'contants';
 
 
 export default function deleteUser(props) {

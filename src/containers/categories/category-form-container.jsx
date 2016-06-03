@@ -3,8 +3,8 @@
  */
 
 import { reduxForm } from 'redux-form';
-import actions from '../../actions';
-import { mapStateToProps } from '../../reducers';
+import actions from 'actions';
+import { mapStateToProps } from 'reducers';
 
 
 export default function CourseForm (ComposedClass, formName) {

@@ -5,7 +5,7 @@
 import {
   CATEGORIES_ROUTE,
   CATEGORY_EDIT_ROUTE
-} from '../../contants';
+} from 'contants';
 
 import { Link } from 'react-router';
 import deleteCategory from './delete-categories';

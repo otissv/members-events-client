@@ -6,7 +6,7 @@
 import { Link } from 'react-router';
 import Address from '../shared/address-shared.jsx';
 import Datetime from 'react-datetime';
-import { EVENTS_ROUTE } from '../../contants';
+import { EVENTS_ROUTE } from 'contants';
 import Form from 'react-uikit-form';
 import FormInput from 'react-uikit-form/lib/form-input';
 import Modal from 'react-uikit-modal';

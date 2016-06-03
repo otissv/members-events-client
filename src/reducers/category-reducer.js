@@ -12,7 +12,7 @@ import {
   SET_COLORS,
   SET_COLOR,
   UPDATE_CATEGORY
-} from '../contants/';
+} from 'contants';
 
 const INITAL_STATE = {
   categoryColor    : '',

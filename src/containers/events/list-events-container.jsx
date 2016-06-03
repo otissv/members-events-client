@@ -4,9 +4,9 @@
 
 
 import { connect } from 'react-redux';
-import actions from '../../actions';
-import { mapStateToProps } from '../../reducers';
-import Events from '../../components/events/list-events.jsx';
+import actions from 'actions';
+import { mapStateToProps } from 'reducers';
+import Events from 'components/events/list-events.jsx';
 
 
 class EventsContainer extends React.Component{

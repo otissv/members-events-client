@@ -19,7 +19,12 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    extensions: ['', '.js', '.jsx'],
+    modulesDirectories: [
+      'src',
+      'src/actions',
+      'node_modules'
+    ]
   },
 
   plugins: [

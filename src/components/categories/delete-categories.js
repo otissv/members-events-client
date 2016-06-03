@@ -2,7 +2,7 @@
 * Delete category component
 */
 
-import { CATEGORIES_ROUTE } from '../../contants';
+import { CATEGORIES_ROUTE } from 'contants';
 
 export default function deleteCategory(props) {
   const {

@@ -3,7 +3,7 @@
 */
 
 import { reduxForm } from 'redux-form';
-import actions from '../../actions';
+import actions from 'actions';
 
 export default function AuthForm (ComposedClass, formName) {
 

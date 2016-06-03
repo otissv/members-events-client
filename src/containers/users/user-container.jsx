@@ -4,9 +4,9 @@
 
 'use strict';
 import { connect } from 'react-redux';
-import actions from '../../actions';
-import { mapStateToProps } from '../../reducers';
-import Users from '../../components/users/view-users.jsx';
+import actions from 'actions';
+import { mapStateToProps } from 'reducers';
+import Users from 'components/users/view-users.jsx';
 
 
 class UserContainer extends React.Component{

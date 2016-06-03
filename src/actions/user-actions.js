@@ -9,7 +9,7 @@ import {
   arrayToObject,
   deleteKeyToArray,
   query
-} from '../helpers';
+} from 'helpers';
 
 import {
   API_URL,
@@ -21,7 +21,7 @@ import {
   SET_USER,
   SET_USERS,
   UPDATE_USER
-} from '../contants';
+} from 'contants';
 
 
 export function createUser (_id, token, data) {

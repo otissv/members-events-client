@@ -8,7 +8,7 @@ import {
   SET_USERS,
   SET_USER,
   UPDATE_USER
-} from '../contants/';
+} from 'contants';
 
 const INITAL_STATE = {
   selectedUser: null,

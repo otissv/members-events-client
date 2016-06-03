@@ -4,7 +4,7 @@
 
 
 import AuthForm from './form-categories';
-import { CATEGORIES_ROUTE } from '../../contants';
+import { CATEGORIES_ROUTE } from 'contants';
 
 export default class NewUser extends React.Component  {
   constructor (props) {

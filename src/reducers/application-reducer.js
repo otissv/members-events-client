@@ -7,7 +7,7 @@ import {
   DELETE_STORAGE,
   GET_STORAGE,
   SET_STORAGE
-} from '../contants';
+} from 'contants';
 
 
 const INITAL_STATE = {

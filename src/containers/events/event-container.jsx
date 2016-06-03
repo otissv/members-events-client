@@ -4,9 +4,9 @@
 
 
 import { connect } from 'react-redux';
-import actions from '../../actions';
-import { mapStateToProps } from '../../reducers';
-import Event from '../../components/events/view-events.jsx';
+import actions from 'actions';
+import { mapStateToProps } from 'reducers';
+import Event from 'components/events/view-events.jsx';
 import moment from 'moment';
 
 

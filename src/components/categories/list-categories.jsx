@@ -3,14 +3,14 @@
 */
 
 
-import { objectToArray } from '../../helpers';
+import { objectToArray } from 'helpers';
 import { Link } from 'react-router';
 
 
 import {
   CATEGORIES_ROUTE,
   CATEGORY_NEW_ROUTE
-} from '../../contants';
+} from 'contants';
 
 
 export default class Categorys extends React.Component {

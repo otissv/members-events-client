@@ -3,10 +3,9 @@
  */
 
 import Form from 'react-uikit-form';
-import FormInput from 'react-uikit-form/lib/form-input';
 import Button from 'react-uikit-button';
 import { Link } from 'react-router';
-import { ROOT_ROUTE } from '../../contants';
+import { ROOT_ROUTE } from 'contants';
 
 function help (type, text, context) {
   return { type, text, context };

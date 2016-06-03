@@ -5,7 +5,7 @@
 import {
   USERS_ROUTE,
   USER_EDIT_ROUTE
-} from '../../contants';
+} from 'contants';
 import { Link } from 'react-router';
 import deleteUser from './delete-users';
 
@@ -27,7 +27,7 @@ class User extends React.Component {
     return <div>
       <h1>User Profile</h1>
       First Name: {user.firstName}<br />
-      Last Name: {user.LastName}<br />
+      Last Name: {user.lastName}<br />
       Username: {user.username}<br />
       Email: {user.email}<br />
       Roles: {user.roles}<br />
@@ -36,7 +36,7 @@ class User extends React.Component {
       Adddres2: {user.address ? user.address.address2: ''}<br />
       City: {user.address ? user.address.city : ''}<br />
       State: {user.address ? user.address.state : ''}<br />
-      Postcode: {user.address ? user.address.postcode : ''}<br />
+      Postcode: {user.address ? user.address.postCode : ''}<br />
 
       <Link to={USERS_ROUTE} >Back</Link>
       <Link to={`${USER_EDIT_ROUTE}/${selectedUser}`} >Edit</Link>

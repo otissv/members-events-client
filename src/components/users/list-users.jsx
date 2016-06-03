@@ -3,11 +3,14 @@
 */
 
 
-import { objectToArray } from '../../helpers';
+import { objectToArray } from 'helpers';
 import { Link } from 'react-router';
 
 
-import { USERS_ROUTE, USER_NEW_ROUTE } from '../../contants';
+import {
+  USERS_ROUTE,
+  USER_NEW_ROUTE
+} from 'contants';
 
 
 class Users extends React.Component {

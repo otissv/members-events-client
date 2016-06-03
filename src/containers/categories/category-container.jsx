@@ -4,9 +4,9 @@
 
 
 import { connect } from 'react-redux';
-import actions from '../../actions';
-import { mapStateToProps } from '../../reducers';
-import Categories from '../../components/categories/view-categories.jsx';
+import actions from 'actions';
+import { mapStateToProps } from 'reducers';
+import Categories from 'components/categories/view-categories.jsx';
 
 
 class CategoryContainer extends React.Component{

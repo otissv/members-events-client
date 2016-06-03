@@ -6,7 +6,7 @@
 import AuthForm from './form-categories.jsx';
 
 
-import { CATEGORIES_ROUTE } from '../../contants';
+import { CATEGORIES_ROUTE } from 'contants';
 
 
 export default class EditCategory extends React.Component  {

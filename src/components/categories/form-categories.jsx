@@ -4,7 +4,7 @@
 
 
 import { Link } from 'react-router';
-import { CATEGORIES_ROUTE } from '../../contants';
+import { CATEGORIES_ROUTE } from 'contants';
 import Form from 'react-uikit-form';
 import FormInput from 'react-uikit-form/lib/form-input';
 import Modal from 'react-uikit-modal';

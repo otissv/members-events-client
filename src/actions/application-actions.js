@@ -15,7 +15,7 @@ import {
   DELETE_STORAGE,
   LOCATION,
   SET_STORAGE
-} from '../contants';
+} from 'contants';
 
 
 export function redirectTo (path) {
