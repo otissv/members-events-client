@@ -9,6 +9,8 @@ import Address from '../shared/address-shared.jsx';
 import Form from 'react-uikit-form';
 import FormInput from 'react-uikit-form/lib/form-input';
 import { USERS_ROUTE } from 'contants';
+import TextEditor from '../shared/text-editor-component.jsx';
+
 
 class UserForm extends React.Component {
   componentWillMount() {
@@ -88,15 +90,44 @@ class UserForm extends React.Component {
             <input type='radio'
               name='roles'
               className={`form-group ${roles.touched && roles.invalid ? 'uk-form-danger' : ''}`}
-              {...roles} value='user' checked={roles.value == 'user'} onChange={onChange}
+              {...roles} value='manager' checked={roles.value == 'manager'} onChange={onChange}
             />
-            User
+            Manager
+          </label>
+          <label>
+            <input type='radio'
+              name='roles'
+              className={`form-group ${roles.touched && roles.invalid ? 'uk-form-danger' : ''}`}
+              {...roles} value='instructor' checked={roles.value == 'instructor'} onChange={onChange}
+            />
+            Instructor
+          </label>
+          <label>
+            <input type='radio'
+              name='roles'
+              className={`form-group ${roles.touched && roles.invalid ? 'uk-form-danger' : ''}`}
+              {...roles} value='receptionist' checked={roles.value == 'receptionist'} onChange={onChange}
+            />
+            Receptionist
+          </label>
+          <label>
+            <input type='radio'
+              name='roles'
+              className={`form-group ${roles.touched && roles.invalid ? 'uk-form-danger' : ''}`}
+              {...roles} value='client' checked={roles.value == 'client'} onChange={onChange}
+            />
+            Client
           </label>
         </div>
 
         <div className='uk-text-danger'>
         {roles.touched ? roles.error : ''}
         </div>
+      </div>
+
+      <span className='uk-form-label'>Comments</span>
+      <div style={{border: '1px solid #ddd', marginBottom: '15px', borderRadius: '4px', minHeight: '30px'}}>
+      <TextEditor {...this.props}/>
       </div>
 
       <button type='submit' className='btn btn-primary'>Send</button>

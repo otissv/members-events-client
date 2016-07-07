@@ -32,6 +32,8 @@ class Category extends React.Component {
       Students: {category.students}<br />
       Satuts  : {category.satuts}<br />
 
+      Comments:<br />
+
       <Link to={CATEGORIES_ROUTE} >Back</Link>
       <Link to={`${CATEGORY_EDIT_ROUTE}/${categorySelected}`} >Edit</Link>
       <a href='#' onClick={this.handleDelete}>Detele</a>

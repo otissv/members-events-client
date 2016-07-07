@@ -5,40 +5,40 @@
 
 import { Router, IndexRoute, Route } from 'react-router';
 
-import AuthForm from './containers/auth/auth-form-container.jsx';
-import IsAuthuthoried from './containers/auth/isAuthuthoried-container.jsx';
-import Signup from './components/auth/signup-auth.jsx';
-import Signin from './components/auth/signin-auth.jsx';
-import Signout from './components/auth/signout-auth.jsx';
+import AuthForm from 'containers/auth/auth-form-container.jsx';
+import IsAuthuthoried from 'containers/auth/isAuthuthoried-container.jsx';
+import Signup from 'components/auth/signup-auth.jsx';
+import Signin from 'components/auth/signin-auth.jsx';
+import Signout from 'components/auth/signout-auth.jsx';
 
-import CategoriesListContainer from './containers/categories/list-category-container.jsx';
-import CategoryContainer from './containers/categories/category-container.jsx';
-import CategoryForm from './containers/categories/category-form-container.jsx';
-import CategoryEdit from './components/categories/edit-categories.jsx';
-import CategoryNew from './components/categories/new-category.jsx';
+import CategoriesListContainer from 'containers/categories/list-category-container.jsx';
+import CategoryContainer from 'containers/categories/category-container.jsx';
+import CategoryForm from 'containers/categories/category-form-container.jsx';
+import CategoryEdit from 'components/categories/edit-categories.jsx';
+import CategoryNew from 'components/categories/new-category.jsx';
 
-import EventsListContainer from './containers/events/list-events-container.jsx';
-import EventContainer from './containers/events/event-container.jsx';
-import EventForm from './containers/events/event-form-container.jsx';
-import EventEdit from './components/events/edit-events.jsx';
-import EventNew from './components/events/new-events.jsx';
-
-
-import UsersListContainer from './containers/users/list-users-container.jsx';
-import UserContainer from './containers/users/user-container.jsx';
-import UserForm from './containers/users/user-form-container.jsx';
-import UserEdit from './components/users/edit-users.jsx';
-import UserNew from './components/users/new-users.jsx';
+import EventsListContainer from 'containers/events/list-events-container.jsx';
+import EventContainer from 'containers/events/event-container.jsx';
+import EventForm from 'containers/events/event-form-container.jsx';
+import EventEdit from 'components/events/edit-events.jsx';
+import EventNew from 'components/events/new-events.jsx';
 
 
-import Container from './containers/component-container.jsx';
+import UsersListContainer from 'containers/users/list-users-container.jsx';
+import UserContainer from 'containers/users/user-container.jsx';
+import UserForm from 'containers/users/user-form-container.jsx';
+import UserEdit from 'components/users/edit-users.jsx';
+import UserNew from 'components/users/new-users.jsx';
 
-import Home from './components/public/home-public.jsx';
-import About from './components/public/about-public.jsx';
-import Contacts from './components/public/contacts-public.jsx';
-import Services from './components/public/services-public.jsx';
-import Layout from './components/application/layout-application.jsx';
-import MyAccount from './components/settings/my-account-setttings.jsx';
+
+import Container from 'containers/component-container.jsx';
+
+import Home from 'components/public/home-public.jsx';
+import About from 'components/public/about-public.jsx';
+import Contacts from 'components/public/contacts-public.jsx';
+import Services from 'components/public/services-public.jsx';
+import Layout from 'components/application/layout-application.jsx';
+import MyAccount from 'components/settings/my-account-setttings.jsx';
 
 
 import {
@@ -58,7 +58,7 @@ import {
   USERS_ROUTE,
   USER_EDIT_ROUTE,
   USER_NEW_ROUTE
-} from './contants';
+} from 'contants';
 
 
 const MyAccoutRoute = IsAuthuthoried(MyAccount, '/signin');

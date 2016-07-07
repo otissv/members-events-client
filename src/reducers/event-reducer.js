@@ -5,13 +5,13 @@
 import { EditorState } from 'draft-js';
 
 import {
-  CREATE_EVENT,
   EVENTS_CALENDAR_DATE,
   REMOVE_EVENT_FROM_LIST,
   SELECT_EVENT,
   SET_EVENTS,
   SET_EVENT,
   SET_EVENT_EDITOR,
+  SET_EVENT_SLOT,
   UPDATE_EVENT
 } from 'contants';
 
@@ -21,7 +21,8 @@ const INITAL_STATE = {
   eventsCalendarDate: new Date(),
   eventsAll    : {},
   eventEditor  : EditorState.createEmpty(),
-  eventSelected: null
+  eventSelected: null,
+  eventSlot    : {}
 };
 
 
@@ -36,9 +37,11 @@ export default function applicationReducer(state = INITAL_STATE, action) {
       return {...state, eventsAll: action.payload};
 
     case SET_EVENTS:
+
       return {...state, eventsAll: action.payload};
 
     case SELECT_EVENT:
+
       return {...state, eventSelected: action.payload};
 
     case SET_EVENT:
@@ -46,6 +49,9 @@ export default function applicationReducer(state = INITAL_STATE, action) {
 
     case SET_EVENT_EDITOR:
       return {...state, eventEditor: action.payload};
+
+      case SET_EVENT_SLOT:
+        return {...state, eventSlot: action.payload};
 
     case UPDATE_EVENT:
       return {...state, event: action.payload};

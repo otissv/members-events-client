@@ -21,6 +21,7 @@ export function mapStateToProps (state) {
     eventsCalendarDate: state.events.eventsCalendarDate,
 		eventEditor       : state.events.eventEditor,
 		eventSelected     : state.events.eventSelected,
+    eventSlot         : state.events.eventSlot,
 
     category          : state.categories.category,
 		categoriesAll     : state.categories.categoriesAll,

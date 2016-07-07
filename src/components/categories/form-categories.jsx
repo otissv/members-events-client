@@ -9,9 +9,9 @@ import Form from 'react-uikit-form';
 import FormInput from 'react-uikit-form/lib/form-input';
 import Modal from 'react-uikit-modal';
 import List from 'react-uikit-list';
-import Listitem from 'react-uikit-list';
 import velocity from 'velocity-animate';
-
+import ListItemSelect from '../shared/list-item-select-shared';
+import TextEditor from '../shared/text-editor-component.jsx';
 
 class CategoryForm extends React.Component {
   constructor (props) {
@@ -56,11 +56,15 @@ class CategoryForm extends React.Component {
   }
 
   handleColorClick (e) {
-    e.preventDefault();
-    const { color } = e.target.dataset;
+    const { index, kitid } = e.item;
+    const id = kitid.split('.')[0];
 
-    this.props.fields.color.onChange(color);
-    this.setState({ show: false });
+    const modal = document.querySelector(`[data-kitid='modal-${id}']`);
+    const dialog = document.querySelector(`[data-kitid='dialog-${id}']`);
+
+    this.swatchAnimateOut(modal, dialog);
+
+    this.props.fields.color.onChange(index);
   }
 
   render () {
@@ -80,6 +84,22 @@ class CategoryForm extends React.Component {
     } = this.props;
 
     const modalId = 'swatches';
+
+    const categoryList = Object.keys(categoryColorsAll).map((key) => {
+      return <ListItemSelect
+       kitid={`${modalId}.${key}`}
+       index={key}
+       body={key}
+       data-category={key}
+       icon={{
+         style: {color: categoryColorsAll[key]},
+         className: 'uk-icon-circle'
+       }}
+       key={key}
+       onClick={this.handleColorClick}
+      />;
+    });
+
 
     return <Form className="uk-form uk-form-stacked" onSubmit={onSubmit}>
       <h3>{heading}</h3>
@@ -126,18 +146,14 @@ class CategoryForm extends React.Component {
         }}
       >
         <List>
-          {Object.keys(categoryColorsAll).map(key => {
-            return <a
-              href="#" key={key}
-              onClick={this.handleColorClick}
-            >
-              <Listitem kitid={`modal-${modalId}`} data-color={key}>
-                <i style={{color: categoryColorsAll[key]}} className="uk-icon-circle"></i> {key}
-              </Listitem>
-              </a>;
-          })}
+          {categoryList}
         </List>
       </Modal>
+
+      <span className='uk-form-label'>Comments</span>
+      <div style={{border: '1px solid #ddd', marginBottom: '15px', borderRadius: '4px', minHeight: '30px'}}>
+        <TextEditor {...this.props}/>
+      </div>
 
       <button type='submit' className='btn btn-primary'>Save</button>
 
@@ -152,11 +168,14 @@ CategoryForm.propTypes = {
   categoryColor    : React.PropTypes.string.isRequired,
   categoryColorsAll: React.PropTypes.object.isRequired,
   fields           : React.PropTypes.object.isRequired,
+  getCategoryColors: React.PropTypes.func.isRequired,
   heading          : React.PropTypes.string,
   initializeForm   : React.PropTypes.func.isRequired,
   categorySelected : React.PropTypes.string,
   onChange         : React.PropTypes.func.isRequired,
-  onSubmit         : React.PropTypes.func.isRequired
+  onSubmit         : React.PropTypes.func.isRequired,
+  setCategoryColors: React.PropTypes.func.isRequired,
+  storage          : React.PropTypes.object.isRequired
 };
 
 export default CategoryForm;

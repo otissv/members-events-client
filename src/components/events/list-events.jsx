@@ -23,6 +23,7 @@ export default class Events extends React.Component {
     super(props);
 
     this.handleSelectEvent = this.handleSelectEvent.bind(this);
+    this.handleSelectEventSlot = this.handleSelectEventSlot.bind(this);
   }
 
 
@@ -32,6 +33,14 @@ export default class Events extends React.Component {
 
     selectEvent(_id);
     redirectTo(`${EVENTS_ROUTE}/${_id}`);
+  }
+
+
+  handleSelectEventSlot(slotInfo) {
+    const { redirectTo, setEventSlot } = this.props;
+
+    setEventSlot(slotInfo);
+    redirectTo(EVENT_NEW_ROUTE);
   }
 
 
@@ -51,10 +60,7 @@ export default class Events extends React.Component {
         endAccessor='end'
         defaultDate={eventsCalendarDate}
         onSelectEvent={this.handleSelectEvent}
-        onSelectSlot={(slotInfo) => alert(
-           `selected slot: \n\nstart ${slotInfo.start.toLocaleString()} ` +
-           `\nend: ${slotInfo.end.toLocaleString()}`
-         )}
+        onSelectSlot={this.handleSelectEventSlot}
       />
     </div>;
   }
@@ -67,6 +73,7 @@ Events.propTypes = {
   eventsCalendarDate: React.PropTypes.object.isRequired,
 
   // actions
+  setEventSlot: React.PropTypes.func.isRequired,
   redirectTo: React.PropTypes.func.isRequired,
   selectEvent: React.PropTypes.func.isRequired
 };

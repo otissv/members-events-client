@@ -14,6 +14,7 @@ import {
   query
 } from 'helpers';
 
+
 import {
   API_URL,
   GET_EVENT,
@@ -25,12 +26,14 @@ import {
   SET_EVENT,
   SET_EVENT_EDITOR,
   SET_EVENTS,
+  SET_EVENT_SLOT,
   UPDATE_EVENT
 } from '../contants';
 
 
 export function createEvent (_id, token, data) {
-  const request = axios.post(`${API_URL}events/${query(_id, token)}`, data);
+
+  const request = axios.post(`${API_URL}events/${query(_id, token)}`, {...data, category: data.category._id});
 
   return {
     type: UPDATE_EVENT,
@@ -133,6 +136,14 @@ export function getEventEditor () {
 export function setEventEditor (state) {
   return {
     type: SET_EVENT_EDITOR,
+    payload: state
+  };
+}
+
+
+export function setEventSlot (state) {
+  return {
+    type: SET_EVENT_SLOT,
     payload: state
   };
 }

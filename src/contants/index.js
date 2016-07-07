@@ -59,6 +59,8 @@ export const REMOVE_EVENT_FROM_LIST = 'REMOVE_EVENT_FROM_LIST';
 export const SELECT_EVENT = 'SELECT_EVENT';
 export const SET_EVENTS = 'SET_EVENTS';
 export const SET_EVENT = 'SET_EVENT';
+export const SET_EVENT_EDITOR = 'SET_EVENT_EDITOR';
+export const SET_EVENT_SLOT = 'SET_EVENT_SLOT';
 export const UPDATE_EVENT = 'UPDATE_EVENT';
 
 

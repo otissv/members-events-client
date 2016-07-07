@@ -38,6 +38,9 @@ class User extends React.Component {
       State: {user.address ? user.address.state : ''}<br />
       Postcode: {user.address ? user.address.postCode : ''}<br />
 
+      Comments: <br />
+
+
       <Link to={USERS_ROUTE} >Back</Link>
       <Link to={`${USER_EDIT_ROUTE}/${selectedUser}`} >Edit</Link>
       <a href='#' onClick={this.handleDelete}>Detele</a>

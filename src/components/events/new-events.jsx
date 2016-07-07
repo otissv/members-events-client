@@ -35,10 +35,15 @@ export default class NewEvent extends React.Component  {
 
 
   render () {
-    const { handleSubmit } = this.props;
+    const { handleSubmit, eventSlot } = this.props;
+    const event = {
+      start: eventSlot.start,
+      end  : eventSlot.end
+    };
+
     return <AuthForm
       onSubmit={handleSubmit(this.handleSubmit)}
-      {...this.props} event={{}}
+      {...this.props} event={event}
       heading='New Event'
       onChange={this.handleChange}
     />;
@@ -47,6 +52,10 @@ export default class NewEvent extends React.Component  {
 
 
 NewEvent.propTypes = {
+  // shouldUpdate
+  eventSlot: React.PropTypes.object,
+
+  // actions
   redirectTo   : React.PropTypes.func.isRequired,
   storage      : React.PropTypes.object.isRequired,
   createEvent  : React.PropTypes.func.isRequired,
